@@ -1,0 +1,108 @@
+classDiagram
+    direction LR
+
+    class Szenario {
+        titel
+        kurzbeschreibung
+        trainingsphase
+        groomingphase
+    }
+    class Themenfeld {
+        bezeichnung
+        herkunft
+    }
+    class Entscheidungspunkt {
+        reihenfolge
+        situationstext
+        leitfrage
+    }
+    class Handlungsoption {
+        text
+        einschätzung
+    }
+    class Rückmeldung {
+        erkennen
+        absichern
+        handeln
+        quelle
+    }
+    class Trainingsphase {
+        <<enumeration>>
+        vor dem Training
+        im Training
+        nach dem Training
+    }
+    class Groomingphase {
+        <<enumeration>>
+        Auswahl
+        Vertrauensaufbau
+        Isolation und Kontrolle
+        Übergriff und Geheimhaltung
+    }
+    class Ampelstufe {
+        <<enumeration>>
+        unbedenklich
+        klärungsbedürftig
+        grenzverletzend
+    }
+    class Nutzerprofil {
+        pseudonym
+        rolle
+        sparte
+    }
+    class Durchlauf {
+        begonnenAm
+        status
+        fortschritt
+        abgeschlossenAm
+    }
+    class Entscheidung {
+        zeitpunkt
+        reihenfolge
+    }
+    class Einschätzungsspiegel {
+        <<berechnet>>
+        bezugspunkt
+        bezugsgruppe
+        anteilProOption
+    }
+    class Verein {
+        name
+        sparten
+    }
+    class Trainerteam {
+        bezeichnung
+        altersklasse
+    }
+    class Ansprechperson {
+        name
+        funktion
+        kontaktweg
+        eskalationsebene
+    }
+    class Hilfsangebot {
+        bezeichnung
+        kontakt
+        überregional
+    }
+
+    Szenario "*" --> "1..*" Themenfeld : behandelt
+    Szenario "1" *-- "2..*" Entscheidungspunkt : gliedert sich in
+    Entscheidungspunkt "1" *-- "3" Handlungsoption : bietet an
+    Handlungsoption "1" *-- "1" Rückmeldung : trägt
+    Handlungsoption "1" --> "0..1" Entscheidungspunkt : führt zu
+    Szenario ..> Trainingsphase
+    Szenario ..> Groomingphase
+    Handlungsoption ..> Ampelstufe
+
+    Nutzerprofil "1" --> "*" Durchlauf : startet
+    Durchlauf "*" --> "1" Szenario : bearbeitet
+    Durchlauf "1" *-- "*" Entscheidung : protokolliert
+    Entscheidung "*" --> "1" Handlungsoption : wählt
+    Einschätzungsspiegel ..> Entscheidung : aggregiert
+    Durchlauf ..> Hilfsangebot : Notausstieg
+
+    Verein "1" *-- "1..*" Trainerteam : umfasst
+    Verein "1" *-- "1..*" Ansprechperson : benennt
+    Nutzerprofil "*" --> "1" Trainerteam : gehört zu
+    Rückmeldung --> "1..*" Ansprechperson : verweist auf

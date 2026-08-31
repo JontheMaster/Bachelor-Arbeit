@@ -1,0 +1,210 @@
+<svg id="model-svg" viewBox="0 0 1010 880" role="img" aria-label="Domänenmodell des Prototyps mit sechzehn Klassen in den drei Bereichen Inhalt, Nutzung und Vereinskontext">
+  <defs>
+    <marker id="arw" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1,1.5 L10,6 L1,10.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="dia" viewBox="0 0 14 10" refX="1" refY="5" markerWidth="11" markerHeight="8" orient="auto">
+      <path d="M1,5 L7,1.4 L13,5 L7,8.6 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <rect class="band" x="12"  y="48" width="176" height="650" rx="8"/>
+  <rect class="band" x="210" y="48" width="210" height="800" rx="8"/>
+  <rect class="band" x="480" y="48" width="210" height="756" rx="8"/>
+  <rect class="band" x="750" y="48" width="210" height="600" rx="8"/>
+
+  <text class="d-pkg" x="100" y="34" text-anchor="middle">TYPEN</text>
+  <text class="d-pkg" x="315" y="34" text-anchor="middle">INHALT · REDAKTIONELL GEPFLEGT</text>
+  <text class="d-pkg" x="585" y="34" text-anchor="middle">NUTZUNG · ENTSTEHT BEIM BEARBEITEN</text>
+  <text class="d-pkg" x="855" y="34" text-anchor="middle">VEREINSKONTEXT · KONFIGURIERBAR</text>
+
+  <line class="link" x1="315" y1="194" x2="315" y2="152" marker-end="url(#arw)"/>
+  <text class="d-mult" x="308" y="177" text-anchor="end">1..*</text>
+  <text class="d-edge" x="324" y="177">behandelt</text>
+
+  <line class="link" x1="315" y1="308" x2="315" y2="386" marker-start="url(#dia)"/>
+  <text class="d-mult" x="308" y="328" text-anchor="end">1</text>
+  <text class="d-mult" x="308" y="380" text-anchor="end">2..*</text>
+  <text class="d-edge" x="324" y="352">gliedert sich in</text>
+
+  <line class="link" x1="315" y1="482" x2="315" y2="554" marker-start="url(#dia)"/>
+  <text class="d-mult" x="308" y="502" text-anchor="end">1</text>
+  <text class="d-mult" x="308" y="548" text-anchor="end">3</text>
+  <text class="d-edge" x="324" y="524">bietet an</text>
+
+  <line class="link" x1="315" y1="632" x2="315" y2="722" marker-start="url(#dia)"/>
+  <text class="d-mult" x="308" y="652" text-anchor="end">1</text>
+  <text class="d-mult" x="308" y="716" text-anchor="end">1</text>
+  <text class="d-edge" x="324" y="684">trägt</text>
+
+  <polyline class="link" points="220,574 200,574 200,434 220,434" marker-end="url(#arw)"/>
+  <text class="d-edge" x="192" y="504" text-anchor="middle" transform="rotate(-90 192 504)">führt zu</text>
+  <text class="d-mult" x="228" y="426">0..1</text>
+
+  <line class="link dash" x1="220" y1="224" x2="180" y2="218" marker-end="url(#arw)"/>
+  <line class="link dash" x1="220" y1="284" x2="180" y2="350" marker-end="url(#arw)"/>
+  <line class="link dash" x1="220" y1="618" x2="180" y2="624" marker-end="url(#arw)"/>
+
+  <polyline class="link" points="490,394 450,394 450,274 410,274" marker-end="url(#arw)"/>
+  <text class="d-mult" x="482" y="386" text-anchor="end">*</text>
+  <text class="d-mult" x="418" y="266">1</text>
+  <text class="d-edge" x="442" y="334" text-anchor="middle" transform="rotate(-90 442 334)">bearbeitet</text>
+
+  <polyline class="link" points="490,549 450,549 450,600 410,600" marker-end="url(#arw)"/>
+  <text class="d-mult" x="482" y="541" text-anchor="end">*</text>
+  <text class="d-mult" x="418" y="592">1</text>
+  <text class="d-edge" x="442" y="576" text-anchor="middle" transform="rotate(-90 442 576)">wählt</text>
+
+  <line class="link" x1="585" y1="290" x2="585" y2="362" marker-end="url(#arw)"/>
+  <text class="d-mult" x="578" y="310" text-anchor="end">1</text>
+  <text class="d-mult" x="578" y="356" text-anchor="end">*</text>
+  <text class="d-edge" x="594" y="332">startet</text>
+
+  <line class="link" x1="585" y1="476" x2="585" y2="530" marker-start="url(#dia)"/>
+  <text class="d-mult" x="578" y="496" text-anchor="end">1</text>
+  <text class="d-mult" x="578" y="526" text-anchor="end">*</text>
+  <text class="d-edge" x="594" y="512">protokolliert</text>
+
+  <line class="link dash" x1="585" y1="674" x2="585" y2="608" marker-end="url(#arw)"/>
+  <text class="d-edge" x="594" y="646">aggregiert</text>
+
+  <line class="link" x1="855" y1="152" x2="855" y2="210" marker-start="url(#dia)"/>
+  <text class="d-mult" x="848" y="172" text-anchor="end">1</text>
+  <text class="d-mult" x="848" y="206" text-anchor="end">1..*</text>
+  <text class="d-edge" x="864" y="185">umfasst</text>
+
+  <polyline class="link" points="950,110 985,110 985,545 950,545" marker-start="url(#dia)"/>
+  <text class="d-edge" x="977" y="330" text-anchor="middle" transform="rotate(-90 977 330)">benennt</text>
+  <text class="d-mult" x="944" y="537" text-anchor="end">1..*</text>
+
+  <line class="link" x1="680" y1="248" x2="760" y2="248" marker-end="url(#arw)"/>
+  <text class="d-mult" x="688" y="240">*</text>
+  <text class="d-mult" x="752" y="240" text-anchor="end">1</text>
+  <text class="d-edge" x="720" y="266" text-anchor="middle">gehört zu</text>
+
+  <polyline class="link" points="410,800 720,800 720,590 760,590" marker-end="url(#arw)"/>
+  <text class="d-edge" x="712" y="694" text-anchor="middle" transform="rotate(-90 712 694)">verweist auf</text>
+  <text class="d-mult" x="754" y="582" text-anchor="end">1..*</text>
+
+  <line class="link dash" x1="680" y1="410" x2="760" y2="394" marker-end="url(#arw)"/>
+  <text class="d-edge" x="694" y="382">Notausstieg</text>
+
+  <rect class="box" x="220" y="74" width="190" height="78" rx="3"/>
+  <text class="d-cls" x="232" y="97">Themenfeld</text>
+  <line class="sep" x1="220" y1="110" x2="410" y2="110"/>
+  <text class="d-attr" x="232" y="128">bezeichnung</text>
+  <text class="d-attr" x="232" y="146">herkunft</text>
+
+  <rect class="box" x="220" y="194" width="190" height="114" rx="3"/>
+  <text class="d-cls" x="232" y="217">Szenario</text>
+  <line class="sep" x1="220" y1="230" x2="410" y2="230"/>
+  <text class="d-attr" x="232" y="248">titel</text>
+  <text class="d-attr" x="232" y="266">kurzbeschreibung</text>
+  <text class="d-attr" x="232" y="284">trainingsphase</text>
+  <text class="d-attr" x="232" y="302">groomingphase</text>
+
+  <rect class="box" x="220" y="386" width="190" height="96" rx="3"/>
+  <text class="d-cls" x="232" y="409">Entscheidungspunkt</text>
+  <line class="sep" x1="220" y1="422" x2="410" y2="422"/>
+  <text class="d-attr" x="232" y="440">reihenfolge</text>
+  <text class="d-attr" x="232" y="458">situationstext</text>
+  <text class="d-attr" x="232" y="476">leitfrage</text>
+
+  <rect class="box" x="220" y="554" width="190" height="78" rx="3"/>
+  <text class="d-cls" x="232" y="577">Handlungsoption</text>
+  <line class="sep" x1="220" y1="590" x2="410" y2="590"/>
+  <text class="d-attr" x="232" y="608">text</text>
+  <text class="d-attr" x="232" y="626">einschätzung</text>
+
+  <rect class="box" x="220" y="722" width="190" height="114" rx="3"/>
+  <text class="d-cls" x="232" y="745">Rückmeldung</text>
+  <line class="sep" x1="220" y1="758" x2="410" y2="758"/>
+  <text class="d-attr" x="232" y="776">erkennen</text>
+  <text class="d-attr" x="232" y="794">absichern</text>
+  <text class="d-attr" x="232" y="812">handeln</text>
+  <text class="d-attr" x="232" y="830">quelle</text>
+
+  <rect class="box" x="20" y="154" width="160" height="128" rx="3"/>
+  <text class="d-ster" x="32" y="172">&#171;enumeration&#187;</text>
+  <text class="d-cls" x="32" y="190">Groomingphase</text>
+  <line class="sep" x1="20" y1="200" x2="180" y2="200"/>
+  <text class="d-val" x="32" y="218">1 Auswahl</text>
+  <text class="d-val" x="32" y="236">2 Vertrauensaufbau</text>
+  <text class="d-val" x="32" y="254">3 Isolation</text>
+  <text class="d-val" x="32" y="272">4 Geheimhaltung</text>
+
+  <rect class="box" x="20" y="300" width="160" height="110" rx="3"/>
+  <text class="d-ster" x="32" y="318">&#171;enumeration&#187;</text>
+  <text class="d-cls" x="32" y="336">Trainingsphase</text>
+  <line class="sep" x1="20" y1="346" x2="180" y2="346"/>
+  <text class="d-val" x="32" y="364">vor dem Training</text>
+  <text class="d-val" x="32" y="382">im Training</text>
+  <text class="d-val" x="32" y="400">nach dem Training</text>
+
+  <rect class="box" x="20" y="574" width="160" height="110" rx="3"/>
+  <text class="d-ster" x="32" y="592">&#171;enumeration&#187;</text>
+  <text class="d-cls" x="32" y="610">Ampelstufe</text>
+  <line class="sep" x1="20" y1="620" x2="180" y2="620"/>
+  <circle cx="36" cy="634" r="4" fill="var(--ok)"/>
+  <text class="d-val" x="46" y="638">unbedenklich</text>
+  <circle cx="36" cy="652" r="4" fill="var(--warn)"/>
+  <text class="d-val" x="46" y="656">klärungsbedürftig</text>
+  <circle cx="36" cy="670" r="4" fill="var(--crit)"/>
+  <text class="d-val" x="46" y="674">grenzverletzend</text>
+
+  <rect class="box" x="490" y="194" width="190" height="96" rx="3"/>
+  <text class="d-cls" x="502" y="217">Nutzerprofil</text>
+  <line class="sep" x1="490" y1="230" x2="680" y2="230"/>
+  <text class="d-attr" x="502" y="248">pseudonym</text>
+  <text class="d-attr" x="502" y="266">rolle</text>
+  <text class="d-attr" x="502" y="284">sparte</text>
+
+  <rect class="box" x="490" y="362" width="190" height="114" rx="3"/>
+  <text class="d-cls" x="502" y="385">Durchlauf</text>
+  <line class="sep" x1="490" y1="398" x2="680" y2="398"/>
+  <text class="d-attr" x="502" y="416">begonnenAm</text>
+  <text class="d-attr" x="502" y="434">status</text>
+  <text class="d-attr" x="502" y="452">fortschritt</text>
+  <text class="d-attr" x="502" y="470">abgeschlossenAm</text>
+
+  <rect class="box" x="490" y="530" width="190" height="78" rx="3"/>
+  <text class="d-cls" x="502" y="553">Entscheidung</text>
+  <line class="sep" x1="490" y1="566" x2="680" y2="566"/>
+  <text class="d-attr" x="502" y="584">zeitpunkt</text>
+  <text class="d-attr" x="502" y="602">reihenfolge</text>
+
+  <rect class="box" x="490" y="674" width="190" height="110" rx="3"/>
+  <text class="d-ster" x="502" y="692">&#171;berechnet&#187;</text>
+  <text class="d-cls" x="502" y="710">Einschätzungsspiegel</text>
+  <line class="sep" x1="490" y1="720" x2="680" y2="720"/>
+  <text class="d-attr" x="502" y="738">bezugspunkt</text>
+  <text class="d-attr" x="502" y="756">bezugsgruppe</text>
+  <text class="d-attr" x="502" y="774">anteilProOption</text>
+
+  <rect class="box" x="760" y="74" width="190" height="78" rx="3"/>
+  <text class="d-cls" x="772" y="97">Verein</text>
+  <line class="sep" x1="760" y1="110" x2="950" y2="110"/>
+  <text class="d-attr" x="772" y="128">name</text>
+  <text class="d-attr" x="772" y="146">sparten</text>
+
+  <rect class="box" x="760" y="210" width="190" height="78" rx="3"/>
+  <text class="d-cls" x="772" y="233">Trainerteam</text>
+  <line class="sep" x1="760" y1="246" x2="950" y2="246"/>
+  <text class="d-attr" x="772" y="264">bezeichnung</text>
+  <text class="d-attr" x="772" y="282">altersklasse</text>
+
+  <rect class="box" x="760" y="346" width="190" height="96" rx="3"/>
+  <text class="d-cls" x="772" y="369">Hilfsangebot</text>
+  <line class="sep" x1="760" y1="382" x2="950" y2="382"/>
+  <text class="d-attr" x="772" y="400">bezeichnung</text>
+  <text class="d-attr" x="772" y="418">kontakt</text>
+  <text class="d-attr" x="772" y="436">überregional</text>
+
+  <rect class="box" x="760" y="514" width="190" height="114" rx="3"/>
+  <text class="d-cls" x="772" y="537">Ansprechperson</text>
+  <line class="sep" x1="760" y1="550" x2="950" y2="550"/>
+  <text class="d-attr" x="772" y="568">name</text>
+  <text class="d-attr" x="772" y="586">funktion</text>
+  <text class="d-attr" x="772" y="604">kontaktweg</text>
+  <text class="d-attr" x="772" y="622">eskalationsebene</text>
+</svg>

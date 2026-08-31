@@ -1,0 +1,656 @@
+<div class="shell">
+
+<header class="masthead">
+  <p class="eyebrow">
+    <span>Projektakte</span><span class="dot">/</span>
+    <span>Bachelor-Thesis DHfPG</span><span class="dot">/</span>
+    <span>Stand 27.08.2026</span>
+  </p>
+  <h1>Ein Prototyp gegen Handlungsunsicherheit im Trainingsalltag</h1>
+  <p class="subtitle">
+    Konzeptionelle Entwicklung eines Prototyps zur Unterstützung bei der Implementierung von
+    Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein Post SV Nürnberg.
+    <strong>Kapitel 1 bis 4 sind inhaltlich abgeschlossen</strong>, die Anforderungsspezifikation steht.
+    Diese Seite ist die Arbeitsakte dazu: Argumentationskette, Stand, offene Punkte, Konzept.
+  </p>
+
+  <dl class="strip">
+    <div><dt>Kapitel fertig</dt><dd>4<small>von 7, plus Verzeichnisse und Anhang</small></dd></div>
+    <div><dt>Anforderungen</dt><dd>25<small>14 funktional, 11 nichtfunktional</small></dd></div>
+    <div><dt>Davon Muss</dt><dd>17<small>9 funktional, 8 nichtfunktional</small></dd></div>
+    <div><dt>Sofort zu klären</dt><dd>4<small>Folgefehler der Kapitel-4-Überarbeitung</small></dd></div>
+    <div><dt>Belege offen</dt><dd>8<small>plus 6 Jahreszahlen-Platzhalter</small></dd></div>
+  </dl>
+</header>
+
+<nav class="rail" aria-label="Inhalt">
+  <ol>
+    <li><a href="#steckbrief"><span>01</span>Steckbrief</a></li>
+    <li><a href="#kette"><span>02</span>Argumentationskette</a></li>
+    <li><a href="#stand"><span>03</span>Kapitelstand</a></li>
+    <li><a href="#offen"><span>04</span>Offene Punkte</a></li>
+    <li><a href="#angebote"><span>05</span>Bestehende Angebote</a></li>
+    <li><a href="#konzept"><span>06</span>Das Konzept</a></li>
+    <li><a href="#anforderungen"><span>07</span>Anforderungen</a></li>
+    <li><a href="#konflikte"><span>08</span>Zielkonflikte</a></li>
+    <li><a href="#basis"><span>09</span>Empirische Basis</a></li>
+    <li><a href="#quellen"><span>10</span>Quellenlage</a></li>
+    <li><a href="#modell"><span>11</span>Domänenmodell</a></li>
+    <li><a href="#konventionen"><span>12</span>Konventionen</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="steckbrief" style="padding-top:0;">
+  <div class="sec-head">
+    <span class="sec-num">01 — Steckbrief</span>
+    <h2>Worum es geht</h2>
+  </div>
+  <div class="scroller">
+    <table>
+      <tbody>
+        <tr><td class="id">Titel</td><td>Konzeptionelle Entwicklung eines Prototyps zur Unterstützung bei der Implementierung von Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein Post SV Nürnberg</td></tr>
+        <tr><td class="id">Forschungsfrage</td><td>Wie kann ein digitales Tool Sportvereine konkret dabei unterstützen, präventiv gegen sexualisierte Gewalt vorzugehen?</td></tr>
+        <tr><td class="id">Zielgruppe</td><td>Erwachsene, ehrenamtliche Trainerinnen und Trainer. Kinderschutz-Ansprechpersonen als Sekundärnutzende.</td></tr>
+        <tr><td class="id">Ergebnisart</td><td>Ein Konzept für einen Prototyp, ausdrücklich keine programmierte Anwendung.</td></tr>
+        <tr><td class="id">Verortung</td><td>Präventionsebene im Vier-Ebenen-Modell (Wolff, 2015, zit. n. Rulofs, 2024, S. 132–133). Intervention und Aufarbeitung liegen außerhalb.</td></tr>
+        <tr><td class="id">Hochschule</td><td>DHfPG Saarbrücken · Sport- und Gesundheitsinformatik · Matrikelnummer 350579</td></tr>
+        <tr><td class="id">Betreuung</td><td>Timo Engler (DHfPG) · Jamie Killinger (Ausbildungsbetrieb)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="kette">
+  <div class="sec-head">
+    <span class="sec-num">02 — Argumentationskette</span>
+    <h2>Die Kette, an der alles hängt</h2>
+    <p class="lede">Sieben Schritte vom empirischen Befund zum Gestaltungsvorschlag. Wenn eine Entscheidung im Konzept begründet werden muss, führt der Weg hierher zurück. Die Reihenfolge ist Argument, nicht Aufzählung: Jeder Schritt setzt den vorigen voraus.</p>
+  </div>
+
+
+  <div class="figwrap">
+    <figure>
+      <div class="scroll">
+<svg id="chain-svg" viewBox="0 0 1010 366" role="img" aria-label="Befundlage und Vereinspraxis führen zum Kernproblem der Mehrdeutigkeit, daraus folgt die Angebotslücke und daraus der Prototyp">
+  <defs>
+    <marker id="ca" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1,1.5 L10,6 L1,10.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <polyline class="link" points="216,99 246,99 246,155 286,155" marker-end="url(#ca)"/>
+  <polyline class="link" points="216,267 246,267 246,211 286,211" marker-end="url(#ca)"/>
+  <line class="link" x1="482" y1="183" x2="552" y2="183" marker-end="url(#ca)"/>
+  <line class="link" x1="738" y1="183" x2="808" y2="183" marker-end="url(#ca)"/>
+
+  <rect class="box" x="16" y="28" width="200" height="142" rx="4"/>
+  <text class="c-eye" x="32" y="52">BEFUNDLAGE</text>
+  <text class="c-ttl" x="32" y="74">Es sind die Erwachsenen</text>
+  <text class="c-txt" x="32" y="96">91 % der Täter sind erwachsene</text>
+  <text class="c-txt" x="32" y="113">Betreuungspersonen. Nur rund</text>
+  <text class="c-txt" x="32" y="130">10 % der Vereine haben eine</text>
+  <text class="c-txt" x="32" y="147">Ansprechperson.</text>
+  <text class="c-src" x="32" y="164">Ohlert 2018 · Rulofs 2024</text>
+
+  <rect class="box" x="16" y="196" width="200" height="142" rx="4"/>
+  <text class="c-eye" x="32" y="220">VEREINSPRAXIS</text>
+  <text class="c-ttl" x="32" y="242">Verankerung fehlt</text>
+  <text class="c-txt" x="32" y="264">Das Schutzkonzept liegt vor. Bei</text>
+  <text class="c-txt" x="32" y="281">den Trainern wirkt es nicht:</text>
+  <text class="c-txt" x="32" y="298">Abwehr aus Unwissenheit, Sorge</text>
+  <text class="c-txt" x="32" y="315">vor Beschuldigung, keine Zeit.</text>
+  <text class="c-src" x="32" y="332">Interview K · Interview T</text>
+
+  <rect class="box2" x="286" y="112" width="196" height="142" rx="4"/>
+  <text class="c-eye" x="302" y="136">KERNPROBLEM</text>
+  <text class="c-ttl" x="302" y="158">Mehrdeutigkeit</text>
+  <text class="c-txt" x="302" y="180">Dieselbe Berührung ist je nach</text>
+  <text class="c-txt" x="302" y="197">Kontext harmlos oder Grooming-</text>
+  <text class="c-txt" x="302" y="214">Beginn. Gebraucht wird Ein-</text>
+  <text class="c-txt" x="302" y="231">ordnung, kein Faktenwissen.</text>
+  <text class="c-src" x="302" y="248">Brackenridge &amp; Fasting 2005</text>
+
+  <rect class="box" x="552" y="112" width="186" height="142" rx="4"/>
+  <text class="c-eye" x="568" y="136">LÜCKE</text>
+  <text class="c-ttl" x="568" y="158">Kein Format passt</text>
+  <text class="c-txt" x="568" y="180">Uuugh nimmt die Täterper-</text>
+  <text class="c-txt" x="568" y="197">spektive, die 3D-Simulation</text>
+  <text class="c-txt" x="568" y="214">braucht einen Gruppentermin,</text>
+  <text class="c-txt" x="568" y="231">Safe Clubs spielt nicht.</text>
+  <text class="c-src" x="568" y="248">Kapitel 3.5</text>
+
+  <rect class="box2" x="808" y="112" width="186" height="142" rx="4"/>
+  <text class="c-eye" x="824" y="136">ANTWORT</text>
+  <text class="c-ttl" x="824" y="158">Der Prototyp</text>
+  <text class="c-txt" x="824" y="180">Szenariobasiert, freiwillig,</text>
+  <text class="c-txt" x="824" y="197">im eigenen Tempo. Selbst-</text>
+  <text class="c-txt" x="824" y="214">reflexion und Abgleich im</text>
+  <text class="c-txt" x="824" y="231">Trainerteam.</text>
+  <text class="c-src" x="824" y="248">Kapitel 2</text>
+</svg>
+      </div>
+      <figcaption>Forschungsstand und Vereinspraxis laufen auf dasselbe Kernproblem zu. Erst daraus wird die Angebotslücke zur Begründung des Prototyps.</figcaption>
+    </figure>
+  </div>
+
+  <ol class="chain">
+    <li><b>01</b><div>
+      <p><strong>Das Problem sitzt bei den Erwachsenen.</strong> 91 % der Täterinnen und Täter sind erwachsene Betreuungspersonen. Weder Sportart noch Leistungsniveau erklären, wer betroffen ist, nur Geschlecht und sexuelle Orientierung. Das Risiko hängt an Kultur und Beziehungsgestaltung.</p>
+      <cite>Ohlert et al., 2018</cite>
+    </div></li>
+    <li><b>02</b><div>
+      <p><strong>Vereine sind strukturell schwach aufgestellt.</strong> Rund ein Zehntel hat Ansprechpersonen oder Schulungen, 31 % einen Ehrenkodex. Ehrenamtlichkeit und Semi-Professionalität unterscheiden den Sportverein von Schule und Kita.</p>
+      <cite>Rulofs, 2024, S. 136–141</cite>
+    </div></li>
+    <li><b>03</b><div>
+      <p><strong>Beim Post SV fehlt nicht das Konzept, sondern seine Verankerung.</strong> Ein Schutzkonzept liegt vor, entstand aber ohne Beteiligung der Trainerschaft und stößt genau deshalb auf Widerstand.</p>
+      <cite>Interview K, Interview T</cite>
+    </div></li>
+    <li><b>04</b><div>
+      <p><strong>Das eigentliche Problem ist Mehrdeutigkeit, nicht fehlendes Wissen.</strong> Dieselbe Handlung kann harmlos oder Grooming-Beginn sein, und genau diese Mehrdeutigkeit nutzen Täter, um Reaktionen gefahrlos zu testen. Ein Lerninstrument muss Einordnungsfähigkeit aufbauen.</p>
+      <cite>Brackenridge &amp; Fasting, 2005</cite>
+    </div></li>
+    <li><b>05</b><div>
+      <p><strong>Der Bedarf lautet Selbstbewusstsein, nicht Belehrung.</strong> Man müsste Trainerinnen und Trainern „das Selbstbewusstsein geben, dass sie sich in einem bestimmten Rahmen bewegen können, ohne etwas falsch zu machen“.</p>
+      <cite>Interview K</cite>
+    </div></li>
+    <li><b>06</b><div>
+      <p><strong>Die Lücke im Angebot.</strong> Kein Format für erwachsene Trainerinnen und Trainer in ihrer Aufsichtsrolle, individuell und zeitlich flexibel nutzbar. Uuugh adressiert Betroffene und Beobachtende, die Schirrmacher-Simulation braucht eine moderierte Gruppe, Safe Clubs verzichtet auf den spielerischen Zugang.</p>
+      <cite>Kapitel 3.5.4</cite>
+    </div></li>
+    <li><b>07</b><div>
+      <p><strong>Daraus folgt der Prototyp.</strong> Szenariobasiert, freiwillig, im eigenen Tempo, mit Selbstreflexion und Abgleich im Trainerteam als den beiden Kernzielen.</p>
+      <cite>Kapitel 2, Kapitel 4.4</cite>
+    </div></li>
+  </ol>
+</section>
+
+<section id="stand">
+  <div class="sec-head">
+    <span class="sec-num">03 — Kapitelstand</span>
+    <h2>Wo die Arbeit steht</h2>
+    <p class="lede">Kapitel 4 ist zwischen dem 25. und 27. August von der Rohfassung zur vollständigen Ausarbeitung gewachsen. Damit ist der gesamte Vorlauf zu Kapitel 5 abgeschlossen.</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Kapitel</th><th>Stand</th><th>Was noch fehlt</th></tr></thead>
+      <tbody>
+        <tr><td class="id">1</td><td><span class="pill ok">fertig</span> Einleitung und Problemstellung</td><td class="src">Belegstellen zu SicherImSport und Ohlert, Kommentare c5–c8</td></tr>
+        <tr><td class="id">2</td><td><span class="pill ok">fertig</span> Zielsetzung</td><td class="src">Kommentare c13, c14 zum Vier-Ebenen-Modell</td></tr>
+        <tr><td class="id">3</td><td><span class="pill ok">fertig</span> Gegenwärtiger Kenntnisstand</td><td class="src">Korrektur zu Sailer &amp; Homner in 3.4, Stichprobenangabe in 3.5.1</td></tr>
+        <tr><td class="id">4</td><td><span class="pill ok">fertig</span> Methodik, alle sechs Unterkapitel</td><td class="src">Toter Verweis auf 4.4.9, zwei fehlende Anforderungen</td></tr>
+        <tr><td class="id">5</td><td><span class="pill warn">offen</span> Ergebnisse</td><td class="src">Gliederung steht, Zuordnung zu Anforderungen unten</td></tr>
+        <tr><td class="id">6</td><td><span class="pill warn">offen</span> Diskussion</td><td class="src">Material gesammelt, vier Grenzen bereits formuliert</td></tr>
+        <tr><td class="id">7</td><td><span class="pill warn">offen</span> Zusammenfassung</td><td class="src">—</td></tr>
+        <tr><td class="id">8</td><td><span class="pill warn">offen</span> Literaturverzeichnis</td><td class="src">Zielumfang 50 bis 75 Quellen</td></tr>
+        <tr><td class="id">9</td><td><span class="pill crit">veraltet</span> Verzeichnisse</td><td class="src">Tabellenverzeichnis führt sechs statt sieben Tabellen</td></tr>
+        <tr><td class="id">A</td><td><span class="pill ok">4 bis 7 fertig</span> Anhang</td><td class="src">Anhang 1 entscheiden, 2 und 3 einfügen, 8 offen</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Kapitel 4 im Detail</h3>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Unterkapitel</th><th>Stand</th><th>Artefakt</th></tr></thead>
+      <tbody>
+        <tr><td class="id">4.1</td><td>Methodisches Vorgehen im Überblick</td><td class="src">Tab. 2 — Design-Thinking-Praktiken</td></tr>
+        <tr><td class="id">4.2</td><td>Stakeholderanalyse</td><td class="src">Tab. 3 — sieben Rollen, drei davon kritisch</td></tr>
+        <tr><td class="id">4.3</td><td>Personas und Nutzungsszenario</td><td class="src">Anhang 4, 5, 6 — Thomas (46), Lena (22), Szenario zu A</td></tr>
+        <tr><td class="id">4.4</td><td>Gestaltungsansatz und Grundfunktionen</td><td class="src">Tab. 4, Unterkapitel 4.4.1 bis 4.4.8</td></tr>
+        <tr><td class="id">4.5</td><td>Use Cases und User Storys</td><td class="src">Tab. 5 — US1 bis US8; Anhang 7 — Use Case</td></tr>
+        <tr><td class="id">4.6</td><td>Anforderungen und Priorisierung</td><td class="src">Tab. 6 und Tab. 7, drei Zielkonflikte</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Was Kapitel 5 aus Kapitel 4 übernimmt</h3>
+  <p class="lede">Kapitel 4 endet mit der priorisierten Spezifikation, Kapitel 5 setzt sie um. Jedes Element in Kapitel 5 sollte sich auf eine Anforderungsnummer zurückführen lassen. Das ist die einfachste Verteidigungslinie im Kolloquium.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Unterkapitel</th><th>Deckt ab</th></tr></thead>
+      <tbody>
+        <tr><td class="id">5.1 Überblick</td><td class="src">F01, F13</td></tr>
+        <tr><td class="id">5.2 Ablauf</td><td class="src">F02, F03, F04, F08, F10 — Use Case aus Anhang 7 als Vorlage, Notation über Glinz et al. Kap. 3.4.4.1</td></tr>
+        <tr><td class="id">5.3 Domänenmodell</td><td class="src">F01 bis F08, F11, F12, F14, NF11</td></tr>
+        <tr><td class="id">5.4 Szenarien</td><td class="src">F02, F05, NF05, NF07</td></tr>
+        <tr><td class="id">5.5 Wireframes</td><td class="src">F04, F05, F06, F12, NF06</td></tr>
+        <tr><td class="id">5.6 Einbindung</td><td class="src">F06, F14, NF09, NF10</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="offen">
+  <div class="sec-head">
+    <span class="sec-num">04 — Offene Punkte</span>
+    <h2>Was als Nächstes ansteht</h2>
+    <p class="lede">Sortiert nach Dringlichkeit. Die ersten vier sind Folgefehler der Kapitel-4-Überarbeitung: schnell zu beheben, fallen bei der Korrektur aber sofort auf.</p>
+  </div>
+
+  <h3>Sofort — Folgen der Überarbeitung</h3>
+  <ul class="items">
+    <li class="crit">
+      <div class="top"><b>Toter Verweis auf Kapitel 4.4.9</b><span class="pill crit">Widerspruch</span></div>
+      <p>Kapitel 4.6 begründet den Wegfall der MoSCoW-Stufe „Won’t have this time“ damit, dass zurückgestellte Festlegungen „bereits in Kapitel 4.4.9 als bewusste Auslassungen geführt werden“. Ein Kapitel 4.4.9 gibt es in der aktuellen Fassung nicht mehr.</p>
+      <p class="fix"><b>Empfehlung:</b> 4.4.9 wieder aufnehmen. Der Inhalt liegt vor — keine Punkte, Bestenlisten oder Levelsysteme; keine Zeitdruckmechanik; keine Täterperspektive; keine realen Vorfälle aus dem Verein. Besonders die Abgrenzung zur Täterperspektive ist nach Kapitel 3.5.1 ein eigenständiges Argument und geht in einer Anforderungszeile unter.</p>
+    </li>
+    <li class="crit">
+      <div class="top"><b>Tabellenverzeichnis auf sieben Tabellen anpassen</b><span class="pill crit">Formfehler</span></div>
+      <p>Tab. 5 (User Storys) fehlt im Verzeichnis ganz. Dadurch sind alle Einträge danach um eine Nummer verschoben: Das Verzeichnis führt die funktionalen Anforderungen als Tab. 5 und die nichtfunktionalen als Tab. 6, im Text sind es Tab. 6 und Tab. 7.</p>
+      <p class="fix"><b>Sollstand:</b> Tab. 1 Grooming-Strategien (3.5.1) · Tab. 2 Design-Thinking-Praktiken (4.1) · Tab. 3 Stakeholder (4.2) · Tab. 4 Gestaltungsgrundlagen (4.4.2) · Tab. 5 User Storys (4.5) · Tab. 6 funktionale Anforderungen (4.6) · Tab. 7 nichtfunktionale Anforderungen (4.6).</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>Notiz zu Kapitel 5.3 ist veraltet</b><span class="pill warn">Arbeitsstand</span></div>
+      <p>Die Arbeitsnotiz zum Domänenmodell nennt die Rückmeldungskategorien noch „Detektion / Schutz / Aktion“ und verweist auf „F01, F02, F03, F04, F10 und F11“. Die Kategorien heißen seit Kapitel 4.4.5 <b>Erkennen, Absichern, Handeln</b>, und die Anforderungsnummern haben sich mit Tab. 6 verschoben.</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>Zitierform bei NF11</b><span class="pill warn">Kosmetik</span></div>
+      <p>Dort steht „Glinz et al. ([Jahr], S. 85)“ mit Klammern innerhalb der Quellenspalte. Alle anderen Zeilen der beiden Tabellen kommen ohne aus.</p>
+    </li>
+  </ul>
+
+  <h3>Inhaltlich — ein offener Widerspruch in Kapitel 3</h3>
+  <ul class="items">
+    <li class="crit">
+      <div class="top"><b>Kapitel 3.4 widerspricht Kapitel 4.4.2</b><span class="pill crit">Priorität</span></div>
+      <p>Kapitel 3.4 behauptet weiterhin, Wettbewerb mit Kooperation habe „sowohl bei motivationalen als auch bei verhaltensbezogenen Lernergebnissen besser abgeschnitten als solche, die allein auf Wettbewerb setzten“. Am Original geprüft stimmt das nicht: kognitiv Q(3) = 0,80, p = ,85 nicht signifikant; motivational Q(3) = 3,85, p = ,28 nicht signifikant; signifikant war nur verhaltensbezogen, Q(2) = 12,80, p &lt; ,01. Der Post-hoc-Kontrast lief zwischen kompetitiv-kollaborativ und <b>keiner sozialen Interaktion</b>, nicht gegen reinen Wettbewerb.</p>
+      <p class="fix"><b>Warum das dringt:</b> Tab. 4 in Kapitel 4.4.2 ist bereits korrekt formuliert. Das ist die einzige Stelle in der Arbeit, an der sich zwei Kapitel offen widersprechen.</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>Uuugh-Stichprobe in 3.5.1</b><span class="pill warn">Genauigkeit</span></div>
+      <p>„39 Jugendlichen und vier Jugendleiterinnen und Jugendleitern“ ist ungenau — die Teilnehmenden waren 15 bis 37 Jahre alt (Ø 21,5), die vier Jugendleitenden 24 bis 45. Zwei Absätze später steht bereits, dass die Stichprobe auch erwachsene Teilnehmende umfasste. Besser: „39 Jugendlichen und jungen Erwachsenen“.</p>
+    </li>
+  </ul>
+
+  <h3>Lücken in der Anforderungsspezifikation</h3>
+  <p class="lede">Zwei Befunde stehen in Tab. 4 als Gestaltungsentscheidung, sind aber in Tab. 6 nicht als Anforderung angekommen.</p>
+  <ul class="items">
+    <li class="warn">
+      <div class="top"><b>Elternkommunikation als eigener Situationstyp</b><span class="pill warn">fehlt in Tab. 6</span></div>
+      <p>Belegt über Götzl et al. (2025, S. 277, 280). Das ist der einzige Befund im gesamten Quellenstapel, der in keinem der drei untersuchten Bestandsangebote vorkommt — also der originellste Punkt des Konzepts. In Tab. 6 taucht er nicht auf, weil F01 und F02 nur allgemein von Themenfeldern sprechen.</p>
+      <p class="fix"><b>Empfehlung:</b> eigene Zeile in Tab. 6, Priorität Soll, Quelle Götzl et al. (2025).</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>Abdeckung der frühen, mehrdeutigen Grooming-Phase</b><span class="pill warn">fehlt in Tab. 6</span></div>
+      <p>Kapitel 3.5.1 zeigt, dass Uuugh genau die erste Modellphase auslässt. Das ist das Alleinstellungsmerkmal, das die Lückenanalyse in 3.5.4 trägt. Kein F-Eintrag verlangt bislang, dass die Szenarien diese Phase abdecken.</p>
+      <p class="fix"><b>Empfehlung:</b> eigene Zeile in Tab. 6, Priorität Muss, Quelle Kapitel 3.1.3 und 3.5.1.</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>F05 hat keine User Story</b><span class="pill warn">Lücke</span></div>
+      <p>Der Text nach Tab. 7 sagt, alle acht User Storys seien in den Anforderungen vertreten — das stimmt. Umgekehrt fehlt zur zentralen Grundfunktion 2 eine User Story, obwohl das Nutzungsszenario in Anhang 6 genau diesen Moment als den beruhigendsten beschreibt.</p>
+      <p class="fix"><b>Vorschlag US9:</b> „Als Trainer möchte ich am Ende sehen, was an der Situation unbedenklich war und was nicht, damit ich einschätzen lerne, statt mir alles zu verbieten.“</p>
+    </li>
+  </ul>
+
+  <h3>Mit Timo Engler klären</h3>
+  <ul class="plain">
+    <li><strong>Schnitt Kapitel 4 / 5.</strong> Kapitel 4 endet mit der Spezifikation und enthält mit Tab. 3 bis Tab. 7 fünf Artefakte. Strengere Variante wäre: Kapitel 4 rein Vorgehen, alle Artefakte nach Kapitel 5. Vor dem Schreiben von Kapitel 5 klären.</li>
+    <li><strong>Interviewleitfaden im Anhang.</strong> Seit die Erhebungsmethodik entfällt, optional geworden. Anhang 8 ist ebenfalls noch mit „X“ belegt.</li>
+    <li><strong>Umfang von Kapitel 4.4.</strong> Neun Unterkapitel unter 4.4 gegenüber sieben im gesamten Kapitel 3. Rückfallebene wäre die Zusammenfassung von 4.4.3 bis 4.4.8 mit fett gesetzten Zwischenüberschriften.</li>
+  </ul>
+
+  <h3>Datenschutz — vor Abgabe</h3>
+  <ul class="items">
+    <li class="crit">
+      <div class="top"><b>Transkripte anonymisieren</b><span class="pill crit">vor Abgabe</span></div>
+      <p>Im Text steht „Interview K“ und „Interview T“, die Dateien tragen noch Vornamen. Datenschutz und Anonymität sind in den DHfPG-Richtlinien ausdrücklich gefordert. In den Quellennotizen tauchten drei verschiedene Namensangaben für den Kinderschutzbeauftragten auf — keiner davon darf in Arbeit oder Anhang gelangen.</p>
+      <p class="fix"><b>Zusätzlich prüfen:</b> Die Angabe „Datenschutzbeauftragter seit 2018, Compliance-Ombudsmann seit 2022/23“ in Kapitel 3.2 macht die Person in einem Verein dieser Größe identifizierbar, auch ohne Namen.</p>
+    </li>
+  </ul>
+</section>
+
+<section id="angebote">
+  <div class="sec-head">
+    <span class="sec-num">05 — Bestehende Angebote</span>
+    <h2>Drei Angebote, drei andere Ausschnitte</h2>
+    <p class="lede">Aus Kapitel 3.5. Jedes der drei belegt, dass digitale und spielerische Zugänge im Vereinssport funktionieren — und jedes deckt einen anderen Ausschnitt ab als den, um den es hier geht.</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Angebot</th><th>Zielgruppe und Format</th><th>Was übernommen wird</th><th>Warum es die Lücke nicht schließt</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="id">Uuugh</td>
+          <td>Vereinsmitglieder als Betroffene oder Beobachtende. 2D-Top-Down, kostenfrei, ab 12</td>
+          <td>Eulenkodex, Phasenstruktur, Notausgang, Fabelwesen zur Distanzierung</td>
+          <td class="src">Täterperspektive statt Aufsichtsrolle. Sechs der acht Strategien liegen in Phase 3 und 4, die mehrdeutige Phase 1 fehlt</td>
+        </tr>
+        <tr>
+          <td class="id">3D-Simulation</td>
+          <td>u. a. Trainerinnen und Trainer. 4 bis 24 Personen, halber bis ganzer Tag, kommerziell</td>
+          <td>Skala grün bis rot, Timing als Lernziel, drei Kontaktebenen, kooperative Aktionsphase</td>
+          <td class="src">Moderierte Gruppensitzung, Mindestteilnehmerzahl, Lizenz. Keine veröffentlichte Evaluation</td>
+        </tr>
+        <tr>
+          <td class="id">Safe Clubs</td>
+          <td>Vereinsverantwortliche und Ansprechpersonen. Analysetool, Workshops, Interventionsschulung</td>
+          <td>Die acht Themenblöcke der Risikoanalyse decken sich mit den Situationen aus Interview K</td>
+          <td class="src">Wissensvermittlung und Präsenzformate, kein spielerischer Zugang, keine Wirksamkeitsdaten</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Die Lücke</span>
+    <p>Ein niedrigschwelliges, individuell und zeitlich flexibel nutzbares Instrument, das erwachsene Trainerinnen und Trainer in ihrer Aufsichts- und Verantwortungsrolle beim Einschätzen mehrdeutiger Alltagssituationen unterstützt. Nach aktuellem Kenntnisstand nicht dokumentiert.</p>
+  </div>
+</section>
+
+<section id="konzept">
+  <div class="sec-head">
+    <span class="sec-num">06 — Das Konzept</span>
+    <h2>Was der Prototyp ist und was er nicht ist</h2>
+    <p class="lede">Szenariobasiertes digitales Lernformat mit Elementen des Serious-Game-Designs. Tolks’ Kriterien 1, 2 und 4 sind erfüllt, Kriterium 3 — die Unterordnung des Inhalts unter den Unterhaltungsfaktor — bewusst nicht. Lernziel ist Handlungssicherheit im Umgang mit mehrdeutigen Situationen, nicht Faktenwissen.</p>
+  </div>
+
+  <h3>Fünf Gestaltungsprinzipien</h3>
+  <div class="cards">
+    <article><span class="num">Prinzip 1</span><h4>Blending statt Belohnung</h4><p>Die Bewältigung der Szenarien ist selbst die geübte Kompetenz, nicht die Belohnung dafür. Ein vorgeschalteter Wissenstest würde trennen, was hier zusammengehört.</p></article>
+    <article><span class="num">Prinzip 2</span><h4>Drei Motive getrennt halten</h4><p>Spielen, Lernen und Anleiten verfolgen je ein eigenes Motiv und können kollidieren. Weil im Ehrenamt keine anleitende Person vorausgesetzt werden kann, muss die Instruktion im Prototyp selbst liegen.</p></article>
+    <article><span class="num">Prinzip 3</span><h4>Kompetenz, Autonomie, Eingebundenheit</h4><p>Autonomie über freie Szenarienwahl und eigenes Tempo, Kompetenzerleben über die fachliche Rückmeldung und eine Fortschrittsübersicht statt Punkte, soziale Eingebundenheit über den Abgleich im Team.</p></article>
+    <article><span class="num">Prinzip 4</span><h4>Komplexität bleibt beim Designer</h4><p>Die zugrunde liegenden Modelle tauchen in der Anwendung nicht auf. Carvalho et al. berichten für ihr eigenes Modell schlechtere Bedienbarkeit bei Personen ohne Vorerfahrung; Uuugh-Testende scheiterten an der Textlast.</p></article>
+    <article><span class="num">Prinzip 5</span><h4>Fiktion statt realer Fälle</h4><p>Erfundene, aber realitätsnahe Situationen. Die fiktionale Rahmung ermöglicht die Auseinandersetzung, ohne dass persönliche Erfahrungen offengelegt werden müssen.</p></article>
+  </div>
+
+  <h3>Sechs Grundfunktionen</h3>
+  <div class="cards">
+    <article><span class="num">4.4.3 — GF 1</span><h4>Szenariobasierte Entscheidungssituationen</h4><p>Ausgangslage, dann Entscheidungspunkte mit einer Leitfrage und genau drei Handlungsoptionen, von denen keine offensichtlich falsch ist. Interaktion auf der narrativen Ebene, nicht auf der Ebene einzelner Ein- und Ausgaben.</p></article>
+    <article><span class="num">4.4.4 — GF 2</span><h4>Abgestufte Einschätzung</h4><p>Eingeordnet wird die <b>Situation</b>, nicht die eigene Entscheidung. Für jede durchlaufene Situation listet der Prototyp auf, welche Merkmale wie zu lesen waren — einschließlich solcher, die gar nicht eingetreten sind, aber die Kippschwelle markieren.</p></article>
+    <article><span class="num">4.4.5 — GF 3</span><h4>Dreiteilige Rückmeldung</h4><p>Erkennen, Absichern, Handeln. Umdeutung des Eulenkodex, weil „Schutz“ bei Trainerinnen und Trainern Transparenz im eigenen Handeln meint und nicht Selbstschutz vor einem Übergriff. Erscheint erst auf Anforderung.</p></article>
+    <article><span class="num">4.4.6 — GF 4</span><h4>Verzweigung und Wiederholbarkeit</h4><p>Der Fortgang ist festgelegt und hängt nicht von der gewählten Option ab. Kein Abbruch. Grooming endet ebenfalls nicht, wenn sich jemand einmal richtig verhält — ein Szenario, das bei der vermeintlich richtigen Reaktion aufhört, würde das verfehlen.</p></article>
+    <article><span class="num">4.4.7 — GF 5</span><h4>Abgleich im Trainerteam</h4><p>Anteil je Handlungsoption, keine Rangfolge, keine Personenzuordnung. Der Kinderschutzbeauftragte hat genau diese Form selbst vorgeschlagen. Der Prototyp liefert nur den Anlass, das Gespräch findet außerhalb statt.</p></article>
+    <article><span class="num">4.4.8 — GF 6</span><h4>Information und Beratung auf Abruf</h4><p>Vertiefungen nur auf Anforderung. Ansprechpersonen nach drei Eskalationsebenen und der Zugang zu einer überregionalen Beratungsstelle bleiben ohne Anforderung sichtbar.</p></article>
+  </div>
+
+  <h3>Die drei Stufen der Einschätzung</h3>
+  <p class="lede">Der Maßstab von Grundfunktion 2. Er bewertet Merkmale der Situation, nie die Reaktion der nutzenden Person.</p>
+  <ul class="ampel">
+    <li><b>unbedenklich</b><span>Erlaubt es, ein auffälliges Detail ausdrücklich als harmlos auszuweisen — und arbeitet damit gegen die Haltung „Ich kann ja gar nichts mehr machen“.</span></li>
+    <li><b>klärungsbedürftig</b><span>Die Mehrdeutigkeit, um die es geht. Nicht falsch, aber auch nicht einfach abzuhaken.</span></li>
+    <li><b>grenzverletzend</b><span>Auch dort aufgeführt, wo es nicht eingetreten ist — als Markierung der Schwelle, ab der die Situation kippt.</span></li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">Bewusste Auslassungen</span>
+    <p>Keine Punkte, Bestenlisten oder Levelsysteme · keine Zeitdruckmechanik · keine Täterperspektive · keine realen Vorfälle aus dem Verein.</p>
+    <p>Der Inhalt liegt vor, das zugehörige Unterkapitel <code>4.4.9</code> ist bei der Überarbeitung entfallen. Kapitel 4.6 verweist noch darauf — siehe offene Punkte.</p>
+  </div>
+</section>
+
+<section id="anforderungen">
+  <div class="sec-head">
+    <span class="sec-num">07 — Anforderungen</span>
+    <h2>Was der Prototyp leisten muss</h2>
+    <p class="lede">Priorisiert nach MoSCoW in drei Stufen. „Won’t have this time“ entfällt, weil zurückgestellte Festlegungen als bewusste Auslassungen geführt werden. Vorrang haben Anforderungen, die von beiden Befragten unabhängig benannt wurden, zusätzlich literaturgestützt sind, unmittelbar zum Lernziel beitragen und unter den Bedingungen des Ehrenamts umsetzbar sind.</p>
+  </div>
+
+  <div class="filter" role="group" aria-label="Nach Priorität filtern">
+    <button type="button" data-prio="alle" aria-pressed="true">Alle 25</button>
+    <button type="button" data-prio="Muss" aria-pressed="false">Nur Muss</button>
+    <button type="button" data-prio="Soll" aria-pressed="false">Nur Soll</button>
+    <button type="button" data-prio="Kann" aria-pressed="false">Nur Kann</button>
+  </div>
+
+  <h3>Funktional — Tab. 6</h3>
+  <div class="scroller">
+    <table id="tab-f">
+      <thead><tr><th>Nr.</th><th>Anforderung</th><th>Prio</th><th>Quelle</th></tr></thead>
+      <tbody>
+        <tr data-prio="Muss"><td class="id">F01</td><td>Übersicht der verfügbaren Szenarien mit Themenfeld und kurzer Beschreibung, aus der frei ausgewählt wird.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US1 · Kap. 4.4.3 · Sailer, zit. n. Tolks et al., 2020</td></tr>
+        <tr data-prio="Muss"><td class="id">F02</td><td>Ausgangssituation, dann mehrere Entscheidungspunkte mit je einer Leitfrage und genau drei Handlungsoptionen, von denen keine offensichtlich falsch ist.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US2 · Kap. 4.4.3 · Ritterfeld et al., 2009, S. 691</td></tr>
+        <tr data-prio="Muss"><td class="id">F03</td><td>Der Fortgang ist festgelegt und hängt nicht von der gewählten Option ab; abgebrochen wird nie.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.6 · Brackenridge &amp; Fasting, 2005, S. 19 · Interview K</td></tr>
+        <tr data-prio="Muss"><td class="id">F04</td><td>Nach jeder Entscheidung ist eine fachliche Rückmeldung abrufbar, gegliedert in Erkennen, Absichern und Handeln.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US3 · Kap. 4.4.5 · Krauß et al., 2025, S. 13 · Palzkill, 2021, S. 198</td></tr>
+        <tr data-prio="Muss"><td class="id">F05</td><td>Am Szenarioende Auflistung der Merkmale nach unbedenklich, klärungsbedürftig und grenzverletzend — einschließlich nicht eingetretener, ohne Bewertung der eigenen Entscheidung.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.4 · Interview K · Schirrmacher Group, o. J.</td></tr>
+        <tr data-prio="Muss"><td class="id">F06</td><td>Am Szenarioende Ansprechpersonen und Meldewege mit Namen und Kontaktweg, geordnet nach drei Eskalationsebenen.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US7 · Kap. 4.4.8 · Schirrmacher Group, o. J. · Interview K</td></tr>
+        <tr data-prio="Muss"><td class="id">F07</td><td>Zugang zu einer überregionalen Beratungsstelle an jedem Punkt der Nutzung.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.8 · Krauß et al., 2025, S. 13</td></tr>
+        <tr data-prio="Muss"><td class="id">F08</td><td>Nach Abschluss aller Rückmeldungen Anteil je Handlungsoption, ohne Rangfolge und ohne Zuordnung zu Personen.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US4 · Kap. 4.4.7 · Interview K · Wouters et al., 2013, S. 256–260</td></tr>
+        <tr data-prio="Soll"><td class="id">F09</td><td>Hinweis, wenn für einen Entscheidungspunkt zu wenige Entscheidungen anderer vorliegen; die übrigen werden regulär angezeigt.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Anhang 7</td></tr>
+        <tr data-prio="Muss"><td class="id">F10</td><td>Bearbeitung unterbrechbar; der Fortschritt wird gespeichert und setzt am zuletzt erreichten Entscheidungspunkt fort.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US5 · Anhang 6 · Anhang 7 · Interview K</td></tr>
+        <tr data-prio="Soll"><td class="id">F11</td><td>Abgeschlossene Szenarien erneut startbar, um die übrigen Optionen und Rückmeldungen nachzulesen.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Kap. 4.4.6 · Breuer &amp; Bente, 2010, S. 12</td></tr>
+        <tr data-prio="Soll"><td class="id">F12</td><td>Vertiefende Hintergrundinformationen an jedem Punkt abrufbar, aber nie von sich aus eingeblendet.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Kap. 4.4.8 · Breuer &amp; Bente, 2010, S. 16</td></tr>
+        <tr data-prio="Kann"><td class="id">F13</td><td>Übersicht über bearbeitete und offene Szenarien, ohne Punktestand und ohne Bestenliste.</td><td class="nowrap"><span class="pill kann">Kann</span></td><td class="src">Kap. 4.4.1 · Sailer &amp; Homner, 2020, S. 99–100</td></tr>
+        <tr data-prio="Soll"><td class="id">F14</td><td>Ansprechpersonen, Meldewege und Szenarien ohne technische Kenntnisse aktualisierbar und ergänzbar.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Kap. 4.2 · Horch et al., 2024, S. 166</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Nichtfunktional — Tab. 7</h3>
+  <div class="scroller">
+    <table id="tab-nf">
+      <thead><tr><th>Nr.</th><th>Anforderung</th><th>Prio</th><th>Quelle</th></tr></thead>
+      <tbody>
+        <tr data-prio="Muss"><td class="id">NF01</td><td>Ein vollständiger Durchlauf dauert höchstens fünf Minuten.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Interview K · Stickel et al., 2025 · Anhang 6, 7</td></tr>
+        <tr data-prio="Muss"><td class="id">NF02</td><td>Die einzelnen Entscheidungen sind zeitlich nicht begrenzt.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.2 · Stickel et al., 2025</td></tr>
+        <tr data-prio="Muss"><td class="id">NF03</td><td>Ohne Einführung, Schulung oder anleitende Person nutzbar; die Instruktion liegt in der Anwendung.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US6 · Kap. 4.4.1 · Carvalho et al., 2015</td></tr>
+        <tr data-prio="Muss"><td class="id">NF04</td><td>Getroffene Entscheidungen sind weder für andere Nutzende noch für den Verein auf einzelne Personen rückführbar.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">US8 · Interview K · Anhang 6</td></tr>
+        <tr data-prio="Muss"><td class="id">NF05</td><td>Situationsbeschreibungen und Rückmeldungen im Textumfang begrenzt; Fachbegriffe und Modelle erscheinen nicht in der Anwendung.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.1 · Bittner et al., 2026, S. 341 · Carvalho et al., 2015</td></tr>
+        <tr data-prio="Soll"><td class="id">NF06</td><td>Ohne Einarbeitung und ohne Installationsaufwand auf dem Smartphone nutzbar.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Anhang 4 · Anhang 6</td></tr>
+        <tr data-prio="Muss"><td class="id">NF07</td><td>Die Szenarien sind erfunden, aber realitätsnah; reale Vorfälle aus dem Verein werden nicht abgebildet.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4.1 · De Angeli et al., 2026</td></tr>
+        <tr data-prio="Muss"><td class="id">NF08</td><td>Spielerische Elemente ordnen sich dem Inhalt unter; eine Bewertung der eigenen Reaktion als richtig oder falsch findet nicht statt.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 4.4 · Interview K · Tolks et al., 2020, S. 704 · Breuer &amp; Bente, 2010, S. 14</td></tr>
+        <tr data-prio="Muss"><td class="id">NF09</td><td>Die Nutzung ist freiwillig und ohne Nachweis-, Abschluss- oder Fristenpflicht.</td><td class="nowrap"><span class="pill muss">Muss</span></td><td class="src">Kap. 2 · Interview K · Horch et al., 2024, S. 162–164</td></tr>
+        <tr data-prio="Soll"><td class="id">NF10</td><td>Die Pflege der Vereinsangaben erfordert weder technische Kenntnisse noch wiederkehrenden Aufwand über wenige Minuten hinaus.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Kap. 4.2 · Horch et al., 2024, S. 166</td></tr>
+        <tr data-prio="Soll"><td class="id">NF11</td><td>Der Szenarienbestand ist erweiterbar, ohne dass Aufbau oder Ablauf geändert werden müssen.</td><td class="nowrap"><span class="pill soll">Soll</span></td><td class="src">Kap. 4.4.3 · Glinz et al., S. 85</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Hinweis zur Systematik</span>
+    <p>Glinz et al. unterscheiden nicht funktional gegen nichtfunktional, sondern <b>funktionale Anforderungen, Qualitätsanforderungen und Randbedingungen</b> (S. 10–11). Kapitel 4.6 greift das auf und begründet, warum die letzten beiden gemeinsam in Tab. 7 stehen.</p>
+      <p>Zwei Dinge dazu im Blick behalten: Das Handbuch warnt an derselben Stelle davor, die Abgrenzung über die Faustregel „was das System tun soll gegen wie es das tun soll“ zu ziehen — die Formulierung „unter welchen Bedingungen er dies tun muss“ liegt nah daran und sollte im Kolloquium erklärbar sein. Und mehrere Einträge in Tab. 7 sind nach dieser Systematik eher Randbedingungen als Qualitätsanforderungen, etwa NF07 und NF09.</p>
+  </div>
+</section>
+
+<section id="konflikte">
+  <div class="sec-head">
+    <span class="sec-num">08 — Zielkonflikte</span>
+    <h2>Drei Konflikte, zwei davon offen</h2>
+    <p class="lede">In Kapitel 4.6 offengelegt. Der zweite und dritte sind der Anfang von Kapitel 6.</p>
+  </div>
+
+  <div class="conflicts">
+    <div>
+      <p class="vs">Inhaltliche Tiefe der Rückmeldung <code>F04 · F05 · F12</code> gegen begrenzte Bearbeitungsdauer und Textumfang <code>NF01 · NF05</code></p>
+      <p class="res"><span class="pill ok">gelöst</span> Über die Abrufbarkeit: Vertiefendes erscheint nur auf Anforderung, während das im Ernstfall Nötige ohne Anforderung sichtbar bleibt.</p>
+    </div>
+    <div>
+      <p class="vs">Abgleich im Trainerteam <code>F08</code> gegen nicht personenbeziehbare Nutzung <code>NF04</code></p>
+      <p class="res"><span class="pill warn">teilweise</span> Die Darstellung als Anteil ohne Rangfolge und Personenzuordnung reicht nicht: In einem kleinen Trainerteam lässt bereits die Zahl der vorliegenden Entscheidungen Rückschlüsse zu. Das ist der handfesteste Datenschutzeinwand gegen das Konzept — in Kapitel 6 nicht nur nennen, sondern mit einer Mindestzahl an Antworten je Entscheidungspunkt beantworten.</p>
+    </div>
+    <div>
+      <p class="vs">Anzeige der Ansprechpersonen <code>F06</code> verlangt aktuelle Angaben, deren Pflege <code>F14 · NF10</code> an einer unbesetzten Rolle hängt</p>
+      <p class="res"><span class="pill crit">offen</span> Die Betreiberrolle ist im Post SV Nürnberg nicht besetzt. Bei ihrer Vergabe greift dieselbe Personalisierung, die schon dazu geführt hat, dass das gesamte Schutzkonzept an einer einzelnen ehrenamtlichen Person hängt.</p>
+    </div>
+  </div>
+</section>
+
+<section id="basis">
+  <div class="sec-head">
+    <span class="sec-num">09 — Empirische Basis</span>
+    <h2>Zwei Perspektiven auf denselben Verein</h2>
+    <p class="lede">Zwei leitfadengestützte Experteninterviews, Juli 2026. Keine repräsentative Erhebung. Die Befragten wirken als Informanten im Sinne von Druin (2002, zit. n. Pan et al., 2026) — sie tragen an ausgewählten Punkten gezielt bei, sind aber keine Design Partner. Begründet mit der Zeitknappheit im Ehrenamt.</p>
+  </div>
+
+  <div class="quotes">
+    <div>
+      <h4>Interview K</h4>
+      <p class="role">Kinderschutzbeauftragter</p>
+      <blockquote>„bei den Trainern sind definitiv Lücken. Bei den Trainern ist aber auch der Bedarf hoch, sich selbst zu schützen“</blockquote>
+      <ul>
+        <li>Schutzkonzept vollständig selbst entwickelt, bewusst strikt — und genau deshalb umstritten</li>
+        <li>Abwehrhaltung entsteht aus Unwissenheit: „Ich kann ja gar nichts mehr machen, was darf ich denn überhaupt noch sagen“</li>
+        <li>Der Bedarf ist ein Selbstbewusstseins-, kein Wissensproblem</li>
+        <li>Bringt die App-Idee selbst ins Spiel; wünscht prozentuale Rückmeldung, lehnt richtig/falsch ab</li>
+        <li>Grenzen: wirkt nur bei Personen ohne schädigende Absicht, ausschließlich präventiv</li>
+        <li><b>Situationen:</b> Umkleide mit Eltern im Raum · Hausrecht eines jungen Trainers · Wortwahl bei der Auswechslung</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Interview T</h4>
+      <p class="role">Trainer im Trainingsbetrieb</p>
+      <blockquote>„einfach Tabuthema noch ist“</blockquote>
+      <ul>
+        <li>Wendet sich bei Unsicherheit an Trainerkollegen derselben Altersklasse, nicht an eine benannte Ansprechperson</li>
+        <li>Über sexualisierte Gewalt wird im Verein zu selten gesprochen</li>
+        <li>Diese bestehende Praxis ist der Anknüpfungspunkt für Grundfunktion 5</li>
+        <li><b>Situationen:</b> körpernahes Vormachen · Einzelgespräche nach dem Training · Teambuilding, bei dem die Gruppe unerwartet schrumpft</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Die drei Quellen der Anforderungen</h3>
+  <p class="lede">Nach der Einteilung von al Mrayat et al. (2013). Die Quellenspalte der beiden Anforderungstabellen weist jeweils aus, worauf eine Anforderung zurückgeht.</p>
+  <ul class="plain">
+    <li><strong>Konversationell</strong> — die beiden Experteninterviews</li>
+    <li><strong>Analytisch</strong> — Uuugh, die 3D-Online-Simulation, Safe Clubs sowie der Forschungsstand zu Serious Games und Gamification</li>
+    <li><strong>Synthetisch</strong> — Nutzungsszenarien, Spielszenarien, Wireframes</li>
+    <li><strong>Beobachtend</strong> — kommt nicht zum Einsatz; hätte Zugang zu Wissen eröffnet, das die Befragten nicht ohne Weiteres in Worte fassen können. Für Kapitel 6 vorgemerkt.</li>
+  </ul>
+</section>
+
+<section id="quellen">
+  <div class="sec-head">
+    <span class="sec-num">10 — Quellenlage</span>
+    <h2>Was belegt ist und was noch nicht</h2>
+    <p class="lede">Die größte Änderung dieses Stands: Mit Glinz et al. sind alle vier zuvor offenen Belegstellen des Requirements Engineering geschlossen.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Erledigt — Glinz et al. schließt vier Lücken auf einmal</span>
+    <p>Persona-Methode, Use-Case-Notation, User-Story-Schablone, die Unterscheidung der Anforderungsarten und die MoSCoW-Priorisierung sind jetzt sämtlich belegt. Die früher empfohlene Anschaffung von Rupp &amp; die SOPHISTen erübrigt sich.</p>
+    <p><b>Fundstellen:</b> Stakeholder S. 20–21 und 90 · Personas S. 93–94 · Szenarien S. 108 · User-Story-Schablone nach Cohn (2004) S. 47 · Use-Case-Formularvorlage S. 48–49 · Anforderungsarten S. 10–11 · Quelle als Anforderungsattribut S. 152 · MoSCoW S. 159–160 · Erweiterbarkeit S. 85. Für Kapitel 5 zusätzlich nutzbar: UML-Aktivitätsdiagramm Kap. 3.4.4.1 und Klassendiagramm Abb. 3.8.</p>
+    <p><b>Vorschlag für das Literaturverzeichnis:</b> Glinz, M., van Loenhoud, H., Staal, S. &amp; Bühne, S. (2022). <i>Handbuch IREB Certified Professional for Requirements Engineering. Foundation Level</i> (Version 1.2.0). International Requirements Engineering Board. — Das Datum der Version 1.2.0 auf S. 5 der Versionshistorie gegenprüfen. Und bei der Erstnennung in Kapitel 4.2 ausschreiben statt „Glinz et al.“, so wie es die Arbeit bei allen anderen mehrautorigen Quellen hält.</p>
+  </div>
+
+  <h3>Jahreszahlen und Seitenangaben ergänzen</h3>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Stelle</th><th>Platzhalter</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="id">Kap. 1, 2</td><td>Horch et al., [Jahr]</td><td class="src"><span class="pill ok">auflösbar</span> 2024 — steht in 3.2, 4.2, 4.6 und Anhang 4 bereits so da</td></tr>
+        <tr><td class="id">Kap. 1</td><td>Palzkill ([Jahr])</td><td class="src"><span class="pill ok">auflösbar</span> 2021 — überall sonst so zitiert</td></tr>
+        <tr><td class="id">4.2 bis 4.6, Anh. 7</td><td>Glinz et al., [Jahr]</td><td class="src"><span class="pill ok">auflösbar</span> siehe oben</td></tr>
+        <tr><td class="id">4.1, 4.3, 6</td><td>Salzmann, [Jahr] und S.???</td><td class="src"><span class="pill warn">prüfen</span> Die fünf Praktiken stehen auf S. 113–114, dort zitiert Salzmann Carlgren et al. (2016b, S. 47); auf S. 98 zusätzlich S. 50. Jahr der Dissertation eintragen.</td></tr>
+        <tr><td class="id">Kap. 1</td><td>Kliemann, [Jahr], S. 262</td><td class="src"><span class="pill crit">Quelle fehlt</span> vermutlich Kapitel im Sammelband Fegert et al. (2018), liegt nicht vor</td></tr>
+        <tr><td class="id">Kap. 1</td><td>Fegert, Kölch &amp; Kliemann, [Jahr], S. 4</td><td class="src"><span class="pill crit">Quelle fehlt</span> vermutlich 2018</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Zu prüfende Belegstellen</h3>
+  <ul class="plain">
+    <li><strong>Kapitel 1, SicherImSport.</strong> Die Zahlen 70 % / 26 % / 19 % stammen aus Rulofs et al. (2022), nicht aus Safe Clubs; Schmitz, Söllinger und Ohlert zitieren sie selbst sekundär. Zusätzlich widersprechen sich die Stichprobengrößen: Stickel et al. nennen 4.367 Befragte, Bittner et al. 2.024, bei identischen Prozentwerten. Empfehlung: direkt über Rulofs (2024, S. 131) belegen und die Stichprobengröße weglassen.</li>
+    <li><strong>Ohlert et al. (2018).</strong> Lesart festlegen: 37,6 % mit 11,2 % schwer (eigene Angabe) gegen 37 % gesamt mit 16/10/11 (Rulofs) gegen geschlechtergetrennt 48 % / 23 % (Palzkill).</li>
+    <li><strong>Brackenridge &amp; Fasting (2005).</strong> Alle Seitenangaben stammen aus dem Autorenmanuskript, gegen die Druckfassung (Auto/Biography 13(1), 1–20) prüfen.</li>
+    <li><strong>Bange (2018) und Kölch &amp; Fegert (2018).</strong> Nicht am Original verifiziert, Fegert et al. (2018) liegt nicht vor.</li>
+    <li><strong>Universitätsklinikum Ulm (2025).</strong> Zur Gestaltung der Uuugh-Figuren, Quelle noch nicht belegt.</li>
+    <li><strong>Carlgren et al. (2016b).</strong> Liegt nicht im Original vor, wird durchgehend über Salzmann sekundär zitiert. DOI 10.1111/caim.12153.</li>
+    <li><strong>Safe Clubs Projektende.</strong> Abstract nennt Februar 2025, Text „Ende 2024“. Aktuell mit „Anfang 2025“ umgangen.</li>
+    <li><strong>Palzkill (2021, S. 198)</strong> schreibt „§8b SGB III“; korrekt wäre § 8b SGB VIII, vermutlich Druckfehler in der Quelle. In Kapitel 4.4 deshalb ohne Paragrafenangabe.</li>
+  </ul>
+
+  <h3>Für Kapitel 6 vormerken</h3>
+  <ul class="plain">
+    <li><strong>Bereits im Text:</strong> zwei Befragte aus einem Verein · keine beobachtende Komponente · keine Co-Evaluation · Einzelbearbeitung, damit entfällt die Praktik Diversität · Dell’Era et al. untersucht kommerzielle Beratungsprojekte im Querschnittsdesign, keine kausalen Aussagen.</li>
+    <li><strong>Aus der Umstellung von Grundfunktion 2:</strong> Der Prototyp meldet nicht zurück, ob die eigene Reaktion angemessen war, obwohl Persona A genau das sucht. Und der Ansatz, Situationsmerkmale abgestuft auszuweisen, ist im Quellenstapel nicht wirksamkeitsgeprüft, sondern nur an Uuugh und die Schirrmacher-Simulation angelehnt.</li>
+    <li><strong>Noch zu ergänzen:</strong> Wouters et al. (2013) finden für Erwachsene keinen Lernvorteil — die Zielgruppe dieser Arbeit ist genau diese Gruppe. Sailer &amp; Homner (2020) finden im informellen Trainingssetting kleinere Effekte als im schulischen. Tolks’ drittes Kriterium wird bewusst nicht erfüllt.</li>
+    <li><strong>Und die beiden ungelösten Zielkonflikte</strong> aus Abschnitt 08.</li>
+  </ul>
+</section>
+
+<section id="modell">
+  <div class="sec-head">
+    <span class="sec-num">11 — Domänenmodell</span>
+    <h2>Der Bauplan für den Szenario-Baukasten</h2>
+    <p class="lede">Sechzehn Klassen in drei Bereichen. Die Grundidee ist die Trennung von Inhalt und Vereinskontext: Beim Einsatz in einem anderen Verein werden nur Ansprechpersonen und Trainerteams ausgetauscht, die Szenarien bleiben unverändert. Das belegt NF11 und ist zugleich das Übertragbarkeitsargument für Kapitel 6.</p>
+  </div>
+
+  <div class="cards">
+    <article><span class="num">Bereich 1</span><h4>Inhalt — redaktionell gepflegt</h4><p>Szenario · Themenfeld · Entscheidungspunkt · Handlungsoption · Rückmeldung, dazu die Wertevorräte Trainingsphase, Groomingphase und Ampelstufe.</p></article>
+    <article><span class="num">Bereich 2</span><h4>Nutzung — läuft mit</h4><p>Nutzerprofil · Durchlauf · Entscheidung · Einschätzungsspiegel als berechnete Klasse.</p></article>
+    <article><span class="num">Bereich 3</span><h4>Vereinskontext — konfigurierbar</h4><p>Verein · Trainerteam · Ansprechperson · Hilfsangebot. Der einzige Teil, der beim Wechsel des Vereins ausgetauscht wird.</p></article>
+  </div>
+
+  <h3>Zwei offene Abgleichspunkte mit Kapitel 4.4.4</h3>
+  <ul class="items">
+    <li class="warn">
+      <div class="top"><b>Die Ampelstufe hängt an der falschen Klasse</b><span class="pill warn">Modell nachziehen</span></div>
+      <p><code>Handlungsoption.einschätzung</code> legt die Stufe an der <b>Option</b> fest. Kapitel 4.4.4 stuft aber ausdrücklich die <b>Merkmale der Situation</b> ein, nicht die Reaktion darauf.</p>
+      <p class="fix"><b>Empfehlung:</b> eigene Klasse <code>Situationsmerkmal</code> mit Bezug zum Entscheidungspunkt und einer Ampelstufe — weil F05 ausdrücklich auch nicht eingetretene Merkmale verlangt, die an keiner gewählten Option hängen.</p>
+    </li>
+    <li class="warn">
+      <div class="top"><b>F09 ist nicht modelliert</b><span class="pill warn">Attribut fehlt</span></div>
+      <p><code>Einschätzungsspiegel</code> braucht ein Attribut für die Mindestzahl vorliegender Entscheidungen. Das ist zugleich die Antwort auf den Datenschutzkonflikt aus Abschnitt 08.</p>
+    </li>
+  </ul>
+
+  <a class="linkcard" href="__DOMAENENMODELL__">
+    <span><b>Domänenmodell im Detail</b><span>Alle sechzehn Klassen mit Attributen, Beziehungen, Kardinalitäten und der Rückbindung an die Anforderungen</span></span>
+    <span class="go">ansehen →</span>
+  </a>
+</section>
+
+<section id="konventionen">
+  <div class="sec-head">
+    <span class="sec-num">12 — Konventionen</span>
+    <h2>Regeln, die für die ganze Arbeit gelten</h2>
+  </div>
+  <ul class="plain">
+    <li>Interviews werden als <strong>Interview K</strong> (Kinderschutzbeauftragter) und <strong>Interview T</strong> (Trainer) zitiert, niemals mit Klarnamen.</li>
+    <li>Sekundärzitate durchgängig als „zitiert nach“ kennzeichnen.</li>
+    <li>Mehrautorige Quellen bei der Erstnennung ausschreiben, danach „et al.“.</li>
+    <li>Unterkapitel nur, wenn mindestens ein weiteres auf derselben Ebene folgt; maximal drei Gliederungsebenen.</li>
+    <li>Zielumfang Literaturverzeichnis: 50 bis 75 Quellen.</li>
+    <li>Das Ergebnis heißt durchgehend <strong>Prototyp</strong>, nicht „App“ oder „Spiel“.</li>
+    <li>Anforderungen werden mit <strong>Fnn</strong> und <strong>NFnn</strong> referenziert, Grundfunktionen über ihre Kapitelnummer.</li>
+    <li>Belege werden vor der Verwendung am Original geprüft; abweichende Befunde werden protokolliert.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Projektakte zur Bachelor-Thesis · DHfPG Saarbrücken · Sport- und Gesundheitsinformatik</p>
+  <p>Stand 27.08.2026 · Kapitel 1 bis 4 abgeschlossen</p>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.filter button');
+  var rows = document.querySelectorAll('#tab-f tbody tr, #tab-nf tbody tr');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var p = b.dataset.prio;
+      btns.forEach(function(o){ o.setAttribute('aria-pressed', String(o === b)); });
+      rows.forEach(function(r){
+        r.classList.toggle('hidden', p !== 'alle' && r.dataset.prio !== p);
+      });
+    });
+  });
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail a'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var seen = new Map();
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ seen.set(e.target, e.isIntersecting ? e.intersectionRatio : 0); });
+      var best = null, bestV = 0;
+      secs.forEach(function(s){
+        var v = seen.get(s) || 0;
+        if (v > bestV) { bestV = v; best = s; }
+      });
+      links.forEach(function(a, i){
+        a.setAttribute('aria-current', String(secs[i] === best && best !== null));
+      });
+    }, { rootMargin: '-10% 0px -55% 0px', threshold: [0, .15, .4, .8] });
+    secs.forEach(function(s){ if (s) io.observe(s); });
+  }
+})();
+</script>
