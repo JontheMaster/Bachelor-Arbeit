@@ -4,105 +4,83 @@ classDiagram
     class Szenario {
         titel
         kurzbeschreibung
+        ausgangssituation
         trainingsphase
-        groomingphase
     }
     class Themenfeld {
         bezeichnung
         herkunft
+    }
+    class Situationsmerkmal {
+        beschreibung
+        stufe
+        eingetreten
+    }
+    class Ampelstufe {
+        <<Wertevorrat>>
+        unbedenklich
+        klärungsbedürftig
+        grenzverletzend
     }
     class Entscheidungspunkt {
         reihenfolge
         situationstext
         leitfrage
     }
-    class Handlungsoption {
-        text
-        einschätzung
-    }
     class Rückmeldung {
         erkennen
         absichern
         handeln
-        quelle
     }
-    class Trainingsphase {
-        <<enumeration>>
-        vor dem Training
-        im Training
-        nach dem Training
-    }
-    class Groomingphase {
-        <<enumeration>>
-        Auswahl
-        Vertrauensaufbau
-        Isolation und Kontrolle
-        Übergriff und Geheimhaltung
-    }
-    class Ampelstufe {
-        <<enumeration>>
-        unbedenklich
-        klärungsbedürftig
-        grenzverletzend
-    }
-    class Nutzerprofil {
-        pseudonym
-        rolle
-        sparte
+    class Handlungsoption {
+        text
     }
     class Durchlauf {
-        begonnenAm
+        <<lokal>>
         status
         fortschritt
+        begonnenAm
         abgeschlossenAm
+        gezählt
     }
     class Entscheidung {
-        zeitpunkt
-        reihenfolge
+        <<lokal>>
     }
     class Einschätzungsspiegel {
-        <<berechnet>>
-        bezugspunkt
-        bezugsgruppe
+        <<gemeinsam>>
+        anzahlProOption
         anteilProOption
+        mindestanzahl
     }
     class Verein {
         name
-        sparten
-    }
-    class Trainerteam {
-        bezeichnung
-        altersklasse
     }
     class Ansprechperson {
         name
         funktion
         kontaktweg
-        eskalationsebene
     }
     class Hilfsangebot {
         bezeichnung
-        kontakt
-        überregional
+        kontaktweg
+        erreichbarkeit
     }
 
-    Szenario "*" --> "1..*" Themenfeld : behandelt
+    Szenario "*" --> "1" Themenfeld : behandelt
+    Szenario "1" *-- "1..*" Situationsmerkmal : weist auf
     Szenario "1" *-- "2..*" Entscheidungspunkt : gliedert sich in
-    Entscheidungspunkt "1" *-- "3" Handlungsoption : bietet an
-    Handlungsoption "1" *-- "1" Rückmeldung : trägt
-    Handlungsoption "1" --> "0..1" Entscheidungspunkt : führt zu
-    Szenario ..> Trainingsphase
-    Szenario ..> Groomingphase
-    Handlungsoption ..> Ampelstufe
+    Situationsmerkmal ..> Ampelstufe
+    Entscheidungspunkt "1" *-- "1" Rückmeldung : trägt
+    Entscheidungspunkt "1" *-- "3" Handlungsoption : stellt zur Wahl
 
-    Nutzerprofil "1" --> "*" Durchlauf : startet
     Durchlauf "*" --> "1" Szenario : bearbeitet
     Durchlauf "1" *-- "*" Entscheidung : protokolliert
     Entscheidung "*" --> "1" Handlungsoption : wählt
-    Einschätzungsspiegel ..> Entscheidung : aggregiert
-    Durchlauf ..> Hilfsangebot : Notausstieg
+    Entscheidung ..> Einschätzungsspiegel : erhöht
+    Einschätzungsspiegel "*" --> "1" Entscheidungspunkt : gilt für
+    Einschätzungsspiegel "*" --> "1" Verein : gilt im
+    Durchlauf "*" --> "1" Verein : findet statt im
+    Durchlauf ..> Hilfsangebot : ruft auf
+    Durchlauf ..> Ansprechperson : zeigt
 
-    Verein "1" *-- "1..*" Trainerteam : umfasst
     Verein "1" *-- "1..*" Ansprechperson : benennt
-    Nutzerprofil "*" --> "1" Trainerteam : gehört zu
-    Rückmeldung --> "1..*" Ansprechperson : verweist auf

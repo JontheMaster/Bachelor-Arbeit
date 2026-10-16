@@ -1,74 +1,66 @@
 # Kapitelstand
 
-Ausgekoppelt aus der [Projektdokumentation](projektdokumentation.md). Stand 27.08.2026.
+Ausgekoppelt aus der [Projektdokumentation](projektdokumentation.md). Stand 17.10.2026, Grundlage ist die Fassung vom 16.10.2026.
 
-| Kapitel | Stand |
-|---|---|
-| 1 Einleitung und Problemstellung | fertig, Belegstellen und Kommentare offen |
-| 2 Zielsetzung | fertig, Kommentare offen |
-| 3 Gegenwärtiger Kenntnisstand | fertig, eine inhaltliche Korrektur offen (3.4, Abschnitt 4.2) |
-| **4 Methodik** | **vollständig ausgearbeitet**, einschließlich beider Anforderungstabellen |
-| 5 Ergebnisse | offen, Gliederung steht |
-| 6 Diskussion | offen, Material gesammelt (Abschnitt 4.6) |
-| 7 Zusammenfassung | offen |
-| 8 Literaturverzeichnis | offen |
-| 9 Verzeichnisse | Tabellenverzeichnis veraltet (Abschnitt 4.1) |
-| Anhang | 1 offen, 2–3 Transkripte einzufügen, 4–7 fertig, 8 offen |
+Alle Kapitel sind geschrieben. Offen ist die Endkorrektur; die Spalte rechts nennt die größten Baustellen, die vollständige Liste steht in claude/abgabe-checkliste.md.
 
-### 3.1 Kapitel 4 im Detail — jetzt geschlossen
-
-Kapitel 4 ist damit von der Rohfassung (25.08.) zur vollständigen Ausarbeitung gewachsen. Alle sechs Unterkapitel stehen, die Anforderungsspezifikation ist erstellt.
-
-| Unterkapitel | Stand |
-|---|---|
-| Kapitelvorspann zu 4 | fertig |
-| 4.1 Methodisches Vorgehen im Überblick | fertig, mit Tab. 2 |
-| 4.2 Stakeholderanalyse | **fertig**, mit Tab. 3 (sieben Rollen) |
-| 4.3 Personas und Nutzungsszenario | **fertig**, Personas in Anhang 4/5, Szenario in Anhang 6 |
-| 4.4 Gestaltungsansatz und Grundfunktionen | fertig, mit Tab. 4 und 4.4.1 bis 4.4.8 |
-| 4.5 Use Cases und User Storys | **fertig**, mit Tab. 5 (US1–US8), Use Case in Anhang 7 |
-| 4.6 Anforderungen und Priorisierung | **fertig**, mit Tab. 6 (F01–F14) und Tab. 7 (NF01–NF11) |
-
-**Der methodische Bogen von 4.1:** Einordnung als gestaltungsorientierte Arbeit (al Mrayat) → Problemraum vor Lösungsraum (Dell'Era) → fünf Design-Thinking-Praktiken als Raster (Carlgren zit. n. Salzmann, Tab. 2) → Dreiphasenmodell mit entfallender Co-Evaluation (De Angeli) → drei Quellen der Anforderungen nach konversationell, analytisch, synthetisch (al Mrayat) → Rolle der Befragten als Informanten (Druin, zit. n. Pan et al.).
-
-**Der Gestaltungsbogen von 4.4:** Lernziel Handlungssicherheit statt Faktenwissen (Stickel, Ritterfeld) → Einordnung als szenariobasiertes Lernformat mit Serious-Game-Elementen, Tolks' Kriterium 3 bewusst nicht erfüllt → fünf Gestaltungsprinzipien (4.4.1) → Tab. 4 als Landkarte (4.4.2) → sechs Grundfunktionen einzeln (4.4.3 bis 4.4.8).
-
-**Gliederungsentscheidungen, Stand jetzt:**
-
-- Ein Unterkapitel zur Erhebungsmethodik der Interviews entfällt auf Weisung von Timo Engler. Dafür klärt 4.1, aus welchen drei Quellen die Anforderungen stammen.
-- Use Cases stehen nach dem Gestaltungsansatz und vor den Anforderungen. Kapitel 2 wurde entsprechend korrigiert.
-- **Geändert gegenüber dem 25.08.:** Die sechs Grundfunktionen sind jetzt nummerierte Unterkapitel (4.4.3 bis 4.4.8), nicht mehr fett gesetzte Zwischenüberschriften. Damit bleiben es drei Gliederungsebenen, die DHfPG-Richtlinien sind eingehalten.
-- **Geändert gegenüber dem 25.08.:** Ein Unterkapitel „Bewusste Auslassungen" (vormals 4.4.9) existiert nicht mehr. Kapitel 4.6 verweist aber noch darauf → siehe Abschnitt 4.1.
-- Tab. 4 steht **vor** den Grundfunktionen und ordnet jedem Befund eine Grundfunktion zu. Damit ist sie Landkarte statt Zusammenfassung.
-- Qualitätsanforderungen und Randbedingungen stehen gemeinsam in Tab. 7, nicht in zwei getrennten Tabellen. Begründung im Text: eine dritte Tabelle hätte bei einem Konzept ohne Implementierung zu wenige Einträge.
-- Die vierte MoSCoW-Stufe „Won't have this time" entfällt, weil zurückgestellte Festlegungen als bewusste Auslassungen geführt werden.
-- Grundlage der Einordnung von Kapitel 4: „Im Rahmen von konzeptionellen Arbeiten erfolgt im Kapitel ‚Methodik' i.d.R. eine Analyse der Rahmenbedingungen des jeweiligen Konzeptanbieters im Hinblick auf die spezifischen Konzeptanforderungen." (DHfPG-Richtlinien)
-
-### 3.2 Geplante Gliederung Kapitel 5
-
-5.1 Überblick über das Konzept · 5.2 Ablauf der zentralen Funktion (Aktivitätsdiagramm) · 5.3 Domänenmodell · 5.4 Struktur und Konzeption der Spiel-Szenarien · 5.5 Wireframes · 5.6 Einbindung in den Vereinsalltag
-
-Was Kapitel 5 aus Kapitel 4 übernimmt: Kapitel 4 endet mit der priorisierten Spezifikation, Kapitel 5 setzt sie um. Jedes Element in Kapitel 5 sollte sich auf eine Anforderungsnummer zurückführen lassen; das ist die einfachste Verteidigungslinie im Kolloquium.
-
-| Unterkapitel | Deckt ab |
-|---|---|
-| 5.1 Überblick | F01, F13 |
-| 5.2 Ablauf | F02, F03, F04, F08, F10 (Use Case aus Anhang 7 als Vorlage) |
-| 5.3 Domänenmodell | F01–F08, F11, F12, F14, NF11 |
-| 5.4 Szenarien | F02, F05, NF05, NF07 |
-| 5.5 Wireframes | F04, F05, F06, F12, NF06 |
-| 5.6 Einbindung | F06, F14, NF09, NF10 |
-
-### 3.3 Tabellennummerierung, Stand der Arbeit
-
-| Nr. | Titel | Kapitel |
+| Kapitel | Stand | Größte offene Punkte |
 |---|---|---|
-| Tab. 1 | Zuordnung der Manipulationsstrategien zu den Grooming-Phasen | 3.5.1 |
-| Tab. 2 | Design-Thinking-Praktiken und ihre Umsetzung | 4.1 |
+| 1 Einleitung und Problemstellung | geschrieben | Ohlert-Befund differenzieren (Kommentar 5), Kaderathleten-Hinweis, Rulofs-Belege |
+| 2 Zielsetzung | geschrieben | Vier-Ebenen-Modell kürzen statt streichen (Kommentare 10/11) |
+| 3 Gegenwärtiger Kenntnisstand | geschrieben | Sailer & Homner in 3.4 (Kommentar 29), Palzkill und Brackenridge & Fasting in 3.1.4 (Kommentar 22), 3.2 an die Transkripte angleichen, Uuugh-Stichprobe |
+| 4 Methodik | geschrieben | Tab. 4 (Eskalationszeile, Grundfunktion 4), Tab. 6/7 (F12-Quelle, F15/NF12), fünftes Prinzip (Kommentare 50–52), Stickel nach Kap. 3 (Kommentar 48) |
+| 5 Ergebnisse | geschrieben, 5.1 bis 5.5 | Tab. 9 (Ohlert S. ???, Themenfelder), Wireframes an die Szenarien angleichen |
+| 6 Diskussion | geschrieben, rund 780 Wörter | „drei Schritte“, es folgen zwei; Ausblick fehlt; Erwachsenen-Befund und Unabhängigkeit der Interviews |
+| 7 Zusammenfassung | geschrieben, rund 540 Wörter | Empfehlung nur, wenn sie in Kap. 6 hergeleitet ist |
+| 8 Literaturverzeichnis | 29 Einträge | Hängender Einzug statt Handumbruch, Dell’Era, Titel-Schreibung |
+| 9 Verzeichnisse | Abb. 1–3 und Tab. 1–9 aktuell | Abkürzungsverzeichnis angekündigt, fehlt |
+| Anhang | 4 bis 11 fertig | Anhangsverzeichnis, Leitfaden (Anhang 1), Transkripte (Anhang 2 und 3) |
+| Formalia | – | Datum auf der Titelseite, Kommentare (12 Stränge) und Markierungen (253 Stellen) entfernen, KI-Angabe mit Timo klären |
+
+### 3.1 Gliederung Kapitel 4 und 5
+
+| Unterkapitel | Inhalt | Artefakte |
+|---|---|---|
+| 4.1 Methodisches Vorgehen im Überblick | Dell’Era (Reihenfolge), Carlgren über Salzmann (Praktiken), De Angeli (drei Phasen), al Mrayat (Quellen), Druin/Scaife über Pan (Informanten) | Tab. 2 |
+| 4.2 Stakeholderanalyse | sieben Rollen, drei kritisch | Tab. 3 |
+| 4.3 Personas & Nutzungsszenario | Persona A „Der Etablierte“ (Thomas, 46), Persona B „Die Neue“ (Lena, 22) | Anhang 4, 5, 6 |
+| 4.4 Gestaltungsansatz & Grundfunktionen | Lernziel, fünf Prinzipien (4.4.1), Tab. 4 (4.4.2), sechs Grundfunktionen (4.4.3–4.4.8) | Tab. 4 |
+| 4.5 Use Cases & User Storys | US1 bis US9, Use Case „Szenario bearbeiten“ | Tab. 5, Anhang 7 |
+| 4.6 Anforderungen & Priorisierung | F01–F15, NF01–NF13, zwei Zielkonflikte | Tab. 6, Tab. 7 |
+| 5.1 Konzeptüberblick | ohne Benutzerkonten, lokale Speicherung plus Zählwert, Trennung Inhalt/Vereinskontext | – |
+| 5.2 Ablaufmodellierung eines Szenariodurchlaufs | UML-Aktivitätsdiagramm | Abb. 1 |
+| 5.3 Strukturmodellierung als konzeptionelles Klassendiagramm | 13 Klassen in drei Bereichen | Abb. 2, Anhang 8 |
+| 5.4 Ausgestaltung der Szenarien und Reflexionsimpulse | Szenariovorlage, zehn Szenarien, drei ausgearbeitet | Tab. 8, Tab. 9, Anhang 9–11 |
+| 5.5 Oberflächenkonzeption des Prototyps | drei Smartphone-Ansichten | Abb. 3 |
+
+Das ursprünglich geplante Unterkapitel 5.6 „Einbindung in den Vereinsalltag“ ist entfallen. Die Punkte dazu (Betreiberrolle verteilen, Schutzkonzept auf Eindeutigkeit prüfen) stehen jetzt in Kap. 6.
+
+**Kapitel 5 und die Anforderungen:**
+
+| Unterkapitel | Bildet ab |
+|---|---|
+| 5.1 Konzeptüberblick | NF04, NF05, NF13 |
+| 5.2 Ablauf (Abb. 1) | F03, F05, F06, F10, F11, F12 |
+| 5.3 Klassendiagramm (Abb. 2, Anhang 8) | F01–F13, NF04, NF05, NF13; F15 bewusst nicht im Modell, weil Systemfunktion |
+| 5.4 Szenarien (Tab. 8, 9, Anhang 9–11) | F01, F03, F04, F07, NF06, NF09 |
+| 5.5 Wireframes (Abb. 3) | F02, F06–F10, F14, NF08 |
+
+### 3.2 Tabellen und Abbildungen
+
+| Nr. | Titel (verkürzt) | Kapitel |
+|---|---|---|
+| Tab. 1 | Manipulationsstrategien und Phasen des Grooming-Modells | 3.5.1 |
+| Tab. 2 | Design-Thinking-Praktiken nach Carlgren et al. und ihre Umsetzung | 4.1 |
 | Tab. 3 | Stakeholder mit Interesse und Einfluss | 4.2 |
 | Tab. 4 | Gestaltungsgrundlagen und Zuordnung zu den Grundfunktionen | 4.4.2 |
 | Tab. 5 | User Storys aus Sicht von Persona A | 4.5 |
-| Tab. 6 | Funktionale Anforderungen | 4.6 |
-| Tab. 7 | Nichtfunktionale Anforderungen | 4.6 |
+| Tab. 6 | Funktionale Anforderungen mit Priorisierung, Quelle und Grundfunktion | 4.6 |
+| Tab. 7 | Nichtfunktionale Anforderungen mit Priorisierung und Quelle | 4.6 |
+| Tab. 8 | Bestandteile eines Szenarios mit Zuordnung zum Klassenmodell | 5.4 |
+| Tab. 9 | Szenarien mit Themenfeld, Trainingsphase und inhaltlicher Grundlage | 5.4 |
+| Abb. 1 | Szenariodurchlauf als UML-Aktivitätsdiagramm (Notation nach Glinz et al., 2024, S. 70–71) | 5.2 |
+| Abb. 2 | Konzeptionelles Klassendiagramm (Notation nach Glinz et al., 2024, S. 67) | 5.3 |
+| Abb. 3 | Wireframes (Detaillierungsgrad nach Glinz et al., 2024, S. 82) | 5.5 |
 
-Das **Tabellenverzeichnis in Kapitel 9.2 ist veraltet** und listet nur sechs Einträge mit falscher Zuordnung → Abschnitt 4.1.
+Kopfzeilenwiederholung bei mehrseitigen Tabellen: Tab. 6 und 7 eingestellt. Tab. 4 und die Tabelle in Anhang 8 laufen über zwei Seiten ohne wiederholte Kopfzeile. In Tab. 6 bricht die Zeile F11 über die Seite.

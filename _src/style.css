@@ -723,3 +723,13 @@ figcaption{
 .sep{stroke:var(--rule);stroke-width:1;}
 .link{stroke:currentColor;stroke-width:1.3;fill:none;}
 .dash{stroke-dasharray:5 4;}
+
+/* ---------- Abbildungen aus der Arbeit (seit 17.10.2026) ---------- */
+:root{--paper:#FFFFFF;--img-dim:1;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--img-dim:.88;}}
+:root[data-theme="dark"]{--img-dim:.88;}
+.figwrap img.fig{display:block;width:100%;height:auto;margin:0 auto;background:var(--paper);border-radius:2px;filter:brightness(var(--img-dim));}
+.figwrap img.tall{max-width:560px;}
+.figwrap img.mid{max-width:880px;}
+.figwrap img.wide{min-width:640px;}
+td .pill{margin-left:.25rem;}

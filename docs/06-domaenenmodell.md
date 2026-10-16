@@ -1,129 +1,120 @@
-# Domänenmodell
+# Klassendiagramm (vormals Domänenmodell)
 
-Ausgekoppelt aus der [Projektdokumentation](projektdokumentation.md). Stand 27.08.2026. Der Mermaid-Quelltext steht zusätzlich in [domaenenmodell.mmd](domaenenmodell.mmd), die ausführliche Fassung mit Notationslegende, Klassentabellen und Rückbindung auf der Seite `domaenenmodell.html`.
+Ausgekoppelt aus der [Projektdokumentation](projektdokumentation.md). Stand 17.10.2026, Grundlage ist die Fassung vom 16.10.2026.
 
-Sechzehn Klassen in drei Bereichen. Ausführliche Erläuterung, Notation, Klassentabellen und Rückbindung an die Anforderungen auf der verlinkten Seite.
+13 Klassen in drei Bereichen. Ersetzt das Domänenmodell vom 31.08. mit 16 Klassen (Nutzerprofil, Trainerteam, Groomingphase und Trainingsphase als Klassen sind entfallen, Situationsmerkmal ist neu).
 
-**Grundidee:** Inhalt (redaktionell gepflegt) ist vom Vereinskontext (konfigurierbar) getrennt. Beim Einsatz in einem anderen Verein werden nur Ansprechpersonen und Trainerteams ausgetauscht, die Szenarien bleiben unverändert. Bewusste Gestaltungsentscheidung, Beleg für NF11 und Argument für Kapitel 6.
+**Inhalt** (redaktionell gepflegt): Szenario, Themenfeld, Situationsmerkmal, Ampelstufe «Wertevorrat», Entscheidungspunkt, Rückmeldung, Handlungsoption.
 
-**Inhalt:** Szenario, Themenfeld, Entscheidungspunkt, Handlungsoption, Rückmeldung, sowie die Wertevorräte Trainingsphase, Groomingphase und Ampelstufe.
-**Nutzung:** Nutzerprofil, Durchlauf, Entscheidung, Einschätzungsspiegel (berechnet).
-**Vereinskontext:** Verein, Trainerteam, Ansprechperson, Hilfsangebot.
+**Nutzung** (entsteht beim Bearbeiten): Durchlauf «lokal», Entscheidung «lokal», Einschätzungsspiegel «gemeinsam».
 
-```
+**Vereinskontext** (beim Einsatz hinterlegt): Verein, Ansprechperson, Hilfsangebot.
+
+Die Trennung des Vereinskontexts von den Inhalten geht auf NF13 zurück und ist das Argument für die Übertragbarkeit auf andere Vereine.
+
+```mermaid
 classDiagram
     direction LR
 
     class Szenario {
         titel
         kurzbeschreibung
+        ausgangssituation
         trainingsphase
-        groomingphase
     }
     class Themenfeld {
         bezeichnung
         herkunft
+    }
+    class Situationsmerkmal {
+        beschreibung
+        stufe
+        eingetreten
+    }
+    class Ampelstufe {
+        <<Wertevorrat>>
+        unbedenklich
+        klärungsbedürftig
+        grenzverletzend
     }
     class Entscheidungspunkt {
         reihenfolge
         situationstext
         leitfrage
     }
-    class Handlungsoption {
-        text
-        einschätzung
-    }
     class Rückmeldung {
         erkennen
         absichern
         handeln
-        quelle
     }
-    class Trainingsphase {
-        <<enumeration>>
-        vor dem Training
-        im Training
-        nach dem Training
-    }
-    class Groomingphase {
-        <<enumeration>>
-        Auswahl
-        Vertrauensaufbau
-        Isolation und Kontrolle
-        Übergriff und Geheimhaltung
-    }
-    class Ampelstufe {
-        <<enumeration>>
-        unbedenklich
-        klärungsbedürftig
-        grenzverletzend
-    }
-    class Nutzerprofil {
-        pseudonym
-        rolle
-        sparte
+    class Handlungsoption {
+        text
     }
     class Durchlauf {
-        begonnenAm
+        <<lokal>>
         status
         fortschritt
+        begonnenAm
         abgeschlossenAm
+        gezählt
     }
     class Entscheidung {
-        zeitpunkt
-        reihenfolge
+        <<lokal>>
     }
     class Einschätzungsspiegel {
-        <<berechnet>>
-        bezugspunkt
-        bezugsgruppe
+        <<gemeinsam>>
+        anzahlProOption
         anteilProOption
+        mindestanzahl
     }
     class Verein {
         name
-        sparten
-    }
-    class Trainerteam {
-        bezeichnung
-        altersklasse
     }
     class Ansprechperson {
         name
         funktion
         kontaktweg
-        eskalationsebene
     }
     class Hilfsangebot {
         bezeichnung
-        kontakt
-        überregional
+        kontaktweg
+        erreichbarkeit
     }
 
-    Szenario "*" --> "1..*" Themenfeld : behandelt
+    Szenario "*" --> "1" Themenfeld : behandelt
+    Szenario "1" *-- "1..*" Situationsmerkmal : weist auf
     Szenario "1" *-- "2..*" Entscheidungspunkt : gliedert sich in
-    Entscheidungspunkt "1" *-- "3" Handlungsoption : bietet an
-    Handlungsoption "1" *-- "1" Rückmeldung : trägt
-    Handlungsoption "1" --> "0..1" Entscheidungspunkt : führt zu
-    Szenario ..> Trainingsphase
-    Szenario ..> Groomingphase
-    Handlungsoption ..> Ampelstufe
+    Situationsmerkmal ..> Ampelstufe
+    Entscheidungspunkt "1" *-- "1" Rückmeldung : trägt
+    Entscheidungspunkt "1" *-- "3" Handlungsoption : stellt zur Wahl
 
-    Nutzerprofil "1" --> "*" Durchlauf : startet
     Durchlauf "*" --> "1" Szenario : bearbeitet
     Durchlauf "1" *-- "*" Entscheidung : protokolliert
     Entscheidung "*" --> "1" Handlungsoption : wählt
-    Einschätzungsspiegel ..> Entscheidung : aggregiert
-    Durchlauf ..> Hilfsangebot : Notausstieg
+    Entscheidung ..> Einschätzungsspiegel : erhöht
+    Einschätzungsspiegel "*" --> "1" Entscheidungspunkt : gilt für
+    Einschätzungsspiegel "*" --> "1" Verein : gilt im
+    Durchlauf "*" --> "1" Verein : findet statt im
+    Durchlauf ..> Hilfsangebot : ruft auf
+    Durchlauf ..> Ansprechperson : zeigt
 
-    Verein "1" *-- "1..*" Trainerteam : umfasst
     Verein "1" *-- "1..*" Ansprechperson : benennt
-    Nutzerprofil "*" --> "1" Trainerteam : gehört zu
-    Rückmeldung --> "1..*" Ansprechperson : verweist auf
 ```
 
-**Zwei Punkte zum Abgleich mit Kapitel 4.6, offen:**
+| Klasse | Bereich | Bedeutung | Anforderung |
+|---|---|---|---|
+| Szenario | Inhalt | Zusammenhängende Situationsfolge aus dem Trainingsalltag | F01–F04, NF09 |
+| Themenfeld | Inhalt | Risikofeld, dem ein Szenario zugeordnet ist | F01, F02 |
+| Entscheidungspunkt | Inhalt | Stelle, an der die Situation anhält | F03, F05 |
+| Handlungsoption | Inhalt | Eine der drei Reaktionsmöglichkeiten | F03, F13 |
+| Rückmeldung | Inhalt | Fachliche Einordnung eines Entscheidungspunkts | F06 |
+| Situationsmerkmal | Inhalt | Merkmal des Szenarios mit Einstufung | F07 |
+| Ampelstufe | Inhalt | Wertevorrat der drei Stufen | F07 |
+| Durchlauf | Nutzung | Eine Bearbeitung, nur auf dem Endgerät | F12, F13, F14, NF04, NF05 (in Anhang 8 steht noch F15) |
+| Entscheidung | Nutzung | Gewählte Option; erhöht beim Abschluss den Zähler, ohne übertragen zu werden | F10, NF04, NF05 |
+| Einschätzungsspiegel | Nutzung | Vereinsweiter Zähler je Entscheidungspunkt und Option | F10, F11 |
+| Verein | Vereinskontext | Einsatzkontext und Bezugsgruppe der Anteilswerte | F10, NF13 |
+| Ansprechperson | Vereinskontext | Vereinsintern benannte Person mit Meldeweg | F08 |
+| Hilfsangebot | Vereinskontext | Überregionale, vereinsunabhängige Beratungsstelle | F09 |
 
-- `Handlungsoption.einschätzung` mit dem Wertevorrat `Ampelstufe` legt die Stufe an der **Option** fest. Kapitel 4.4.4 stuft aber ausdrücklich die **Merkmale der Situation** ein und nicht die Reaktion darauf. Das Modell sollte nachziehen: entweder eine eigene Klasse `Situationsmerkmal` mit Bezug zum Entscheidungspunkt und einer Ampelstufe, oder das Attribut an den Entscheidungspunkt verschieben. Empfehlung: eigene Klasse, weil F05 ausdrücklich auch nicht eingetretene Merkmale verlangt, die an keiner gewählten Option hängen.
-- `Einschätzungsspiegel` braucht ein Attribut für die Mindestzahl vorliegender Entscheidungen, sonst ist F09 nicht modelliert.
-
-**Geändert am 25.08.2026:** Die Attribute der Klasse `Rückmeldung` heißen `erkennen`, `absichern`, `handeln` statt `detektion`, `schutz`, `aktion`, passend zur Umdeutung in Kapitel 4.4.5. Falls ein Renderer bei Umlauten in Klassennamen streikt: `Rueckmeldung` und `Einschaetzungsspiegel` schreiben.
+F15 ist bewusst nicht im Modell: Die Pflegbarkeit ist eine Systemfunktion, kein fachlicher Gegenstand.

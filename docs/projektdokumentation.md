@@ -1,13 +1,16 @@
 # Projektdokumentation Bachelor-Thesis Jonathan Sommerer
 
-**Lebendes Dokument.** Bei jedem Arbeitsstand fortschreiben. Änderungsprotokoll am Ende.
+**Lebendes Dokument.** Wird nur auf ausdrücklichen Wunsch fortgeschrieben (Anweisung auf der Notion-Seite „BA ToDo´s - Dokument“). Änderungsprotokoll am Ende.
 
-Letzte Aktualisierung: 27.08.2026 · Stand der Arbeit: Kapitel 1 bis 4 inhaltlich abgeschlossen
+Letzte Aktualisierung: 17.10.2026 · Grundlage: Fassung bt_350579_sommerer_jonathan.docx vom 16.10.2026 · Stand: Kapitel 1 bis 7 geschrieben, Endkorrektur läuft · Abgabe 31.10.2026
 
-Begleitende Seiten:
+Begleitende Seiten und Listen:
 
-- Projektakte (Ansichtsversion): https://claude.ai/code/artifact/793e1a22-d60b-41a0-abae-e5570b657626
-- Domänenmodell ausführlich: https://claude.ai/code/artifact/dad808cc-ebc7-40c6-a74b-138645f8a509
+- Projektakte (Ansichtsversion dieser Doku): https://claude.ai/code/artifact/793e1a22-d60b-41a0-abae-e5570b657626
+- GitHub-Repo JontheMaster/Bachelor-Arbeit: index.html (Projektakte), docs/ (diese Doku, auch thematisch aufgeteilt), _src/ (Quellfragmente und build.py)
+- Abgabe-Checkliste mit allen offenen Punkten und Fundstellen: claude/abgabe-checkliste.md
+- To-dos als Karten mit Priorität: Notion, Board „BA ToDo´s - Dokument“
+- Domänenmodell-Seite (https://claude.ai/code/artifact/dad808cc-ebc7-40c6-a74b-138645f8a509): Stand 31.08., zeigt noch das alte Modell mit Nutzerprofil und Trainerteam. Gültig ist Abschnitt 8 dieser Doku bzw. Abb. 2 und Anhang 8 der Arbeit.
 
 ---
 
@@ -16,14 +19,16 @@ Begleitende Seiten:
 | | |
 |---|---|
 | **Titel** | Konzeptionelle Entwicklung eines Prototyps zur Unterstützung bei der Implementierung von Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein Post SV Nürnberg |
-| **Hochschule** | DHfPG Saarbrücken, Studiengang Sport- und Gesundheitsinformatik |
+| **Hochschule** | DHfPG Saarbrücken, Studiengang Sport- und Gesundheitsinformatik, Bachelor of Science |
 | **Matrikelnummer** | 350579 |
 | **Betreuung DHfPG** | Timo Engler |
 | **Betreuung Ausbildungsbetrieb** | Jamie Killinger |
 | **Forschungsfrage** | Wie kann ein digitales Tool Sportvereine konkret dabei unterstützen, präventiv gegen sexualisierte Gewalt vorzugehen? |
-| **Zielgruppe** | Erwachsene, ehrenamtliche Trainerinnen und Trainer; Kinderschutz-Ansprechpersonen als Sekundärnutzende |
+| **Zielgruppe** | Erwachsene, ehrenamtliche Trainerinnen und Trainer; Kinderschutz-Ansprechpersonen als Nebennutzende |
 | **Ergebnisart** | Konzept für einen Prototyp, ausdrücklich keine programmierte Anwendung |
-| **Verortung** | Präventionsebene im Vier-Ebenen-Modell (Wolff, 2015, zit. n. Rulofs, 2024, S. 132–133) |
+| **Verortung** | Präventionsebene im Vier-Ebenen-Modell (Wolff, 2015; zitiert nach Rulofs, 2024, S. 133) |
+| **Umfang** | Textteil rund 55 Seiten (S. 5 bis 59). Richtlinie sind 50 Seiten, die Abweichung ist mit Timo Engler abgestimmt (17.10.2026) |
+| **Zeitplan** | Korrekturlesen bis 26.10.2026, Abgabe 31.10.2026 |
 
 ---
 
@@ -31,310 +36,295 @@ Begleitende Seiten:
 
 Die Kette, an der alles hängt. Wenn eine Entscheidung im Konzept begründet werden muss, führt der Weg hierher zurück.
 
-1. **Das Problem sitzt bei den Erwachsenen.** 91 % der Täterinnen und Täter sind erwachsene Betreuungspersonen. Weder Sportart noch Leistungsniveau erklären, wer betroffen ist, nur Geschlecht und sexuelle Orientierung. Das Risiko hängt an Kultur und Beziehungsgestaltung. (Ohlert et al., 2018)
-2. **Vereine sind strukturell schwach aufgestellt.** Rund ein Zehntel hat Ansprechpersonen oder Schulungen, 31 % einen Ehrenkodex. Ehrenamtlichkeit und Semi-Professionalität unterscheiden den Sportverein von Schule und Kita. (Rulofs, 2024, S. 136–141)
-3. **Beim Post SV fehlt nicht das Konzept, sondern seine Verankerung.** Ein Schutzkonzept liegt vor, entstand aber ohne Beteiligung der Trainerschaft und stößt genau deshalb auf Widerstand. (Interview K, Interview T)
-4. **Das eigentliche Problem ist Mehrdeutigkeit, nicht Wissen.** Dieselbe Handlung kann harmlos oder Grooming-Beginn sein, und genau diese Mehrdeutigkeit nutzen Täter, um Reaktionen gefahrlos zu testen. Ein Lerninstrument muss Einordnungsfähigkeit aufbauen. (Brackenridge & Fasting, 2005)
-5. **Der Bedarf lautet Selbstbewusstsein, nicht Belehrung.** „das Selbstbewusstsein geben, dass sie sich in einem bestimmten Rahmen bewegen können, ohne etwas falsch zu machen" (Interview K)
-6. **Die Lücke im Angebot.** Kein Format für erwachsene Trainerinnen und Trainer in ihrer Aufsichtsrolle, individuell und zeitlich flexibel nutzbar.
-7. **Daraus folgt der Prototyp.** Szenariobasiert, freiwillig, im eigenen Tempo, mit Selbstreflexion und Abgleich im Trainerteam als den beiden Kernzielen.
+1. **Das Problem sitzt bei den Erwachsenen.** 81 % der Täterinnen und Täter waren erwachsene Betreuungspersonen (Ohlert et al., 2018, S. 63). Weder Leistungsniveau noch Sportart, Migrationshintergrund oder Behinderung erklären, wer betroffen ist. Für die Gesamtprävalenz ist nur das Geschlecht signifikant (S. 63–64), bei schweren Formen kommt die sexuelle Orientierung hinzu (S. 65). Befragt wurden Kaderathletinnen und -athleten (S. 66). In Kap. 1 steht die Differenzierung noch nicht (Kommentar 5).
+2. **Vereine sind strukturell schwach aufgestellt.** Rund ein Zehntel hat Ansprechpersonen oder Schulungen, 31 % einen Ehrenkodex, rund 10 % einen Interventionsplan (Hartmann-Tews et al., 2016; zitiert nach Rulofs, 2024, S. 137, 140–141). Dazu kommen niedrige Zugangsschwellen und hohe Ehrenamtlichkeit (Rulofs, 2024, S. 134–136).
+3. **Beim Post SV fehlt nicht das Konzept, sondern seine Verankerung.** Der Kinderschutzbeauftragte hat das Schutzkonzept allein und bewusst strikt verfasst. Den Widerstand im Verein führt er auf diese Strenge und auf Unwissenheit zurück (Interview K). Dass die Trainerschaft nicht beteiligt war, ist eine eigene Deutung; 4.1 formuliert das noch zu kausal.
+4. **Das eigentliche Problem ist Mehrdeutigkeit, nicht Wissen.** Dieselbe Handlung kann harmlos oder Grooming-Beginn sein, und genau diese Mehrdeutigkeit nutzen Täter, um Reaktionen gefahrlos zu testen (Brackenridge & Fasting, 2005, S. 19).
+5. **Der Bedarf lautet Selbstbewusstsein, nicht Belehrung.** „das Selbstbewusstsein geben, dass sie sich in einem bestimmten Rahmen bewegen können, ohne etwas falsch zu machen“ (Interview K)
+6. **Die Lücke im Angebot.** Kein Format für erwachsene Trainerinnen und Trainer in ihrer Aufsichtsrolle, individuell und zeitlich flexibel nutzbar (Kap. 3.5.4).
+7. **Daraus folgt der Prototyp.** Szenariobasiert, freiwillig, im eigenen Tempo, mit Selbstreflexion und Abgleich im Trainerteam als den beiden Kernzielen (Kap. 2, 4.4).
 
 ---
 
 ## 3 Kapitelstand
 
-| Kapitel | Stand |
-|---|---|
-| 1 Einleitung und Problemstellung | fertig, Belegstellen und Kommentare offen |
-| 2 Zielsetzung | fertig, Kommentare offen |
-| 3 Gegenwärtiger Kenntnisstand | fertig, eine inhaltliche Korrektur offen (3.4, Abschnitt 4.2) |
-| **4 Methodik** | **vollständig ausgearbeitet**, einschließlich beider Anforderungstabellen |
-| 5 Ergebnisse | offen, Gliederung steht |
-| 6 Diskussion | offen, Material gesammelt (Abschnitt 4.6) |
-| 7 Zusammenfassung | offen |
-| 8 Literaturverzeichnis | offen |
-| 9 Verzeichnisse | Tabellenverzeichnis veraltet (Abschnitt 4.1) |
-| Anhang | 1 offen, 2–3 Transkripte einzufügen, 4–7 fertig, 8 offen |
+Alle Kapitel sind geschrieben. Offen ist die Endkorrektur; die Spalte rechts nennt die größten Baustellen, die vollständige Liste steht in claude/abgabe-checkliste.md.
 
-### 3.1 Kapitel 4 im Detail — jetzt geschlossen
-
-Kapitel 4 ist damit von der Rohfassung (25.08.) zur vollständigen Ausarbeitung gewachsen. Alle sechs Unterkapitel stehen, die Anforderungsspezifikation ist erstellt.
-
-| Unterkapitel | Stand |
-|---|---|
-| Kapitelvorspann zu 4 | fertig |
-| 4.1 Methodisches Vorgehen im Überblick | fertig, mit Tab. 2 |
-| 4.2 Stakeholderanalyse | **fertig**, mit Tab. 3 (sieben Rollen) |
-| 4.3 Personas und Nutzungsszenario | **fertig**, Personas in Anhang 4/5, Szenario in Anhang 6 |
-| 4.4 Gestaltungsansatz und Grundfunktionen | fertig, mit Tab. 4 und 4.4.1 bis 4.4.8 |
-| 4.5 Use Cases und User Storys | **fertig**, mit Tab. 5 (US1–US8), Use Case in Anhang 7 |
-| 4.6 Anforderungen und Priorisierung | **fertig**, mit Tab. 6 (F01–F14) und Tab. 7 (NF01–NF11) |
-
-**Der methodische Bogen von 4.1:** Einordnung als gestaltungsorientierte Arbeit (al Mrayat) → Problemraum vor Lösungsraum (Dell'Era) → fünf Design-Thinking-Praktiken als Raster (Carlgren zit. n. Salzmann, Tab. 2) → Dreiphasenmodell mit entfallender Co-Evaluation (De Angeli) → drei Quellen der Anforderungen nach konversationell, analytisch, synthetisch (al Mrayat) → Rolle der Befragten als Informanten (Druin, zit. n. Pan et al.).
-
-**Der Gestaltungsbogen von 4.4:** Lernziel Handlungssicherheit statt Faktenwissen (Stickel, Ritterfeld) → Einordnung als szenariobasiertes Lernformat mit Serious-Game-Elementen, Tolks' Kriterium 3 bewusst nicht erfüllt → fünf Gestaltungsprinzipien (4.4.1) → Tab. 4 als Landkarte (4.4.2) → sechs Grundfunktionen einzeln (4.4.3 bis 4.4.8).
-
-**Gliederungsentscheidungen, Stand jetzt:**
-
-- Ein Unterkapitel zur Erhebungsmethodik der Interviews entfällt auf Weisung von Timo Engler. Dafür klärt 4.1, aus welchen drei Quellen die Anforderungen stammen.
-- Use Cases stehen nach dem Gestaltungsansatz und vor den Anforderungen. Kapitel 2 wurde entsprechend korrigiert.
-- **Geändert gegenüber dem 25.08.:** Die sechs Grundfunktionen sind jetzt nummerierte Unterkapitel (4.4.3 bis 4.4.8), nicht mehr fett gesetzte Zwischenüberschriften. Damit bleiben es drei Gliederungsebenen, die DHfPG-Richtlinien sind eingehalten.
-- **Geändert gegenüber dem 25.08.:** Ein Unterkapitel „Bewusste Auslassungen" (vormals 4.4.9) existiert nicht mehr. Kapitel 4.6 verweist aber noch darauf → siehe Abschnitt 4.1.
-- Tab. 4 steht **vor** den Grundfunktionen und ordnet jedem Befund eine Grundfunktion zu. Damit ist sie Landkarte statt Zusammenfassung.
-- Qualitätsanforderungen und Randbedingungen stehen gemeinsam in Tab. 7, nicht in zwei getrennten Tabellen. Begründung im Text: eine dritte Tabelle hätte bei einem Konzept ohne Implementierung zu wenige Einträge.
-- Die vierte MoSCoW-Stufe „Won't have this time" entfällt, weil zurückgestellte Festlegungen als bewusste Auslassungen geführt werden.
-- Grundlage der Einordnung von Kapitel 4: „Im Rahmen von konzeptionellen Arbeiten erfolgt im Kapitel ‚Methodik' i.d.R. eine Analyse der Rahmenbedingungen des jeweiligen Konzeptanbieters im Hinblick auf die spezifischen Konzeptanforderungen." (DHfPG-Richtlinien)
-
-### 3.2 Geplante Gliederung Kapitel 5
-
-5.1 Überblick über das Konzept · 5.2 Ablauf der zentralen Funktion (Aktivitätsdiagramm) · 5.3 Domänenmodell · 5.4 Struktur und Konzeption der Spiel-Szenarien · 5.5 Wireframes · 5.6 Einbindung in den Vereinsalltag
-
-Was Kapitel 5 aus Kapitel 4 übernimmt: Kapitel 4 endet mit der priorisierten Spezifikation, Kapitel 5 setzt sie um. Jedes Element in Kapitel 5 sollte sich auf eine Anforderungsnummer zurückführen lassen; das ist die einfachste Verteidigungslinie im Kolloquium.
-
-| Unterkapitel | Deckt ab |
-|---|---|
-| 5.1 Überblick | F01, F13 |
-| 5.2 Ablauf | F02, F03, F04, F08, F10 (Use Case aus Anhang 7 als Vorlage) |
-| 5.3 Domänenmodell | F01–F08, F11, F12, F14, NF11 |
-| 5.4 Szenarien | F02, F05, NF05, NF07 |
-| 5.5 Wireframes | F04, F05, F06, F12, NF06 |
-| 5.6 Einbindung | F06, F14, NF09, NF10 |
-
-### 3.3 Tabellennummerierung, Stand der Arbeit
-
-| Nr. | Titel | Kapitel |
+| Kapitel | Stand | Größte offene Punkte |
 |---|---|---|
-| Tab. 1 | Zuordnung der Manipulationsstrategien zu den Grooming-Phasen | 3.5.1 |
-| Tab. 2 | Design-Thinking-Praktiken und ihre Umsetzung | 4.1 |
+| 1 Einleitung und Problemstellung | geschrieben | Ohlert-Befund differenzieren (Kommentar 5), Kaderathleten-Hinweis, Rulofs-Belege |
+| 2 Zielsetzung | geschrieben | Vier-Ebenen-Modell kürzen statt streichen (Kommentare 10/11) |
+| 3 Gegenwärtiger Kenntnisstand | geschrieben | Sailer & Homner in 3.4 (Kommentar 29), Palzkill und Brackenridge & Fasting in 3.1.4 (Kommentar 22), 3.2 an die Transkripte angleichen, Uuugh-Stichprobe |
+| 4 Methodik | geschrieben | Tab. 4 (Eskalationszeile, Grundfunktion 4), Tab. 6/7 (F12-Quelle, F15/NF12), fünftes Prinzip (Kommentare 50–52), Stickel nach Kap. 3 (Kommentar 48) |
+| 5 Ergebnisse | geschrieben, 5.1 bis 5.5 | Tab. 9 (Ohlert S. ???, Themenfelder), Wireframes an die Szenarien angleichen |
+| 6 Diskussion | geschrieben, rund 780 Wörter | „drei Schritte“, es folgen zwei; Ausblick fehlt; Erwachsenen-Befund und Unabhängigkeit der Interviews |
+| 7 Zusammenfassung | geschrieben, rund 540 Wörter | Empfehlung nur, wenn sie in Kap. 6 hergeleitet ist |
+| 8 Literaturverzeichnis | 29 Einträge | Hängender Einzug statt Handumbruch, Dell’Era, Titel-Schreibung |
+| 9 Verzeichnisse | Abb. 1–3 und Tab. 1–9 aktuell | Abkürzungsverzeichnis angekündigt, fehlt |
+| Anhang | 4 bis 11 fertig | Anhangsverzeichnis, Leitfaden (Anhang 1), Transkripte (Anhang 2 und 3) |
+| Formalia | – | Datum auf der Titelseite, Kommentare (12 Stränge) und Markierungen (253 Stellen) entfernen, KI-Angabe mit Timo klären |
+
+### 3.1 Gliederung Kapitel 4 und 5
+
+| Unterkapitel | Inhalt | Artefakte |
+|---|---|---|
+| 4.1 Methodisches Vorgehen im Überblick | Dell’Era (Reihenfolge), Carlgren über Salzmann (Praktiken), De Angeli (drei Phasen), al Mrayat (Quellen), Druin/Scaife über Pan (Informanten) | Tab. 2 |
+| 4.2 Stakeholderanalyse | sieben Rollen, drei kritisch | Tab. 3 |
+| 4.3 Personas & Nutzungsszenario | Persona A „Der Etablierte“ (Thomas, 46), Persona B „Die Neue“ (Lena, 22) | Anhang 4, 5, 6 |
+| 4.4 Gestaltungsansatz & Grundfunktionen | Lernziel, fünf Prinzipien (4.4.1), Tab. 4 (4.4.2), sechs Grundfunktionen (4.4.3–4.4.8) | Tab. 4 |
+| 4.5 Use Cases & User Storys | US1 bis US9, Use Case „Szenario bearbeiten“ | Tab. 5, Anhang 7 |
+| 4.6 Anforderungen & Priorisierung | F01–F15, NF01–NF13, zwei Zielkonflikte | Tab. 6, Tab. 7 |
+| 5.1 Konzeptüberblick | ohne Benutzerkonten, lokale Speicherung plus Zählwert, Trennung Inhalt/Vereinskontext | – |
+| 5.2 Ablaufmodellierung eines Szenariodurchlaufs | UML-Aktivitätsdiagramm | Abb. 1 |
+| 5.3 Strukturmodellierung als konzeptionelles Klassendiagramm | 13 Klassen in drei Bereichen | Abb. 2, Anhang 8 |
+| 5.4 Ausgestaltung der Szenarien und Reflexionsimpulse | Szenariovorlage, zehn Szenarien, drei ausgearbeitet | Tab. 8, Tab. 9, Anhang 9–11 |
+| 5.5 Oberflächenkonzeption des Prototyps | drei Smartphone-Ansichten | Abb. 3 |
+
+Das ursprünglich geplante Unterkapitel 5.6 „Einbindung in den Vereinsalltag“ ist entfallen. Die Punkte dazu (Betreiberrolle verteilen, Schutzkonzept auf Eindeutigkeit prüfen) stehen jetzt in Kap. 6.
+
+**Kapitel 5 und die Anforderungen:**
+
+| Unterkapitel | Bildet ab |
+|---|---|
+| 5.1 Konzeptüberblick | NF04, NF05, NF13 |
+| 5.2 Ablauf (Abb. 1) | F03, F05, F06, F10, F11, F12 |
+| 5.3 Klassendiagramm (Abb. 2, Anhang 8) | F01–F13, NF04, NF05, NF13; F15 bewusst nicht im Modell, weil Systemfunktion |
+| 5.4 Szenarien (Tab. 8, 9, Anhang 9–11) | F01, F03, F04, F07, NF06, NF09 |
+| 5.5 Wireframes (Abb. 3) | F02, F06–F10, F14, NF08 |
+
+### 3.2 Tabellen und Abbildungen
+
+| Nr. | Titel (verkürzt) | Kapitel |
+|---|---|---|
+| Tab. 1 | Manipulationsstrategien und Phasen des Grooming-Modells | 3.5.1 |
+| Tab. 2 | Design-Thinking-Praktiken nach Carlgren et al. und ihre Umsetzung | 4.1 |
 | Tab. 3 | Stakeholder mit Interesse und Einfluss | 4.2 |
 | Tab. 4 | Gestaltungsgrundlagen und Zuordnung zu den Grundfunktionen | 4.4.2 |
 | Tab. 5 | User Storys aus Sicht von Persona A | 4.5 |
-| Tab. 6 | Funktionale Anforderungen | 4.6 |
-| Tab. 7 | Nichtfunktionale Anforderungen | 4.6 |
+| Tab. 6 | Funktionale Anforderungen mit Priorisierung, Quelle und Grundfunktion | 4.6 |
+| Tab. 7 | Nichtfunktionale Anforderungen mit Priorisierung und Quelle | 4.6 |
+| Tab. 8 | Bestandteile eines Szenarios mit Zuordnung zum Klassenmodell | 5.4 |
+| Tab. 9 | Szenarien mit Themenfeld, Trainingsphase und inhaltlicher Grundlage | 5.4 |
+| Abb. 1 | Szenariodurchlauf als UML-Aktivitätsdiagramm (Notation nach Glinz et al., 2024, S. 70–71) | 5.2 |
+| Abb. 2 | Konzeptionelles Klassendiagramm (Notation nach Glinz et al., 2024, S. 67) | 5.3 |
+| Abb. 3 | Wireframes (Detaillierungsgrad nach Glinz et al., 2024, S. 82) | 5.5 |
 
-Das **Tabellenverzeichnis in Kapitel 9.2 ist veraltet** und listet nur sechs Einträge mit falscher Zuordnung → Abschnitt 4.1.
+Kopfzeilenwiederholung bei mehrseitigen Tabellen: Tab. 6 und 7 eingestellt. Tab. 4 und die Tabelle in Anhang 8 laufen über zwei Seiten ohne wiederholte Kopfzeile. In Tab. 6 bricht die Zeile F11 über die Seite.
 
 ---
 
 ## 4 Offene Punkte
 
-### 4.1 Sofort zu erledigen — Folgen der Überarbeitung von Kapitel 4
+Kurzfassung. Die vollständige Liste mit Fundstellen steht in claude/abgabe-checkliste.md, dieselben Punkte als Karten mit Priorität im Notion-Board (AA = muss inhaltlich, A = muss formal oder Konsistenz, B = sollte, C = Feinschliff).
 
-Diese vier Punkte sind durch die Ausarbeitung vom 26./27.08. neu entstanden. Sie sind schnell zu beheben, fallen bei der Korrektur aber sofort auf.
+### 4.1 Inhaltlich vor Abgabe (AA)
 
-- [ ] **Toter Verweis auf Kapitel 4.4.9.** Kapitel 4.6 begründet den Wegfall der MoSCoW-Stufe „Won't have this time" damit, dass zurückgestellte Festlegungen „bereits in Kapitel 4.4.9 als bewusste Auslassungen geführt werden". Ein Kapitel 4.4.9 existiert in der aktuellen Fassung nicht mehr. **Zwei Wege:** entweder das Unterkapitel 4.4.9 wieder aufnehmen (Inhalt liegt vor: keine Punkte, Bestenlisten oder Levelsysteme · keine Zeitdruckmechanik · keine Täterperspektive · keine realen Vorfälle aus dem Verein) oder den Satz in 4.6 umformulieren und auf NF07, NF08 und F13 verweisen, in denen dieselben Auslassungen als Anforderung stehen. **Empfehlung: 4.4.9 wieder aufnehmen.** Die Abgrenzung zur Täterperspektive ist nach Kapitel 3.5.1 ein eigenständiges Argument und geht in einer Anforderungszeile unter.
-- [ ] **Tabellenverzeichnis (Kapitel 9.2) auf sieben Tabellen anpassen.** Aktuell fehlt Tab. 5 (User Storys) ganz, dadurch sind die Einträge ab Tab. 5 um eine Nummer verschoben: Das Verzeichnis führt die funktionalen Anforderungen als Tab. 5 und die nichtfunktionalen als Tab. 6, im Text sind es Tab. 6 und Tab. 7. Die Sollstruktur steht in Abschnitt 3.3.
-- [ ] **Zitierform bei NF11 vereinheitlichen.** Dort steht „Glinz et al. ([Jahr], S. 85)" mit Klammern innerhalb der Quellenspalte, alle anderen Zeilen der beiden Tabellen kommen ohne aus.
-- [ ] **Notiz in Kapitel 5.3 aktualisieren.** Die Arbeitsnotiz zum Domänenmodell nennt die Rückmeldungskategorien noch „Detektion/Schutz/Aktion" und verweist auf „F01, F02, F03, F04, F10 und F11". Beides stammt aus dem alten Stand: Die Kategorien heißen seit Kapitel 4.4.5 **Erkennen, Absichern, Handeln**, und die Anforderungsnummern haben sich mit Tab. 6 verschoben. Aktuelle Zuordnung siehe Abschnitt 3.2.
+- [ ] **Kap. 1, Ohlert et al.:** Differenzierung Gesamtprävalenz/schwere Formen und Hinweis auf Kaderathleten (Kommentar 5)
+- [ ] **Kap. 3.4, Sailer & Homner:** Satz zum Wettbewerb ist weiterhin falsch. Signifikant war nur der verhaltensbezogene Vergleich, und der lief gegen keine soziale Interaktion. Die Notion-Karte dazu steht auf Erledigt, im Text ist es noch nicht korrigiert (Kommentar 29)
+- [ ] **Palzkill und Brackenridge & Fasting:** zwei verschiedene Ängste. Palzkill (2021, S. 198): einen anderen zu Unrecht zu beschuldigen. Brackenridge & Fasting (2005, S. 19): selbst fälschlich beschuldigt zu werden. Betroffen sind 3.1.4 (Kommentar 22), 3.2, Tab. 4 und Kap. 6
+- [ ] **3.2 an die Transkripte:** App-Idee kam vom Interviewer, nicht vom Kinderschutzbeauftragten; Einzelgespräche ohne Dritte stehen so nicht im Transkript
+- [ ] **Kap. 6:** dritter Schritt für den Post SV fehlt, Ausblick fehlt
+- [ ] **Anhang:** Verzeichnis, Leitfaden (Anhang 1), Transkripte (Anhang 2 und 3) mit bereinigten Metadaten
+- [ ] **Tab. 9:** „Ohlert et al. (2018, S. ???)“
 
-### 4.2 Inhaltliche Korrektur in Kapitel 3 — weiterhin offen
+### 4.2 Konsistenz (A)
 
-- [ ] **Kapitel 3.4, Sailer & Homner.** Der Text behauptet weiterhin, Wettbewerb mit Kooperation habe „sowohl bei motivationalen als auch bei verhaltensbezogenen Lernergebnissen besser abgeschnitten als solche, die allein auf Wettbewerb setzten". Am Original geprüft: kognitiv Q(3) = 0,80, p = ,85 nicht signifikant; motivational Q(3) = 3,85, p = ,28 nicht signifikant; nur verhaltensbezogen Q(2) = 12,80, p < ,01. Der Post-hoc-Kontrast lief zwischen kompetitiv-kollaborativ und **keiner sozialen Interaktion**, nicht gegen reinen Wettbewerb. **Kapitel 4.4.2 (Tab. 4) ist bereits korrekt formuliert, 3.4 widerspricht dem noch.** Das ist die einzige Stelle in der Arbeit, an der sich zwei Kapitel offen widersprechen — deshalb Priorität.
-- [ ] **Kapitel 3.5.1, Uuugh-Stichprobe.** „39 Jugendlichen und vier Jugendleiterinnen und Jugendleitern" ist noch ungenau. Die Teilnehmenden waren 15 bis 37 Jahre alt (Ø 21,5), die vier Jugendleitenden 24 bis 45. Zwei Absätze später steht bereits korrekt, dass die Stichprobe auch erwachsene Teilnehmende umfasste — das passt nicht zusammen. Besser: „39 Jugendlichen und jungen Erwachsenen".
+- [ ] Grundfunktion 4 heißt „Verzweigung“, obwohl der Fortgang nicht von der Wahl abhängt
+- [ ] Tab. 4: Zeile zu den drei Eskalationsebenen ist seit 01.09. überholt
+- [ ] F12: Quelle Interview T statt K; F15 und NF12 doppeln „ohne technische Kenntnisse“
+- [ ] Anhang 8: Durchlauf verweist auf F15, gemeint ist F14
+- [ ] Tab. 9 und Steckbriefe in Anhang 9–11 nennen unterschiedliche Themenfelder
+- [ ] Abb. 3: Szenariotitel, „Punkt 2 von 4“, Merkmalszahl und „Antwort ändern“ passen nicht zu Tab. 8/9 und Use Case
+- [ ] Kap. 7 nennt eine Empfehlung und den Erwachsenen-Befund, die in Kap. 6 nicht stehen
+- [ ] 4.6 nennt „unabhängig voneinander“ als Priorisierungskriterium, Kap. 6 stellt fest, dass die Interviews nicht unabhängig waren
+- [ ] Tab. 4 und Anhang 8: Kopfzeile wiederholen; Tab. 6: Zeilen nicht über Seiten trennen
 
-### 4.3 Jahreszahlen und Quellenangaben ergänzen
+### 4.3 Kommentare in der Arbeit
 
-Sieben Stellen tragen noch den Platzhalter `[Jahr]` oder `S.???`. Zwei davon lassen sich aus der Arbeit selbst auflösen.
+Zwölf Stränge in der Fassung vom 16.10., einer erledigt.
 
-| Stelle | Platzhalter | Status |
-|---|---|---|
-| Kapitel 1, 2 | Horch et al., [Jahr] | **Auflösbar: 2024.** In Kapitel 3.2, 4.2, 4.6 und Anhang 4 steht die Quelle bereits mit 2024. |
-| Kapitel 1 | Palzkill ([Jahr]) | **Auflösbar: 2021.** Überall sonst in der Arbeit mit 2021 zitiert. |
-| Kapitel 4.1, 4.3, 6 | Salzmann, [Jahr] und S.??? | Jahr der Dissertation eintragen. Die fünf Praktiken stehen bei Salzmann auf **S. 113–114**, dort zitiert er Carlgren et al. (2016b, S. 47); am Original gegenprüfen. Salzmann verweist auf S. 98 zusätzlich auf Carlgren et al. (2016b, S. 50). |
-| Kapitel 1 | Kliemann, [Jahr], S. 262 | Vermutlich Kapitel im Sammelband Fegert et al. (2018); liegt nicht vor. |
-| Kapitel 1 | Fegert, Kölch & Kliemann, [Jahr], S. 4 | Vermutlich 2018; siehe oben. |
-| 4.2, 4.3, 4.5, 4.6, Anhang 7 | Glinz et al., [Jahr] | **Auflösbar, siehe unten.** |
+| Kommentar | Stelle | Stand | Empfehlung |
+|---|---|---|---|
+| 5 | Kap. 1, Ohlert | offen | Vorschlagstext aus dem Kommentar übernehmen, Kaderathleten ergänzen |
+| 10/11 | Kap. 2, Vier-Ebenen-Modell | offen | behalten, auf einen Satz kürzen; 3.2 und Kap. 6 bauen darauf auf |
+| 20 | 3.1.3, Phasenmodell | erledigt | nur löschen |
+| 22 | 3.1.4, Handlungssicherheit | offen | Absatz umbauen: zwei Seiten der Unsicherheit, nicht „dieselbe Sorge“; Einstieg nicht beim Verdachtsfall |
+| 25 | 3.3, Blending-Satz | offen | vereinfachen oder streichen (4.4.1 sagt dasselbe) |
+| 27 | 3.4, Deterding-Zerlegung | offen | kürzen, nur die Abgrenzung „Elemente statt Spiel“ wird später gebraucht |
+| 28 | 3.4, Trennlinie Gamification | offen | streichen, Einordnung macht 4.4 |
+| 29/30 | 3.4, Sailer & Homner | offen | korrigieren, nicht streichen (trägt F14 und Tab. 4) |
+| 42 | 4.1, Dell’Era und Carlgren | offen | Dell’Era-Aufzählung streichen, Reihenfolge-Argument behalten |
+| 48 | 4.4, Stickel | offen | Studie in Kap. 3 vorstellen, in 4.4 nur Rückverweis |
+| 50–52 | 4.4.1, fünftes Prinzip | offen | Variante A ohne Uuugh-Satz, De Angeli als Halbsatz zu „keine eigenen Erlebnisse offenlegen“ |
+| 57/58 | 4.4.4, Dopplung | offen | behalten, roten Schlusssatz streichen, Beleg zum Kontinuum ergänzen |
 
-**Glinz et al. — vollständige Angabe.** Die Datei ist das IREB-Handbuch, Version 1.2.0, Autoren Martin Glinz, Hans van Loenhoud, Stefan Staal und Stan Bühne. Erstveröffentlichung 11.11.2020, Urheberrecht laut Nutzungsbedingungen © 2022, danach Versionen 1.1.1 (2023), 1.1.2 (2024) und 1.2.0. Vorschlag für das Literaturverzeichnis:
+### 4.4 Formalia
 
-> Glinz, M., van Loenhoud, H., Staal, S. & Bühne, S. (2022). *Handbuch IREB Certified Professional for Requirements Engineering. Foundation Level* (Version 1.2.0). International Requirements Engineering Board.
-
-Zwei Punkte dazu: Erstens das Datum der Version 1.2.0 auf S. 5 der Versionshistorie selbst nachschlagen und die Jahresangabe daran anpassen. Zweitens wird die Quelle in der Arbeit durchgehend als „Glinz et al." eingeführt, während alle anderen mehrautorigen Quellen bei der Erstnennung ausgeschrieben werden (etwa „Tolks, Lampert, Dadaczynski, Maslon, Paulus & Sailer, 2020"). Bei der Erstnennung in Kapitel 4.2 ausschreiben.
-
-### 4.4 Vollständigkeit der Anforderungsspezifikation
-
-Zwei Befunde, die in Kapitel 4.4 als Gestaltungsentscheidung stehen, sind in Tab. 6 nicht als Anforderung angekommen.
-
-- [ ] **Elternkommunikation als eigener Situationstyp.** Steht in Tab. 4 unter Grundfunktion 1, belegt über Götzl et al. (2025, S. 277, 280). Das ist der einzige Befund im gesamten Quellenstapel, der in keinem der drei untersuchten Bestandsangebote vorkommt, also der originellste Punkt des Konzepts. In Tab. 6 taucht er nicht auf, weil F01 und F02 nur allgemein von Themenfeldern sprechen. **Empfehlung:** eigene Zeile in Tab. 6, Priorität Soll, Quelle Götzl et al. (2025).
-- [ ] **Abdeckung der frühen, mehrdeutigen Grooming-Phase.** Kapitel 3.5.1 zeigt, dass Uuugh genau die erste Modellphase auslässt — das ist das Alleinstellungsmerkmal, das die Lückenanalyse in 3.5.4 trägt. Kein F-Eintrag verlangt bislang, dass die Szenarien diese Phase abdecken. **Empfehlung:** eigene Zeile in Tab. 6, Priorität Muss, Quelle Kapitel 3.1.3 und 3.5.1.
-- [ ] **F05 hat keine User Story.** Der Text nach Tab. 7 sagt, alle acht User Storys seien in den Anforderungen vertreten — das stimmt. Umgekehrt fehlt aber zur zentralen Grundfunktion 2 (F05, abgestufte Einordnung am Szenarioende) eine User Story, obwohl das Nutzungsszenario in Anhang 6 genau diesen Moment als den beruhigendsten beschreibt („Dass ein Vater überhaupt in der Halle ist, steht dort unter unbedenklich, und das beruhigt ihn mehr, als er erwartet hätte"). **Empfehlung:** US9 ergänzen, etwa „Als Trainer möchte ich am Ende sehen, was an der Situation unbedenklich war und was nicht, damit ich einschätzen lerne, statt mir alles zu verbieten." Deckt F05 ab und bindet die Persona-A-Frustration direkt an.
-- [ ] **Trainingsphase vor/während/nach ist keine Anforderung mehr.** Im alten Entwurf war das F11. Sie steckt jetzt nur noch im Domänenmodell und in der Notiz zu Kapitel 5.3. Entscheiden, ob sie als Anforderung zurückkommt oder ausschließlich Strukturmerkmal des Inhaltsmodells bleibt. Für Letzteres spricht, dass sie keine Systemfunktion beschreibt.
+- [ ] Literaturverzeichnis: ein Absatz je Eintrag, hängender Einzug 0,5 cm (aktuell Handumbruch und 1,25 cm)
+- [ ] Abkürzungsverzeichnis anlegen oder Überschrift von Kap. 9 anpassen
+- [ ] Tag der Einreichung auf der Titelseite
+- [ ] Kommentare und Markierungen entfernen, Verzeichnisse am Schluss aktualisieren
 
 ### 4.5 Mit Timo Engler klären
 
-- [ ] **Schnitt Kapitel 4 / 5.** Kapitel 4 endet jetzt tatsächlich mit der priorisierten Anforderungsspezifikation und enthält mit Tab. 3 bis Tab. 7 fünf Artefakte. Strengere Variante wäre: Kapitel 4 rein Vorgehen, alle Artefakte nach Kapitel 5. Da Kapitel 4 damit rund 20 Seiten trägt und Kapitel 5 noch komplett offen ist, sollte das vor dem Schreiben von Kapitel 5 geklärt sein.
-- [ ] **Interviewleitfaden im Anhang.** Seit die Erhebungsmethodik entfällt, ist er optional geworden. Entscheiden und den Anhangspunkt anpassen oder streichen. Anhang 8 ist ebenfalls noch mit „X" belegt.
-- [ ] **Umfang von Kapitel 4.4.** Neun Unterkapitel unter 4.4 stehen sieben Unterkapiteln im gesamten Kapitel 3 gegenüber. Falls das als unverhältnismäßig gilt, wäre die Zusammenfassung von 4.4.3 bis 4.4.8 zu einem Unterkapitel mit fett gesetzten Zwischenüberschriften die Rückfallebene.
+Laut Notion-Karte „Mit Timo abklären“ erledigt: Titelblatt Bachelor of Science, Gendern, Seitenumfang über Limit, „Notation in Anlehnung an“ in Abbildungsunterschriften, Zitation „(Interview T)“.
 
-### 4.6 Zu erledigen
+Noch offen:
 
-- [ ] **Transkripte anonymisieren**, bevor sie in den Anhang gehen. Im Text steht „Interview K" und „Interview T", die Dateien tragen noch Vornamen. Datenschutz und Anonymität sind in den DHfPG-Richtlinien ausdrücklich gefordert. **Achtung:** In den Quellennotizen tauchten drei verschiedene Namensangaben für den Kinderschutzbeauftragten auf. Es darf keiner davon in Arbeit oder Anhang gelangen. Auch die Angabe „Datenschutzbeauftragter seit 2018, Compliance-Ombudsmann seit 2022/23" in Kapitel 3.2 macht die Person in einem Verein dieser Größe identifizierbar — prüfen, ob sie so stehen bleiben soll.
-- [ ] Kommentare aus der Arbeit abarbeiten: c5–c8 (Kapitel 1, zweiter Absatz wirkt zusammenhanglos), c13/c14 (Vier-Ebenen-Modell in der Zielsetzung, Achtung Rückbezug in 3.2), c29 (Absatz zu Unterscheidungsfähigkeit), c32 (Formulierung Blending-Paradigma), c34/c35 (Deterding-Definition, Länge und Relevanz), c50 (Dopplung Dell'Era / Carlgren), c54, c57 (Eltern als Stakeholder), c60, c67/c68
-- [ ] Überprüfen, ob Stickel et al. (2025) in Kapitel 3.3 vorgestellt werden soll (Abschnitt 6.1)
-- [ ] Literaturverzeichnis anlegen. Zielumfang 50 bis 75 Quellen. Ausgangsbestand: 32 Dateien im Projektspeicher plus Sekundärquellen.
-- [ ] Abkürzungsverzeichnis füllen oder streichen
+- [ ] KI-Nutzung: wo und in welcher Form angeben (Richtlinien S. 11; die Selbstständigkeitserklärung ist nur ein Haken beim Upload)
+- [ ] Schnitt Kap. 4/5, Gewicht der technischen Umsetzung gegenüber den Designentscheidungen, Auswahl der Wireframes (Fragen aus der Notion-Karte, nicht als erledigt markiert)
 
-### 4.7 Zu prüfende Belegstellen
+### 4.6 Seit 01.09.2026 erledigt
 
-- [ ] **Kapitel 1:** Die Zahlen 70 % / 26 % / 19 % stammen aus SicherImSport (Rulofs et al., 2022), nicht aus Safe Clubs. Schmitz, Söllinger und Ohlert zitieren sie selbst als Sekundärquelle. Zusätzlich widersprechen sich die Stichprobengrößen in der Sekundärliteratur: Stickel et al. nennen 4.367 Befragte, Bittner et al. 2.024, bei identischen Prozentwerten. Empfehlung: direkt über Rulofs (2024, S. 131) belegen und die Stichprobengröße weglassen.
-- [ ] **Ohlert et al. (2018):** Lesart festlegen. 37,6 % mit 11,2 % schwer (eigene Angabe) gegen 37 % gesamt mit 16/10/11 (Rulofs) gegen geschlechtergetrennt 48 % / 23 % (Palzkill).
-- [ ] **Brackenridge & Fasting (2005):** Alle Seitenangaben stammen aus dem Autorenmanuskript, gegen die Druckfassung (Auto/Biography 13(1), 1–20) prüfen.
-- [ ] **Bange (2018)** und **Kölch & Fegert (2018):** nicht am Original verifiziert, Fegert et al. (2018) liegt nicht vor.
-- [ ] **Universitätsklinikum Ulm (2025)** zur Gestaltung der Uuugh-Figuren: Quelle noch nicht belegt.
-- [ ] **Carlgren et al. (2016b):** liegt nicht im Original vor, wird durchgehend über Salzmann sekundär zitiert. DOI 10.1111/caim.12153.
-- [ ] **Safe Clubs Projektende:** Abstract nennt Februar 2025, Text „Ende 2024". Aktuell mit „Anfang 2025" umgangen.
-- [ ] **Palzkill (2021, S. 198)** schreibt „§8b SGB III". Korrekt wäre § 8b SGB VIII, vermutlich Druckfehler in der Quelle. In Kapitel 4.4 wurde die Paragrafenangabe deshalb weggelassen.
-- [x] **Vier fehlende RE-Standardquellen — erledigt am 26./27.08.2026.** Persona-Methode, Use-Case-Notation, User-Story-Schablone, die Unterscheidung der Anforderungsarten und die MoSCoW-Priorisierung sind jetzt sämtlich über Glinz et al. belegt. Die im alten Stand empfohlene Anschaffung von Rupp & die SOPHISTen erübrigt sich. Fundstellen: Stakeholder S. 20–21 und S. 90, Personas S. 93–94, Szenarien S. 108, User-Story-Schablone nach Cohn (2004) S. 47, Use-Case-Formularvorlage S. 48–49, Anforderungsarten S. 10–11, Quelle als Anforderungsattribut S. 152, MoSCoW S. 159–160.
-- [x] **Rulofs (2024) — geklärt am 25.08.2026.** Bettina Rulofs ist die Autorin von Kapitel 7, Behrens, Bauers und Hovemann sind die Herausgeber des Bandes *Entwicklungstendenzen im Sportmanagement* (Springer Gabler, S. 129–149). Die Zitierweise in der Arbeit ist korrekt.
-- [x] **„hard fun" — geklärt am 25.08.2026.** Die Formulierung stammt von **Papert (1998)**, zitiert nach Breuer & Bente (2010, S. 12), nicht von Gee. „Pleasantly frustrating" ließ sich auf S. 12 nicht finden und wurde deshalb nicht verwendet.
-
-### 4.8 Für Kapitel 6 vormerken
-
-Bereits im Text von Kapitel 6 angelegt:
-
-- Vier Grenzen des Vorgehens: zwei Befragte aus einem Verein · keine beobachtende Komponente · keine Co-Evaluation · Einzelbearbeitung, damit entfällt Salzmanns Praktik Diversität.
-- Dell'Era et al. (2025) untersucht kommerzielle Beratungsprojekte ohne Bezug zu ehrenamtlichen oder pädagogischen Kontexten; Querschnittsdesign erlaubt keine kausalen Aussagen.
-- Zwei Limitationen aus der Umstellung von Grundfunktion 2: Der Prototyp meldet nicht zurück, ob die eigene Reaktion angemessen war, obwohl Persona A genau das sucht. Und der Ansatz, einzelne Situationsmerkmale abgestuft auszuweisen, ist im Quellenstapel nicht wirksamkeitsgeprüft, sondern nur an Uuugh und die Schirrmacher-Simulation angelehnt.
-
-Noch zu ergänzen:
-
-- Wouters et al. (2013) finden für Erwachsene keinen Lernvorteil durch Serious Games — die Zielgruppe dieser Arbeit ist genau diese Gruppe.
-- Sailer & Homner (2020) finden im informellen Trainingssetting kleinere Effekte als im schulischen.
-- Der Prototyp erfüllt Tolks' drittes Serious-Game-Kriterium bewusst nicht.
-- **Die drei Zielkonflikte aus 4.6 wieder aufgreifen**, besonders den zweiten: In einem kleinen Trainerteam kann bereits die Zahl der vorliegenden Entscheidungen Rückschlüsse auf einzelne Personen zulassen (F08 gegen NF04). Das ist der handfesteste Datenschutzeinwand gegen das Konzept und sollte nicht nur genannt, sondern mit einer Mindestzahl an Antworten je Entscheidungspunkt beantwortet werden.
-- Der Prototyp setzt eine Betreiberrolle voraus, die im Post SV Nürnberg nicht besetzt ist (F14, NF10). Personalisierung nach Horch et al. (2024, S. 166) als strukturelles Risiko.
-- Übertragbarkeit auf andere Vereine — dafür ist die Trennung von Inhalt und Vereinskontext im Domänenmodell das Argument.
+- [x] Toter Verweis auf Kap. 4.4.9: 4.6 verweist nicht mehr darauf, die bewussten Auslassungen stecken in NF09, NF10, F14 und den Prinzipien
+- [x] Tabellenverzeichnis vollständig (Tab. 1–9), Abbildungsverzeichnis angelegt
+- [x] Zitierform NF13, Tippfehler „Kan“
+- [x] Platzhalter `[Jahr]` und `S.???` aufgelöst, bis auf Tab. 9
+- [x] Glinz et al. als Glinz, van Loenhoud, Staal & Bühne (2024), Version 1.2.0, Erstnennung in 4.2 ausgeschrieben
+- [x] Seitenzahlen Stickel et al. in NF01/NF02
+- [x] GF-Spalte in Tab. 6 eingeführt (Vorschlag aus dem alten Abschnitt 4.5)
+- [x] Trainingsphase entschieden: Attribut der Klasse Szenario und Spalte in Tab. 9, keine Anforderung
+- [x] Elternkommunikation: keine eigene Anforderung, inhaltlich über Szenario 3 („Der zuverlässige Co-Trainer“) und das Themenfeld in Tab. 9 abgedeckt
+- [x] Frühe Grooming-Phase: keine eigene Anforderung; Kap. 6 führt sie als Beitrag. In allen drei ausgearbeiteten Szenarien sind die grenzverletzenden Merkmale nicht eingetreten
+- [x] Klassendiagramm: Situationsmerkmal als eigene Klasse, Mindestanzahl im Einschätzungsspiegel (F11), Nutzerprofil und Trainerteam entfallen
+- [x] Literaturverzeichnis angelegt, Kapitel 5 bis 7 geschrieben
+- [x] Ohlert-Lesart festgelegt: 37,6 % Lebenszeitprävalenz, davon 11,2 % schwere Formen
+- [x] SicherImSport-Zahlen als Rulofs et al. (2022; zitiert nach Schmitz et al., 2025, S. 75–76), ohne Stichprobengröße
+- [x] Brackenridge & Fasting als Autorenmanuskript mit [elektronische Quelle] zitiert
+- [x] „Universitätsklinikum Ulm (2025)“ hat sich als Krauß et al. (2025) aufgelöst
+- [x] Umfang über 50 Seiten mit Timo Engler abgestimmt
 
 ---
 
 ## 5 Empirische Basis
 
-Zwei leitfadengestützte Experteninterviews, Juli 2026, beide beim Post SV Nürnberg. Ausgewertet in Kapitel 3.2. Keine repräsentative Erhebung, sondern zwei Perspektiven auf denselben Verein.
+Zwei leitfadengestützte Experteninterviews, Juli 2026, beide beim Post SV Nürnberg. Ausgewertet in Kap. 3.2, thematisch und ohne Kategoriensystem. Keine repräsentative Erhebung, sondern zwei Perspektiven auf denselben Verein.
 
-### Interview K — Kinderschutzbeauftragter
+| | Interview T | Interview K |
+|---|---|---|
+| Rolle | Trainer im Trainingsbetrieb | Kinderschutzbeauftragter |
+| Datum | 20.07.2026 (im Transkript vertippt als „20.0.2026“) | 23.07.2026 |
+| Dauer | 41:09 Minuten | ca. 30 Minuten, exakte Dauer im Transkript noch offen |
+| Hintergrund | seit März 2026 im Verein, Erfahrung überwiegend aus dem früheren Verein | Datenschutzbeauftragter seit 2018, Compliance-Ombudsmann seit 2022/23, Schutzkonzept selbst entwickelt |
+
+Reihenfolge und Abhängigkeit: Interview T kam zuerst. Inhalte daraus gingen als „Konsens bisher“ in Interview K ein. In beiden Gesprächen hat der Interviewer die App-Idee vorgestellt, bei K vor der ersten Leitfadenfrage, bei T vor der Frage nach Anforderungen.
+
+### Interview K
 
 - Post SV als Breitensportverein, Abgrenzung vom Leistungssport
-- Schutzkonzept vollständig selbst entwickelt, bewusst strikt: „wenn ich kein Ziel definiere, das auch etwas höher hängt, dann setzt es vielleicht auch keiner richtig um". Genau diese Strenge stößt auf Widerstand.
-- Rolle entstand aus vorhandener Fachlichkeit: Datenschutzbeauftragter seit 2018, beruflich Compliance-Ombudsmann seit 2022/23 → Personalisierung nach Horch et al. (2024, S. 166)
-- „bei den Trainern sind definitiv Lücken. Bei den Trainern ist aber auch der Bedarf hoch, sich selbst zu schützen"
-- Abwehrhaltung aus Unwissenheit: „Ich kann ja gar nichts mehr machen, was darf ich denn überhaupt noch sagen"
+- Schutzkonzept vollständig selbst entwickelt, bewusst strikt: „wenn ich kein Ziel definiere, das auch etwas höher hängt, dann setzt es vielleicht auch keiner richtig um“. Genau diese Strenge stößt auf Widerstand.
+- „bei den Trainern sind definitiv Lücken. Bei den Trainern ist aber auch der Bedarf hoch, sich selbst zu schützen“
+- Abwehrhaltung aus Unwissenheit: „Ich kann ja gar nichts mehr machen, was darf ich denn überhaupt noch sagen“
 - Bedarf ist ein Selbstbewusstseins-, kein Wissensproblem
-- „jeder zweite Trainer, wenn nicht sogar mehr" würde auf Zusatzpflichten abwehrend reagieren; Jüngere sind offener
-- Bringt die App-Idee selbst ins Spiel; wünscht prozentuale Rückmeldung, lehnt richtig/falsch ab
-- Grenzen: wirkt nur bei Personen ohne schädigende Absicht, ausschließlich präventiv
-- Gelungene Prävention: Grenzüberschreitungen anderer werden aktiv gemeldet statt geduldet
+- „jeder zweite Trainer, wenn nicht sogar mehr“ würde auf Zusatzpflichten abwehrend reagieren; Jüngere sind offener, „alte, gestandene Haudegen“ schwerer
+- Greift die App-Idee auf; schlägt selbst eine prozentuale Rückmeldung vor, lehnt richtig/falsch ab („Sender-Empfänger-Geschichte“)
+- Fordert mehr Kontext in Situationsbeschreibungen (Altersunterschied, Vorgeschichte) → F04
+- Grenzen: wirkt nur bei Personen ohne schädigende Absicht, ausschließlich präventiv; Warnung, dass Kundige „noch perfider“ werden könnten
+- Gelungene Prävention: Grenzüberschreitungen anderer werden gemeldet statt still geduldet
+- Vorschlag einer Vorab-Abfrage bei den Trainern, welche Situationen sie beschäftigen (für Kap. 6, Ausblick)
 
 **Situationen:** Umkleide mit Eltern im Raum · Hausrecht eines jungen Trainers gegenüber einem langjährigen Mitglied · Wortwahl bei der Auswechslung
 
-### Interview T — Trainer im Trainingsbetrieb
+### Interview T
 
 - Wendet sich bei Unsicherheit an Trainerkollegen derselben Altersklasse, nicht an eine benannte Ansprechperson
-- Über sexualisierte Gewalt wird zu selten gesprochen, weil es „einfach Tabuthema noch ist"
+- Fühlt sich nach eigener Aussage „auf jeden Fall“ sicher; die Handlungsunsicherheit ist damit nur als Fremdeinschätzung belegt
+- Über sexualisierte Gewalt wird zu selten gesprochen, weil es „einfach Tabuthema noch ist“
+- Im früheren Verein bei Einzelgesprächen nach Möglichkeit eine neutrale dritte Person dabei, nicht bei lange bekannten Spielern
+- Wünsche an die App: Feedback mit erkennbarer Herkunft, keine Vorschriften, übersichtlich, Farben für angemessen/nicht angemessen, Fortschritt darf beim Schließen nicht verloren gehen (→ F12)
+- Wünscht eine App, die „mitlernt“; im Konzept nicht aufgegriffen (keine Benutzerkonten)
 
-**Situationen:** körpernahes Vormachen · Einzelgespräche nach dem Training · Teambuilding, bei dem die Gruppe unerwartet schrumpft
+**Situationen:** körpernahes Vormachen · Einzelgespräche nach dem Training · Teambuilding, bei dem die Gruppe unerwartet schrumpft · Trainer in Mannschaften des anderen Geschlechts
 
 ### Wie die Interviews in die Arbeit eingehen
 
-Die beiden Befragten wirken als **Informanten** im Sinne von Druin (2002, zit. n. Pan et al., 2026), also als Beteiligte, die an ausgewählten Punkten gezielt beitragen — nicht als Design Partner. Begründet wird das mit der Zeitknappheit im Ehrenamt. In der Systematik von al Mrayat et al. (2013) sind sie die **konversationelle** Quelle, neben der analytischen (Bestandsangebote und Forschungsstand) und der synthetischen (Nutzungsszenarien, Spielszenarien, Wireframes).
+Die beiden Befragten wirken als **Informanten** im Sinne von Druin (2002; zitiert nach Pan et al., 2026, S. 456), also als Beteiligte, die an ausgewählten Punkten gezielt beitragen, nicht als Design Partner. Begründet wird das mit der Zeitknappheit im Ehrenamt. In der Systematik von al Mrayat et al. (2013) sind sie die **konversationelle** Quelle, neben der analytischen (Bestandsangebote und Forschungsstand) und der synthetischen (Nutzungsszenario, User Storys, Use Case).
 
 ---
 
 ## 6 Theoretische Bausteine
 
-Umgesetzt in Tab. 4 (Kapitel 4.4.2). Diese Übersicht bleibt als Nachschlagewerk bestehen.
+Umgesetzt in Tab. 4 (Kap. 4.4.2). Anforderungsnummern in aktueller Zählung (F01–F15, NF01–NF13).
 
 | Quelle | Befund | Konsequenz |
 |---|---|---|
-| Ritterfeld & Weber (2006, zit. n. Breuer & Bente, 2010, S. 13) | Drei Paradigmen: Reinforcement, Motivation, Blending | Blending: Bewältigung der Situation ist selbst die Übung |
-| Breuer & Bente (2010, S. 12) | Interaktivität erzeugt Selbstwirksamkeit; drei Interaktionsebenen (Mikro, narrativ, Meta); „hard fun" nach Papert (1998); Flow nach Csikszentmihalyi (1990) | Verzweigung, Wiederholbarkeit, kein Abbruch bei ungünstiger Entscheidung (F03, F11) |
-| Breuer & Bente (2010, S. 14, 16) | Optimales Maß an Unterhaltung; Pull schlägt Push | Begrenzter Spielanteil (NF08); Vertiefungen abrufbar (F12) |
-| Breuer & Bente (2010, S. 15) | Charsky & Mims: gemeinsame Besprechung eines Szenarios als eigene Lerngelegenheit | Trägt die Begründung von Grundfunktion 5 |
-| Wouters et al. (2013) | Lernerfolg besser, Motivation nicht; Gruppenspiel ca. 3×; schematisch schlägt realistisch; **kein Vorteil bei Erwachsenen** | Trägt F08 und die schematische Gestaltung; Erwachsenenbefund für Kapitel 6 |
-| Ritterfeld et al. (2009, S. 691, 695–696) | Interaktivität und Multimodalität wirken einzeln, aber kaum auf Prozesswissen | Interaktive Entscheidungspunkte statt Wissensabfrage (F02) |
-| Sailer & Homner (2020, S. 99–100) | Kompetitiv-kollaborativ schlägt *keine* soziale Interaktion, **nur verhaltensbezogen** | Prozentuale Rückmeldung statt Punktestand (F08, F13) |
-| Tolks et al. (2020, S. 699–704) | Vier Serious-Game-Kriterien; Selbstbestimmungstheorie (Kompetenz, Autonomie, soziale Eingebundenheit); Risiko der Überlagerung | Einordnung des Prototyps; Auswahl der Spielelemente; Verzicht auf Punkte (NF08) |
-| Deterding et al. (2011, S. 11–12) | Paidia gegen Ludus; Zeitdruck als Gestaltungsmuster | Regelgebundenes Format; Verzicht auf Zeitdruck (NF02) |
-| Krauß et al. (2025, S. 13); Bittner et al. (2026) | Eulenkodex Detektion/Schutz/Aktion; Phasen vor/während/nach dem Training; Notausgang; Textlastigkeit als Limitation | Dreiteilige Rückmeldung, angepasst (F04); Beratungszugang (F07); Textgrenze (NF05) |
-| Schirrmacher Group (o. J.) | Skala grün bis rot; Timing als Lernziel; drei Eskalationsebenen | Ampelstufe (F05); Ansprechpersonen nach Ebenen (F06) |
-| Brackenridge & Fasting (2005) | Kontinuum; kontextabhängige Deutung; Furcht vor Falschbeschuldigung | Abgestufte Bewertung (F05); Umdeutung der Kategorie „Absichern"; Fortgang unabhängig von der Wahl (F03) |
-| Götzl et al. (2025, S. 277–280) | Beobachtet-Sein als stärkster hemmender Faktor; **Zugang zu den Eltern als neuer Befund** | Transparenz als Selbstschutz; Elternkommunikation als Szenariotyp — **noch ohne Anforderungsnummer**, siehe 4.4 |
-| Palzkill (2021, S. 194, 196, 198) | Risikofaktoren; fünf Neutralisierungsstrategien; fünf Leitlinien im Verdachtsfall; Anspruch auf anonyme Beratung | Themenraster; ungünstige Optionen; Bewertungsmaßstab; Beratungszugang |
-| Stickel et al. (2025) | Selbstwirksamkeit d = 0,82, stabil über 6 Monate; **Zeitmangel als dominierender Abbruchgrund, nicht emotionale Belastung**; 63 % geben Inhalte weiter | Begrenzte Bearbeitungsdauer (NF01, NF02); Austausch im Team als realistische Erwartung |
-| Horch et al. (2024, S. 158–164, 166, 178) | Rollenidentität Konsument/Produzent/Eigentümer; Anreizstruktur des Ehrenamts; Personalisierung; Qualifikationsproblem | Stakeholderanalyse nach Rollen; freiwilliges Tool statt Pflichtschulung (NF09); Pflegeaufwand als Anforderung (F14, NF10) |
+| Ritterfeld & Weber (2006; zitiert nach Breuer & Bente, 2010, S. 13) | Drei Paradigmen: Reinforcement, Motivation, Blending | Blending: Bewältigung der Situation ist selbst die Übung |
+| Breuer & Bente (2010, S. 12) | Interaktivität erzeugt Selbstwirksamkeit; narrative Interaktionsebene | Fester Fortgang, Wiederholbarkeit, kein Abbruch (F05, F13) |
+| Breuer & Bente (2010, S. 14, 16) | Optimales Maß an Unterhaltung; Pull schlägt Push | Spielelemente untergeordnet (NF10); Rückmeldung abrufbar (F06) |
+| Breuer & Bente (2010, S. 15) | Charsky & Mims: gemeinsame Besprechung eines Szenarios als Lerngelegenheit | Trägt Grundfunktion 5 |
+| Wouters et al. (2013) | Lernerfolg besser, Motivation nicht; Gruppenspiel etwa dreifach; schematisch schlägt realistisch; kein Vorteil bei Erwachsenen | F10, NF07; Erwachsenen-Befund gehört in Kap. 6 |
+| Ritterfeld et al. (2009, S. 694–696) | Interaktivität und Multimodalität wirken einzeln, aber kaum auf Prozesswissen | Entscheidungspunkte statt Wissensabfrage (F03) |
+| Sailer & Homner (2020, S. 99–100) | Kompetitiv-kollaborativ schlägt keine soziale Interaktion, nur verhaltensbezogen | Prozentuale Rückmeldung statt Punktestand (F10, F14) |
+| Tolks et al. (2020, S. 699–704) | Vier Serious-Game-Kriterien; Selbstbestimmungstheorie; Risiko der Überlagerung | Einordnung als Lernformat mit Serious-Game-Elementen; NF10 |
+| Deterding et al. (2011, S. 9–13) | Gamification = Elemente statt Spiel | Abgrenzung in 3.4 |
+| Krauß et al. (2025, S. 13); Bittner et al. (2026, S. 337, 341) | Eulenkodex Detektion/Schutz/Aktion; Notausgang; Textlastigkeit als Limitation | Dreiteilige Rückmeldung (F06); Beratungszugang (F09); Textgrenze (NF06) |
+| Schirrmacher GmbH (o. J.) | Skala grün bis rot; Timing als Lernziel; drei Kontaktebenen | Ampelstufe (F07). Die Kontaktebenen sind seit 01.09. nicht mehr Teil des Konzepts |
+| Brackenridge & Fasting (2005, S. 3, 19) | Kontinuum; kontextabhängige Deutung; Trainer fürchten, selbst fälschlich beschuldigt zu werden | Abgestufte Einschätzung (F07); Kategorie Absichern; fester Fortgang (F05) |
+| Palzkill (2021, S. 194–198) | Risikofaktoren; fünf Neutralisierungsstrategien; Beobachtende fürchten, andere zu Unrecht zu beschuldigen; Leitlinien im Verdachtsfall | Themenraster; ungünstige Optionen; Bewertungsmaßstab der Rückmeldung |
+| Götzl et al. (2025, S. 276–280) | Beobachtet-Sein als stärkster hemmender Faktor; Kontakt zu den Eltern | Absichern als Transparenz; Szenario 3 |
+| Rulofs (2024, S. 140–141) | Benannte Ansprechperson, Interventionsplan, externe Fachberatung | Zweiteilung F08 (vereinsintern) und F09 (extern) |
+| Stickel et al. (2025, S. 2–5) | Größter Effekt bei Selbstwirksamkeit; Abbruch überwiegend aus Zeitmangel | Kurze Durchläufe (NF01, NF02). Studie noch in Kap. 3 vorstellen |
+| Horch et al. (2024, S. 158–166, 177–178) | Vier Rollen der Mitglieder; Anreizstruktur des Ehrenamts; Personalisierung; Qualifikationsproblem | Stakeholder nach Rollen; Freiwilligkeit (NF11); Pflegeaufwand (F15, NF12) |
 
-### 6.1 Methodische Quellen für Kapitel 4
+### 6.1 Methodische Quellen
 
 | Quelle | Verwendung |
 |---|---|
-| **Glinz et al. (Version 1.2.0)** | **Trägt den gesamten RE-Apparat:** Stakeholderbegriff und dreistufige Einflussskala (S. 20–21, 90) · Personas (S. 93–94) · Szenariobegriff (S. 108) · User-Story-Schablone nach Cohn 2004 (S. 47) · Use-Case-Formularvorlage (S. 48–49) · Anforderungsarten (S. 10–11) · Quelle als Anforderungsattribut (S. 152) · MoSCoW (S. 159–160) · Erweiterbarkeit (S. 85) |
-| al Mrayat et al. (2013) | Vier Erhebungskategorien; Verortung der drei Quellen; RE als iterativer Prozess |
-| De Angeli et al. (2026) | Co-Discovery / Co-Design / Co-Evaluation; Risiko der Trivialisierung; fiktionale Rahmung (NF07); Design Brief |
-| Pan et al. (2026) / Druin (2002) | Informant Design; vier Beteiligungsstufen; Fachpersonen in der frühen Phase |
-| Carvalho et al. (2015) | Drei Aktivitäten mit eigenem Motiv (4.4.1); Zerlegung in Handlungsschritte als Begründung für Use Cases (4.5); Komplexitätswarnung (NF03, NF05) |
-| Dell'Era et al. (2025) | Problemraum vor Lösungsraum; sechs Praktiken; Sensemaking gegen Problem-Solving |
-| Carlgren et al. (2016b, zit. n. Salzmann) | Fünf Design-Thinking-Praktiken als Raster (Tab. 2); Nutzerfokus und latente Bedürfnisse |
-| Podsakoff et al. (2003, S. 887) | Nur noch für das Mehrquellen-Argument, mit ausdrücklicher Kennzeichnung als Analogie |
+| Glinz, van Loenhoud, Staal & Bühne (2024), Version 1.2.0 | Stakeholder (S. 20–21, 90), Personas (S. 93–94), Szenarien (S. 108), User-Story-Schablone nach Cohn (S. 47), Use-Case-Vorlage (S. 48–49), Anforderungsarten (S. 11), Quelle als Attribut (S. 151), Verfolgbarkeit (S. 154–155), MoSCoW (S. 159), Zielkonflikte (S. 114–115), Erweiterbarkeit (S. 85), Notation Abb. 1–3 (S. 67, 70–71, 82), Validierung (S. 27) |
+| al Mrayat et al. (2013) | Vier Erhebungskategorien; RE als iterativer Prozess |
+| De Angeli et al. (2026) | Co-Discovery / Co-Design / Co-Evaluation; Risiko der Banalisierung; fiktionale Rahmung (NF09, in Prüfung, Kommentare 50–52) |
+| Pan et al. (2026) / Druin (2002) / Scaife et al. (1997) | Informant Design; Fachpersonen in der frühen Phase |
+| Carvalho et al. (2015) | Drei Aktivitäten mit eigenem Motiv (4.4.1); Zerlegung in Handlungsschritte (4.5); Komplexitätswarnung (NF03, NF06) |
+| Dell’Era et al. (2025) | Problemraum vor Lösungsraum |
+| Carlgren et al. (2016b; zitiert nach Salzmann, 2020, S. 27, 113–114) | Fünf Design-Thinking-Praktiken als Raster (Tab. 2) |
+| Podsakoff et al. (2003, S. 887) | Mehrquellen-Argument, ausdrücklich als „one way“ |
 
-**Ein Hinweis zu Glinz et al.:** Das Handbuch unterscheidet nicht funktional gegen nichtfunktional, sondern **funktionale Anforderungen, Qualitätsanforderungen und Randbedingungen** (S. 10–11). Kapitel 4.6 hat das aufgegriffen und begründet, warum die letzten beiden gemeinsam in Tab. 7 stehen. Zwei Dinge sind dabei im Blick zu behalten: Erstens warnt das Handbuch an derselben Stelle ausdrücklich davor, die Abgrenzung über die Faustregel „was das System tun soll gegen wie es das tun soll" zu ziehen, weil das häufig zu Fehlklassifikationen führt — die Formulierung „unter welchen Bedingungen er dies tun muss" in 4.6 liegt nah an dieser Faustregel und sollte im Kolloquium erklärbar sein. Zweitens sind mehrere Einträge in Tab. 7 nach dieser Systematik eher Randbedingungen als Qualitätsanforderungen, etwa NF07 (fiktionale Szenarien) und NF09 (Freiwilligkeit). Ein Satz im Text, der das benennt, nimmt die Frage vorweg.
+### 6.2 Literaturverzeichnis
 
-**Anmerkung zu Stickel et al. (2025):** wird bisher nur in Kapitel 4.4 und in Tab. 7 verwendet, ist aber die zielgruppennächste Wirksamkeitsquelle im gesamten Stapel und gehört eigentlich in Kapitel 3.3 vorgestellt.
-
-### 6.2 Bislang ungenutztes Material
-
-Kein Verlust, aber für Kapitel 5 vorgemerkt:
-
-- **Götzl et al.:** sportartspezifische Risikoeinschätzung (Turnen und Schwimmen riskanter, Fußball wegen geringerem Eltern-Trainer-Austausch), räumlich-bauliche Hinweise zu Rückzugsräumen, O-Ton-Zitate → Material für 5.4
-- **Stickel et al.:** Modulstruktur, besonders Modul 3.2 zum Interventionsplan → Vorlage für den inneren Aufbau eines Szenarios (5.4)
-- **Schmitz et al.:** die fünf Interventionsphasen des Online-Schulungstools → zweite Gliederungsvorlage für 5.4
-- **Breuer & Bente, Tab. 1 (S. 19):** Label- und Tag-System zur Selbstverortung → Einstieg in 5.1
-- **Deterding et al., Tab. 1:** fünf Ebenen von Spieldesignelementen → Strukturierungshilfe für 5.1
-- **Glinz et al., Kap. 3.4.4.1:** UML-Aktivitätsdiagramm mit Notationsübersicht → direkte Vorlage für 5.2, damit ist auch dieses Kapitel belegt
-- **Glinz et al., Abb. 3.8:** Beispiel für ein einfaches UML-Klassendiagramm → Notationsbeleg für 5.3
-- **Podsakoff, prozedurale Remedies:** entfällt, seit die Erhebungsmethodik gestrichen wurde
+29 Einträge, Sekundärquellen nur über die Sekundärquelle aufgeführt. Am Original noch nicht bestätigt (Stand 18.09.): die vier Beiträge aus dem Sammelband Fegert et al. (2018), also Bange, Kölch & Fegert, Kliemann sowie Fegert, Kölch & Kliemann. Formale Baustellen siehe 4.4.
 
 ---
 
 ## 7 Das Konzept
 
-### 7.1 Gestaltungsentscheidungen (Kapitel 4.4)
+### 7.1 Gestaltungsentscheidungen (Kap. 4.4)
 
-**Einordnung:** szenariobasiertes digitales Lernformat mit Elementen des Serious-Game-Designs. Tolks' Kriterien 1, 2 und 4 sind erfüllt, Kriterium 3 (Unterordnung des Inhalts unter den Unterhaltungsfaktor) bewusst nicht. Regelgebunden im Sinne von Ludus, kein offener Handlungsraum.
+**Einordnung:** szenariobasiertes digitales Lernformat mit Elementen des Serious-Game-Designs. Tolks’ Kriterien 1, 2 und 4 sind erfüllt, Kriterium 3 (Unterordnung des Inhalts unter den Unterhaltungsfaktor) bewusst nicht.
 
 **Lernziel:** Handlungssicherheit im Umgang mit mehrdeutigen Situationen, nicht Faktenwissen.
 
-**Fünf Gestaltungsprinzipien (4.4.1):** Blending-Paradigma · Trennung von Spiel-, Lern- und Instruktionsmotiv · Ausrichtung an Kompetenz, Autonomie und sozialer Eingebundenheit · Komplexität bleibt beim Designer · fiktionale statt realer Fälle.
+**Fünf Gestaltungsprinzipien (4.4.1):** Blending-Paradigma · Trennung von Spiel-, Lern- und Instruktionsmotiv · Ausrichtung an Kompetenz, Autonomie und sozialer Eingebundenheit · Modelle bleiben im Hintergrund · erfundene statt realer Fälle, schematische Darstellung.
 
 **Sechs Grundfunktionen (4.4.3 bis 4.4.8):**
 
-1. **Szenariobasierte Entscheidungssituationen** — narrative Interaktionsebene; Ausgangslage, dann Entscheidungspunkte mit Leitfrage und genau drei Optionen, von denen keine offensichtlich falsch ist; Themenraster aus Palzkill, Safe Clubs und den Interviews
-2. **Abgestufte Einschätzung** — eingeordnet wird die **Situation**, nicht die eigene Entscheidung. Für jede durchlaufene Situation listet der Prototyp auf, welche Merkmale unbedenklich, klärungsbedürftig und grenzverletzend sind, einschließlich solcher, die gar nicht eingetreten sind, aber die Kippschwelle markieren. Die Stufe „unbedenklich" ist dabei so wichtig wie die anderen beiden.
-3. **Dreiteilige Rückmeldung Erkennen, Absichern, Handeln** — Umdeutung des Eulenkodex, weil „Schutz" bei Trainern Transparenz im eigenen Handeln meint und nicht Selbstschutz vor einem Übergriff. Erscheint erst auf Anforderung.
-4. **Verzweigung und Wiederholbarkeit** — der Fortgang ist festgelegt und hängt nicht von der gewählten Option ab; kein Abbruch; abgeschlossene Szenarien sind erneut startbar
-5. **Abgleich im Trainerteam** — Anteil je Handlungsoption, keine Rangfolge, keine Personenzuordnung. Der Prototyp liefert nur den Anlass, das Gespräch findet außerhalb statt.
-6. **Information und Beratung auf Abruf** — Vertiefungen und Rückmeldung nur auf Anforderung; Ansprechpersonen nach drei Eskalationsebenen und Beratungszugang ohne Anforderung sichtbar
-
-**Bewusste Auslassungen** (Inhalt liegt vor, Unterkapitel fehlt aktuell — siehe 4.1): keine Punkte, Bestenlisten oder Levelsysteme · keine Zeitdruckmechanik · keine Täterperspektive · keine realen Vorfälle aus dem Verein.
+1. **Szenariobasierte Entscheidungssituationen:** Ausgangslage, dann Entscheidungspunkte mit Leitfrage und genau drei Optionen, keine offensichtlich falsch; Themenfelder aus Palzkill, Safe Clubs und den Interviews
+2. **Abgestufte Einschätzung:** Am Szenarioende werden die Merkmale der Situation eingeordnet, nicht die eigene Entscheidung; auch nicht eingetretene Merkmale, die die Kippschwelle markieren
+3. **Dreiteilige Rückmeldung Erkennen, Absichern, Handeln:** Umdeutung des Eulenkodex; hängt am Entscheidungspunkt, nicht an der gewählten Option; erscheint auf Abruf
+4. **„Verzweigung und Wiederholbarkeit“:** Fortgang festgelegt, unabhängig von der Wahl, kein Abbruch, erneut startbar. Die Bezeichnung passt nicht zum Inhalt und soll umbenannt werden
+5. **Abgleich im Trainerteam:** Anteil je Handlungsoption, keine Rangfolge, keine Personenzuordnung; der Prototyp liefert nur den Anlass
+6. **Information und Beratung auf Abruf:** Rückmeldungen auf Abruf; Ansprechpersonen am Szenarioende und Beratungsstelle jederzeit ohne Anforderung sichtbar
 
 ### 7.2 Funktionale Anforderungen (Tab. 6)
 
-| Nr. | Anforderung, verkürzt | Prio | Grundfunktion |
+| Nr. | Anforderung, verkürzt | Prio | GF |
 |---|---|---|---|
-| F01 | Übersicht der Szenarien mit Themenfeld und Kurzbeschreibung, freie Auswahl | Muss | 1 |
-| F02 | Ausgangssituation, mehrere Entscheidungspunkte, je Leitfrage und genau drei Optionen | Muss | 1 |
-| F03 | Fortgang festgelegt, unabhängig von der Wahl, kein Abbruch | Muss | 4 |
-| F04 | Fachliche Rückmeldung abrufbar, gegliedert in Erkennen, Absichern, Handeln | Muss | 3 |
-| F05 | Am Szenarioende Merkmale nach unbedenklich / klärungsbedürftig / grenzverletzend, inkl. nicht eingetretener, ohne Bewertung der eigenen Entscheidung | Muss | 2 |
-| F06 | Ansprechpersonen und Meldewege mit Namen und Kontaktweg, nach drei Eskalationsebenen | Muss | 6 |
-| F07 | Überregionale Beratungsstelle an jedem Punkt erreichbar | Muss | 6 |
-| F08 | Nach allen Rückmeldungen Anteil je Handlungsoption, ohne Rangfolge, ohne Personenzuordnung | Muss | 5 |
-| F09 | Hinweis bei zu wenigen Entscheidungen anderer | Soll | 5 |
-| F10 | Unterbrechen und am zuletzt erreichten Entscheidungspunkt fortsetzen | Muss | — |
-| F11 | Abgeschlossene Szenarien erneut startbar | Soll | 4 |
-| F12 | Vertiefende Hintergrundinformationen abrufbar, kein Push | Soll | 6 |
-| F13 | Übersicht über bearbeitete und offene Szenarien, ohne Punktestand und Bestenliste | Kann | — |
-| F14 | Ansprechpersonen, Meldewege und Szenarien ohne technische Kenntnisse pflegbar | Soll | — |
+| F01 | Szenarien decken die Themenfelder ab, besonders mehrdeutige Situationen | Muss | 1 |
+| F02 | Übersicht der Szenarien mit Themenfeld und Kurzbeschreibung, freie Auswahl | Muss | 1 |
+| F03 | Ausgangssituation, mehrere Entscheidungspunkte, je Leitfrage und genau drei Optionen | Muss | 1 |
+| F04 | Ausgangssituation nennt mindestens Altersgruppe, Ort und Vorgeschichte | Muss | 1 |
+| F05 | Fortgang festgelegt, unabhängig von der Wahl | Muss | 4 |
+| F06 | Fachliche Rückmeldung nach jeder Entscheidung abrufbar, gegliedert in Erkennen, Absichern, Handeln | Soll | 3 |
+| F07 | Am Szenarioende Merkmale nach unbedenklich / klärungsbedürftig / grenzverletzend, inkl. nicht eingetretener | Muss | 2 |
+| F08 | Am Szenarioende Ansprechpersonen und Meldewege des Vereins mit Namen und Kontaktweg | Muss | 6 |
+| F09 | Offizielle Melde- und Beratungsstelle an jedem Punkt abrufbar | Soll | 6 |
+| F10 | Nach allen Rückmeldungen Anteil je Handlungsoption, ohne Rangfolge, ohne Personenzuordnung | Muss | 5 |
+| F11 | Hinweis bei zu wenigen Entscheidungen anderer, übrige Punkte regulär | Soll | 5 |
+| F12 | Unterbrechen, Fortschritt auf dem Gerät, Fortsetzen am letzten Entscheidungspunkt | Muss | – |
+| F13 | Abgeschlossene Szenarien erneut startbar | Kann | 4 |
+| F14 | Übersicht über bearbeitete und offene Szenarien, ohne Punktestand und Bestenliste | Kann | – |
+| F15 | Ansprechpersonen, Meldewege und Szenarien ohne technische Kenntnisse pflegbar | Soll | – |
 
-Neun Muss, vier Soll, ein Kann. Fehlend: Elternkommunikation und frühe Grooming-Phase, siehe 4.4.
+Neun Muss, vier Soll, zwei Kann. Die frühere F14 (vertiefende Hintergrundinformationen) ist gestrichen, alle Nummern dahinter sind um eins gerückt.
 
 ### 7.3 Nichtfunktionale Anforderungen (Tab. 7)
 
@@ -344,166 +334,228 @@ Neun Muss, vier Soll, ein Kann. Fehlend: Elternkommunikation und frühe Grooming
 | NF02 | Entscheidungen zeitlich unbegrenzt | Muss | Randbedingung |
 | NF03 | Ohne Einführung, Schulung oder anleitende Person nutzbar | Muss | Qualität (Benutzbarkeit) |
 | NF04 | Entscheidungen nicht auf einzelne Personen rückführbar | Muss | Qualität (Datenschutz) |
-| NF05 | Textumfang begrenzt, keine Fachbegriffe und Modelle in der Anwendung | Muss | Qualität (Benutzbarkeit) |
-| NF06 | Ohne Einarbeitung und Installationsaufwand auf dem Smartphone nutzbar | Soll | Qualität / Randbedingung |
-| NF07 | Szenarien erfunden, aber realitätsnah; keine realen Vorfälle | Muss | Randbedingung |
-| NF08 | Spielerische Elemente ordnen sich unter, keine Richtig-falsch-Bewertung | Muss | Randbedingung |
-| NF09 | Freiwillig, ohne Nachweis-, Abschluss- oder Fristenpflicht | Muss | Randbedingung |
-| NF10 | Pflege ohne technische Kenntnisse und ohne wiederkehrenden Aufwand | Soll | Qualität (Wartbarkeit) |
-| NF11 | Szenarienbestand erweiterbar ohne Änderung an Aufbau oder Ablauf | Soll | Qualität (Erweiterbarkeit) |
+| NF05 | Fortschritt und eigene Entscheidungen nur auf dem Endgerät; zentral nur ein Zählwert je Option; keine personenbezogenen Daten | Muss | Randbedingung (Datenschutz) |
+| NF06 | Textumfang begrenzt, Sprache des Trainingsalltags, keine Fachbegriffe und Modelle | Muss | Qualität (Benutzbarkeit) |
+| NF07 | Darstellung schematisch | Muss | Randbedingung |
+| NF08 | Ohne Anmeldung und Installation im Browser auf dem Smartphone nutzbar | Soll | Qualität / Randbedingung |
+| NF09 | Szenarien erfunden, aber realitätsnah; keine realen Vorfälle | Muss | Randbedingung |
+| NF10 | Spielerische Elemente untergeordnet, keine Richtig-falsch-Bewertung | Muss | Randbedingung |
+| NF11 | Freiwillig, ohne Nachweis-, Abschluss- oder Fristenpflicht | Muss | Randbedingung |
+| NF12 | Pflege der Vereinsangaben ohne technische Kenntnisse, wenige Minuten je Aktualisierung | Kann | Qualität (Wartbarkeit) |
+| NF13 | Szenarienbestand erweiterbar ohne Änderung an Aufbau oder Ablauf | Soll | Qualität (Erweiterbarkeit) |
 
-Die Spalte „Art nach Glinz" steht **nicht** in der Arbeit, sondern ist eine Arbeitshilfe für den Fall, dass die Zuordnung im Kolloquium erfragt wird (siehe 6.1).
+Zehn Muss, zwei Soll, ein Kann. Die Spalte „Art nach Glinz“ steht nicht in der Arbeit, sie ist eine Arbeitshilfe für das Kolloquium.
 
-### 7.4 Die drei Zielkonflikte
+### 7.4 Zielkonflikte
 
-| Konflikt | Auflösung im Text |
+| Konflikt | Stand |
 |---|---|
-| Inhaltliche Tiefe (F04, F05, F12) gegen Bearbeitungsdauer und Textumfang (NF01, NF05) | Abrufbarkeit: Vertiefendes nur auf Anforderung, das im Ernstfall Nötige ohne Anforderung sichtbar |
-| Abgleich im Trainerteam (F08) gegen nicht personenbeziehbare Nutzung (NF04) | **Nur teilweise gelöst.** In kleinen Trainerteams lässt bereits die Zahl der Entscheidungen Rückschlüsse zu. → Kapitel 6 |
-| Anzeige der Ansprechpersonen (F06) verlangt aktuelle Angaben, deren Pflege (F14, NF10) an einer unbesetzten Rolle hängt | **Nicht gelöst.** → Kapitel 6 |
+| Inhaltliche Tiefe (F06, F07) gegen Bearbeitungsdauer und Textumfang (NF01, NF06) | In 4.6 gelöst über Abrufbarkeit |
+| Abgleich im Trainerteam (F10) gegen Nicht-Rückführbarkeit (NF04) | In 4.6 über die Mindestanzahl je Entscheidungspunkt (F11) beantwortet; der Schwellenwert lässt sich laut Kap. 6 erst im Betrieb festlegen |
+| Anzeige der Ansprechpersonen (F08) gegen Pflege durch eine unbesetzte Betreiberrolle (F15, NF12) | Nicht in 4.6, sondern in Kap. 6: Betreiberrolle vor der Einführung auf mindestens zwei Personen verteilen |
+
+### 7.5 Entscheidung vom 01.09.2026: Eskalationsebenen gestrichen
+
+Die Staffelung der Ansprechpersonen nach drei Eskalationsebenen ist aus dem Konzept entfernt. Einzige Quelle war die Schirrmacher GmbH (o. J.), Interview K enthält dazu nichts, Ebene 1 lässt sich nicht als Kontakt pflegen, und das Lernziel „angemessene Ebene wählen“ gehört zur Intervention. Erhalten bleibt die Zweiteilung vereinsintern (F08) gegen extern (F09), belegt über Rulofs (2024, S. 140–141).
+
+Umsetzung: F08, Kap. 4.4.8, Anhang 7 und das Klassendiagramm sind bereinigt. **Noch offen:** die Zeile in Tab. 4 unter Grundfunktion 6.
+
+### 7.6 Ergebnisse aus Kapitel 5
+
+**Konzeptüberblick (5.1).** Drei Festlegungen ergeben sich aus dem Zusammenspiel der Anforderungen: keine Benutzerkonten, Daten möglichst auf dem Endgerät mit einem einzigen vereinsweiten Zählwert je Entscheidungspunkt und Option, Trennung der Inhalte vom Einsatzkontext. Gepflegt werden müssen nur Vereinsangaben und Szenarienbestand.
+
+**Ablauf (5.2, Abb. 1).** Aktivitätsdiagramm mit Rückführung auf den Verzweigungsknoten oberhalb des Entscheidungspunkts; von den Handlungsoptionen geht keine eigene Kante aus. Zwei Abweichungen: Unterbrechung mit Speichern, Hinweis bei zu wenigen Entscheidungen anderer.
+
+**Struktur (5.3, Abb. 2, Anhang 8).** 13 Klassen in drei Bereichen, Diagramm ohne Attribute, Attribute und Anforderungsbezug in Anhang 8. Details in Abschnitt 8.
+
+**Szenariovorlage (5.4, Tab. 8).**
+
+| Bestandteil | Vorgabe | Klasse |
+|---|---|---|
+| Titel | kurz, situationsbezogen | Szenario |
+| Themenfeld | eines der Risikofelder | Themenfeld |
+| Trainingsphase | vor, im oder nach dem Training, in der Übersicht angezeigt | Szenario |
+| Kurzbeschreibung | ein bis zwei Sätze, ohne den Verlauf vorwegzunehmen | Szenario |
+| Ausgangssituation | mindestens Altersgruppe, Ort, Vorgeschichte | Szenario |
+| Entscheidungspunkte | mehrere, feste Reihenfolge, Situationstext höchstens vier Sätze | Entscheidungspunkt |
+| Leitfrage | eine je Punkt, zweite Person | Entscheidungspunkt |
+| Handlungsoptionen | genau drei, je ein Satz, keine offensichtlich falsch | Handlungsoption |
+| Fachliche Rückmeldung | je Punkt, Erkennen/Absichern/Handeln, höchstens drei Sätze je Abschnitt | Rückmeldung |
+| Situationsmerkmale | zehn bis zwölf je Szenario, jede Stufe mindestens zweimal | Situationsmerkmal, Ampelstufe |
+
+Die drei ausgearbeiteten Szenarien halten die Vorgaben ein (11, 12 und 11 Merkmale, je drei grenzverletzende, keines davon eingetreten).
+
+**Szenarienbestand (5.4, Tab. 9).**
+
+| Szenario | Themenfeld (Tab. 9) | Phase | ausgearbeitet |
+|---|---|---|---|
+| Vor dem Heimspiel | Umkleideräume und Duschen | vor | Anhang 9 |
+| Die Hilfestellung | Körperkontakt und Hilfestellung | im | Anhang 10 |
+| Der zuverlässige Co-Trainer | Elternkontakt und Autofahrten | nach | Anhang 11 |
+| Die Auswechslung | Sprache und Umgangston | im | – |
+| Das Gespräch nach dem Abpfiff | Einzelgespräche und Einzeltraining | nach | – |
+| Die Zimmereinteilung | Auswärtsfahrten, Turniere und Übernachtungen | nach | – |
+| Die Nachricht am Abend | Digitale Kommunikation | nach | – |
+| Der alte Bekannte in der Halle | Gewachsene Gewohnheiten und Hausrecht | vor | – |
+| Der Hinweis im Trainerteam | Beobachtungen ansprechen | vor | – |
+| Mobbing im Team | Grenzverletzungen zwischen Kindern und Jugendlichen | im | – |
+
+**Oberfläche (5.5, Abb. 3).** Drei Smartphone-Ansichten im Hochformat: Übersicht, Entscheidungspunkt (Rückmeldung unter den Optionen), Auswertung (Merkmale, Einschätzungsspiegel, Ansprechpersonen). Beratungszugang in der Fußzeile jeder Ansicht.
+
+### 7.7 Festlegungen seit 01.09.2026
+
+- Keine Benutzerkonten, keine Pseudonyme, keine serverseitigen Einzeldatensätze. Fortschritt und Entscheidungen lokal, zentral nur Zähler je Entscheidungspunkt und Option
+- Fachliche Rückmeldung hängt am Entscheidungspunkt, nicht an der Handlungsoption
+- Situationsmerkmal als eigene Klasse mit Ampelstufe und Kennzeichen „eingetreten“
+- Wertevorrat Groomingphase gestrichen; Trainingsphase als Attribut des Szenarios
+- F14 alt (vertiefende Hintergrundinformationen) gestrichen
+- Unterkapitel 5.6 entfallen, Inhalte nach Kap. 6
+- Bekannte Schwäche der lokalen Speicherung (in Kap. 6): Gerätewechsel oder gelöschte Browserdaten setzen den Fortschritt zurück, damit sind Mehrfachzählungen nicht auszuschließen
 
 ---
 
-## 8 Domänenmodell
+## 8 Klassendiagramm (Abb. 2, Anhang 8)
 
-Sechzehn Klassen in drei Bereichen. Ausführliche Erläuterung, Notation, Klassentabellen und Rückbindung an die Anforderungen auf der verlinkten Seite.
+13 Klassen in drei Bereichen. Ersetzt das Domänenmodell vom 31.08. mit 16 Klassen (Nutzerprofil, Trainerteam, Groomingphase und Trainingsphase als Klassen sind entfallen, Situationsmerkmal ist neu).
 
-**Grundidee:** Inhalt (redaktionell gepflegt) ist vom Vereinskontext (konfigurierbar) getrennt. Beim Einsatz in einem anderen Verein werden nur Ansprechpersonen und Trainerteams ausgetauscht, die Szenarien bleiben unverändert. Bewusste Gestaltungsentscheidung, Beleg für NF11 und Argument für Kapitel 6.
+**Inhalt** (redaktionell gepflegt): Szenario, Themenfeld, Situationsmerkmal, Ampelstufe «Wertevorrat», Entscheidungspunkt, Rückmeldung, Handlungsoption.
 
-**Inhalt:** Szenario, Themenfeld, Entscheidungspunkt, Handlungsoption, Rückmeldung, sowie die Wertevorräte Trainingsphase, Groomingphase und Ampelstufe.
-**Nutzung:** Nutzerprofil, Durchlauf, Entscheidung, Einschätzungsspiegel (berechnet).
-**Vereinskontext:** Verein, Trainerteam, Ansprechperson, Hilfsangebot.
+**Nutzung** (entsteht beim Bearbeiten): Durchlauf «lokal», Entscheidung «lokal», Einschätzungsspiegel «gemeinsam».
 
-```
+**Vereinskontext** (beim Einsatz hinterlegt): Verein, Ansprechperson, Hilfsangebot.
+
+Die Trennung des Vereinskontexts von den Inhalten geht auf NF13 zurück und ist das Argument für die Übertragbarkeit auf andere Vereine.
+
+```mermaid
 classDiagram
     direction LR
 
     class Szenario {
         titel
         kurzbeschreibung
+        ausgangssituation
         trainingsphase
-        groomingphase
     }
     class Themenfeld {
         bezeichnung
         herkunft
+    }
+    class Situationsmerkmal {
+        beschreibung
+        stufe
+        eingetreten
+    }
+    class Ampelstufe {
+        <<Wertevorrat>>
+        unbedenklich
+        klärungsbedürftig
+        grenzverletzend
     }
     class Entscheidungspunkt {
         reihenfolge
         situationstext
         leitfrage
     }
-    class Handlungsoption {
-        text
-        einschätzung
-    }
     class Rückmeldung {
         erkennen
         absichern
         handeln
-        quelle
     }
-    class Trainingsphase {
-        <<enumeration>>
-        vor dem Training
-        im Training
-        nach dem Training
-    }
-    class Groomingphase {
-        <<enumeration>>
-        Auswahl
-        Vertrauensaufbau
-        Isolation und Kontrolle
-        Übergriff und Geheimhaltung
-    }
-    class Ampelstufe {
-        <<enumeration>>
-        unbedenklich
-        klärungsbedürftig
-        grenzverletzend
-    }
-    class Nutzerprofil {
-        pseudonym
-        rolle
-        sparte
+    class Handlungsoption {
+        text
     }
     class Durchlauf {
-        begonnenAm
+        <<lokal>>
         status
         fortschritt
+        begonnenAm
         abgeschlossenAm
+        gezählt
     }
     class Entscheidung {
-        zeitpunkt
-        reihenfolge
+        <<lokal>>
     }
     class Einschätzungsspiegel {
-        <<berechnet>>
-        bezugspunkt
-        bezugsgruppe
+        <<gemeinsam>>
+        anzahlProOption
         anteilProOption
+        mindestanzahl
     }
     class Verein {
         name
-        sparten
-    }
-    class Trainerteam {
-        bezeichnung
-        altersklasse
     }
     class Ansprechperson {
         name
         funktion
         kontaktweg
-        eskalationsebene
     }
     class Hilfsangebot {
         bezeichnung
-        kontakt
-        überregional
+        kontaktweg
+        erreichbarkeit
     }
 
-    Szenario "*" --> "1..*" Themenfeld : behandelt
+    Szenario "*" --> "1" Themenfeld : behandelt
+    Szenario "1" *-- "1..*" Situationsmerkmal : weist auf
     Szenario "1" *-- "2..*" Entscheidungspunkt : gliedert sich in
-    Entscheidungspunkt "1" *-- "3" Handlungsoption : bietet an
-    Handlungsoption "1" *-- "1" Rückmeldung : trägt
-    Handlungsoption "1" --> "0..1" Entscheidungspunkt : führt zu
-    Szenario ..> Trainingsphase
-    Szenario ..> Groomingphase
-    Handlungsoption ..> Ampelstufe
+    Situationsmerkmal ..> Ampelstufe
+    Entscheidungspunkt "1" *-- "1" Rückmeldung : trägt
+    Entscheidungspunkt "1" *-- "3" Handlungsoption : stellt zur Wahl
 
-    Nutzerprofil "1" --> "*" Durchlauf : startet
     Durchlauf "*" --> "1" Szenario : bearbeitet
     Durchlauf "1" *-- "*" Entscheidung : protokolliert
     Entscheidung "*" --> "1" Handlungsoption : wählt
-    Einschätzungsspiegel ..> Entscheidung : aggregiert
-    Durchlauf ..> Hilfsangebot : Notausstieg
+    Entscheidung ..> Einschätzungsspiegel : erhöht
+    Einschätzungsspiegel "*" --> "1" Entscheidungspunkt : gilt für
+    Einschätzungsspiegel "*" --> "1" Verein : gilt im
+    Durchlauf "*" --> "1" Verein : findet statt im
+    Durchlauf ..> Hilfsangebot : ruft auf
+    Durchlauf ..> Ansprechperson : zeigt
 
-    Verein "1" *-- "1..*" Trainerteam : umfasst
     Verein "1" *-- "1..*" Ansprechperson : benennt
-    Nutzerprofil "*" --> "1" Trainerteam : gehört zu
-    Rückmeldung --> "1..*" Ansprechperson : verweist auf
 ```
 
-**Zwei Punkte zum Abgleich mit Kapitel 4.6, offen:**
+| Klasse | Bereich | Bedeutung | Anforderung |
+|---|---|---|---|
+| Szenario | Inhalt | Zusammenhängende Situationsfolge aus dem Trainingsalltag | F01–F04, NF09 |
+| Themenfeld | Inhalt | Risikofeld, dem ein Szenario zugeordnet ist | F01, F02 |
+| Entscheidungspunkt | Inhalt | Stelle, an der die Situation anhält | F03, F05 |
+| Handlungsoption | Inhalt | Eine der drei Reaktionsmöglichkeiten | F03, F13 |
+| Rückmeldung | Inhalt | Fachliche Einordnung eines Entscheidungspunkts | F06 |
+| Situationsmerkmal | Inhalt | Merkmal des Szenarios mit Einstufung | F07 |
+| Ampelstufe | Inhalt | Wertevorrat der drei Stufen | F07 |
+| Durchlauf | Nutzung | Eine Bearbeitung, nur auf dem Endgerät | F12, F13, F14, NF04, NF05 (in Anhang 8 steht noch F15) |
+| Entscheidung | Nutzung | Gewählte Option; erhöht beim Abschluss den Zähler, ohne übertragen zu werden | F10, NF04, NF05 |
+| Einschätzungsspiegel | Nutzung | Vereinsweiter Zähler je Entscheidungspunkt und Option | F10, F11 |
+| Verein | Vereinskontext | Einsatzkontext und Bezugsgruppe der Anteilswerte | F10, NF13 |
+| Ansprechperson | Vereinskontext | Vereinsintern benannte Person mit Meldeweg | F08 |
+| Hilfsangebot | Vereinskontext | Überregionale, vereinsunabhängige Beratungsstelle | F09 |
 
-- `Handlungsoption.einschätzung` mit dem Wertevorrat `Ampelstufe` legt die Stufe an der **Option** fest. Kapitel 4.4.4 stuft aber ausdrücklich die **Merkmale der Situation** ein und nicht die Reaktion darauf. Das Modell sollte nachziehen: entweder eine eigene Klasse `Situationsmerkmal` mit Bezug zum Entscheidungspunkt und einer Ampelstufe, oder das Attribut an den Entscheidungspunkt verschieben. Empfehlung: eigene Klasse, weil F05 ausdrücklich auch nicht eingetretene Merkmale verlangt, die an keiner gewählten Option hängen.
-- `Einschätzungsspiegel` braucht ein Attribut für die Mindestzahl vorliegender Entscheidungen, sonst ist F09 nicht modelliert.
-
-**Geändert am 25.08.2026:** Die Attribute der Klasse `Rückmeldung` heißen `erkennen`, `absichern`, `handeln` statt `detektion`, `schutz`, `aktion`, passend zur Umdeutung in Kapitel 4.4.5. Falls ein Renderer bei Umlauten in Klassennamen streikt: `Rueckmeldung` und `Einschaetzungsspiegel` schreiben.
+F15 ist bewusst nicht im Modell: Die Pflegbarkeit ist eine Systemfunktion, kein fachlicher Gegenstand.
 
 ---
 
 ## 9 Konventionen
 
 - Interviews werden als **Interview K** (Kinderschutzbeauftragter) und **Interview T** (Trainer) zitiert, niemals mit Klarnamen
-- Sekundärzitate durchgängig als „zitiert nach" kennzeichnen
-- Mehrautorige Quellen bei der Erstnennung ausschreiben, danach „et al."
+- Sekundärzitate durchgängig als „zitiert nach“ mit Semikolon; ins Literaturverzeichnis nur die Sekundärquelle
+- Mehrautorige Quellen bei der Erstnennung ausschreiben (drei bis fünf Autoren), ab sechs Autoren immer „et al.“; bei Wiederholung darf nur das Jahr entfallen, nicht der Name
 - Unterkapitel nur, wenn mindestens ein weiteres auf derselben Ebene folgt; maximal drei Gliederungsebenen
-- Zielumfang Literaturverzeichnis: 50 bis 75 Quellen
-- Das Ergebnis heißt durchgehend „Prototyp", nicht „App" oder „Spiel"
-- Anforderungen werden mit F**nn** und NF**nn** referenziert, Grundfunktionen über die Kapitelnummer
-- Belege werden vor der Verwendung am Original geprüft; abweichende Befunde werden in Abschnitt 4.7 protokolliert
+- Das Ergebnis heißt durchgehend „Prototyp“, nicht „App“ oder „Spiel“
+- Anforderungen werden mit Fnn und NFnn referenziert, Grundfunktionen über die Kapitelnummer
+- Belege werden vor der Verwendung am Original geprüft
+- Antworten zur Arbeit stützen sich auf die aktuelle Word-Fassung im Projektspeicher, nicht auf diese Doku (Anweisung in Notion)
+- Diese Dokumentation führt dieselbe Nummerierung wie die Arbeit. Bei jeder Änderung an Tab. 6 oder Tab. 7 sind 3.1, 7.2, 7.3, 7.4 und Abschnitt 8 mitzuziehen
+
+**Farbmarkierungen in der Word-Datei** (Legende aus Notion):
+
+| Notion | Markierung in Word | Bedeutung | Anzahl am 16.10. |
+|---|---|---|---|
+| Rot | rot | vielleicht rausnehmen oder kürzen | 13 |
+| Blau | türkis | Zitation überprüfen | 105 |
+| Gelb | gelb | überprüfen | 26 |
+| Lila | pink | Schreibstandard mit Richtlinien abgleichen | 109 |
+| Grün | – | umformulieren | 0 |
 
 ---
 
@@ -512,6 +564,8 @@ classDiagram
 | Datum | Änderung |
 |---|---|
 | 24.08.2026 | Dokumentation angelegt. Gliederung Kapitel 4 beschlossen, Reihenfolgekonflikt mit Kapitel 2 behoben, Unterkapitel zur Erhebungsmethodik auf Weisung von Timo Engler gestrichen. Domänenmodell entworfen. Vier fehlende Anforderungen identifiziert. |
-| 25.08.2026 | Quellen für Kapitel 4 gesichtet. Kapitel 4 als Rohfassung geschrieben (4.1 und 4.4 vollständig, 4.2, 4.3, 4.5 und 4.6 mit Einleitung und Platzhalter). Tab. 2 und Tab. 3 ergänzt, Tabellennummerierung verschoben. Rulofs-Zitierweise und Herkunft von „hard fun" geprüft und geklärt. Fehler zu Sailer & Homner in Kapitel 3.4 gefunden. Selbstbestimmungstheorie als fünftes Gestaltungsprinzip ergänzt. Elternkommunikation als fünfte fehlende Anforderung aufgenommen. Rückmeldungskategorien im Domänenmodell auf Erkennen, Absichern, Handeln umbenannt. Vier fehlende Standardquellen des Requirements Engineering benannt. |
-| 26./27.08.2026 | **Kapitel 4 vollständig ausgearbeitet.** Stakeholderanalyse mit sieben Rollen (Tab. 3), zwei Personas und Nutzungsszenario (Anhang 4–6), acht User Storys mit Anforderungsbezug (Tab. 5), Use Case „Szenario bearbeiten" (Anhang 7), vierzehn funktionale (Tab. 6) und elf nichtfunktionale Anforderungen (Tab. 7), drei Zielkonflikte offengelegt. Grundfunktionen zu nummerierten Unterkapiteln 4.4.3 bis 4.4.8 umgebaut, „Bewusste Auslassungen" dabei entfallen. Grundfunktion 2 umgestellt: eingeordnet werden die Merkmale der Situation, nicht die eigene Entscheidung; zwei daraus folgende Limitationen für Kapitel 6 notiert. |
-| 27.08.2026 | Dokumentation vollständig überarbeitet. **Glinz et al. (IREB, Version 1.2.0) als neue Quelle aufgenommen — sie schließt alle vier zuvor offenen Belegstellen des Requirements Engineering**, die Empfehlung zu Rupp & die SOPHISTen entfällt. Fundstellen und Vorschlag für das Literaturverzeichnis ergänzt. Vier neue Folgefehler der Überarbeitung dokumentiert (toter Verweis auf 4.4.9, veraltetes Tabellenverzeichnis, Zitierform NF11, veraltete Notiz in 5.3). Lücken in der Spezifikation benannt (Elternkommunikation, frühe Grooming-Phase, fehlende User Story zu F05). Zwei Abgleichspunkte zwischen Domänenmodell und Kapitel 4.4.4 aufgenommen. Zuordnung der Kapitel-5-Unterkapitel zu Anforderungsnummern ergänzt. |
+| 25.08.2026 | Quellen für Kapitel 4 gesichtet. Kapitel 4 als Rohfassung geschrieben. Tab. 2 und Tab. 3 ergänzt. Rulofs-Zitierweise und Herkunft von „hard fun“ geklärt. Fehler zu Sailer & Homner in Kapitel 3.4 gefunden. Selbstbestimmungstheorie als fünftes Gestaltungsprinzip ergänzt. Rückmeldungskategorien auf Erkennen, Absichern, Handeln umbenannt. |
+| 26./27.08.2026 | Kapitel 4 vollständig ausgearbeitet: Stakeholderanalyse, Personas und Nutzungsszenario, User Storys, Use Case, Tab. 6 und Tab. 7, Zielkonflikte. Grundfunktionen zu 4.4.3 bis 4.4.8 umgebaut. Grundfunktion 2 auf die Merkmale der Situation umgestellt. |
+| 27.08.2026 | Dokumentation überarbeitet. Glinz et al. (IREB, Version 1.2.0) als Quelle aufgenommen, schließt alle offenen RE-Belegstellen. Folgefehler der Überarbeitung und Lücken in der Spezifikation dokumentiert. |
+| 01.09.2026 | Nummerierung an die Arbeit angeglichen (F01–F16, NF01–NF13). Eskalationsebenen aus F08 gestrichen (Abschnitt 7.5). Abschnitt zur Quellenspalte in Tab. 6 und Tab. 7 ergänzt. US9 und Notiz in 5.3 als erledigt markiert. |
+| 17.10.2026 | **Doku auf die Fassung vom 16.10. gebracht.** Kapitelstand: Kapitel 1 bis 7 geschrieben, Kapitel 5 mit 5.1 bis 5.5 (5.6 entfallen), Tab. 8 und 9, Abb. 1 bis 3, Anhang 8 bis 11. Nummerierung F01–F15 nach Streichung der alten F14 nachgezogen (Abschnitte 6, 7.2, 7.4, 8). Abschnitt 4 neu: offene Punkte als Kurzfassung mit Verweis auf claude/abgabe-checkliste.md und das Notion-Board, Kommentartabelle, erledigte Punkte seit 01.09. Argumentationskette korrigiert (81 statt 91 Prozent, Ohlert-Befund differenziert, Begründung des Widerstands nach Interview K). Empirische Basis um Daten, Reihenfolge, Herkunft der App-Idee und weitere Aussagen aus Interview T ergänzt. Palzkill und Brackenridge & Fasting in Abschnitt 6 getrennt. Neuer Abschnitt 7.6 zu den Ergebnissen aus Kapitel 5 und 7.7 zu den Festlegungen seit 01.09. Abschnitt 8 durch das aktuelle Klassendiagramm mit 13 Klassen ersetzt. Farblegende der Markierungen in Abschnitt 9. Umfang und Abgabetermin im Steckbrief. Neu gefunden: Kopfzeilenwiederholung fehlt bei Tab. 4 und Anhang 8, Zeile F11 bricht über die Seite. |

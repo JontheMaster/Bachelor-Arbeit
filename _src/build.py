@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Baut aus den Content-Fragmenten die Artifact- und die GitHub-Fassung."""
+import base64
 import pathlib
 
 # Aus dem Ordner _src heraus aufrufen: python3 build.py
@@ -26,15 +27,15 @@ PAGES = [
         "content": "index.content.html",
         "title": "Projektakte Post SV",
         "desc": "Arbeitsakte zur Bachelor-Thesis: Argumentationskette, Kapitelstand, "
-                "offene Punkte und die vollstaendige Anforderungsspezifikation.",
+                "offene Punkte, Anforderungen und Ergebnisse aus Kapitel 5.",
         "artifact_out": SITE / "artifact-index.html",
         "repo_out": REPO / "index.html",
     },
     {
         "content": "modell.content.html",
         "title": "Domänenmodell Szenario-Baukasten",
-        "desc": "Sechzehn Klassen in drei Bereichen: das Inhaltsmodell hinter dem Prototyp, "
-                "mit Kardinalitaeten und Rueckbindung an die Anforderungen.",
+        "desc": "Archiv, Stand 27.08.2026: Entwurf des Inhaltsmodells mit sechzehn Klassen. "
+                "Gueltig ist das Klassendiagramm in der Projektakte.",
         "artifact_out": SITE / "artifact-modell.html",
         "repo_out": REPO / "domaenenmodell.html",
     },
@@ -43,8 +44,23 @@ PAGES = [
 
 MODEL_SVG = (SITE / "model.svg").read_text(encoding="utf-8")
 
+# Abbildungen aus der Arbeit, als data-URI eingebettet, damit beide Fassungen eigenstaendig bleiben
+FIGURES = {
+    "__ABB1__": "img/abb1-aktivitaetsdiagramm.png",
+    "__ABB2__": "img/abb2-klassendiagramm.png",
+    "__ABB3__": "img/abb3-wireframes.png",
+}
+
+
+def data_uri(rel):
+    raw = (SITE / rel).read_bytes()
+    return "data:image/png;base64," + base64.b64encode(raw).decode("ascii")
+
 
 def links(body, to_index, to_modell):
+    for key, rel in FIGURES.items():
+        if key in body:
+            body = body.replace(key, data_uri(rel))
     return (body
             .replace("__MODEL_SVG__", MODEL_SVG)
             .replace("__PROJEKTAKTE__", to_index)

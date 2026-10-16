@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Sechzehn Klassen in drei Bereichen: das Inhaltsmodell hinter dem Prototyp, mit Kardinalitaeten und Rueckbindung an die Anforderungen.">
+<meta name="description" content="Archiv, Stand 27.08.2026: Entwurf des Inhaltsmodells mit sechzehn Klassen. Gueltig ist das Klassendiagramm in der Projektakte.">
 <title>Domänenmodell Szenario-Baukasten</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F5C63'/%3E%3Cpath d='M9 22V10h5.6c2.5 0 4.1 1.4 4.1 3.6 0 1.6-.9 2.7-2.3 3.1l2.9 5.3h-2.7l-2.6-4.9h-2.5V22H9zm2.5-6.9h2.8c1.3 0 2.1-.6 2.1-1.6s-.8-1.6-2.1-1.6h-2.8v3.2z' fill='%23fff'/%3E%3C/svg%3E">
 <style>
@@ -733,6 +733,16 @@ figcaption{
 .link{stroke:currentColor;stroke-width:1.3;fill:none;}
 .dash{stroke-dasharray:5 4;}
 
+/* ---------- Abbildungen aus der Arbeit (seit 17.10.2026) ---------- */
+:root{--paper:#FFFFFF;--img-dim:1;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--img-dim:.88;}}
+:root[data-theme="dark"]{--img-dim:.88;}
+.figwrap img.fig{display:block;width:100%;height:auto;margin:0 auto;background:var(--paper);border-radius:2px;filter:brightness(var(--img-dim));}
+.figwrap img.tall{max-width:560px;}
+.figwrap img.mid{max-width:880px;}
+.figwrap img.wide{min-width:640px;}
+td .pill{margin-left:.25rem;}
+
 </style>
 </head>
 <body>
@@ -817,7 +827,7 @@ code{font-family:var(--f-mono);font-size:.875em;background:var(--accent-wash);co
   <p class="eyebrow">
     <span>Domänenmodell</span><span class="dot">/</span>
     <span>Kapitel 5.3</span><span class="dot">/</span>
-    <span>Stand 27.08.2026</span>
+    <span>Stand 27.08.2026 · Archiv</span>
   </p>
   <h1>Der Szenario-Baukasten als Inhaltsmodell</h1>
   <p class="subtitle">
@@ -840,6 +850,12 @@ code{font-family:var(--f-mono);font-size:.875em;background:var(--accent-wash);co
 </header>
 
 <main>
+
+<div class="callout" style="margin-top:0;">
+  <span class="tag">Archiv · überholt seit Kapitel 5</span>
+  <p>Diese Seite zeigt den Entwurf vom 27.08. mit sechzehn Klassen. In der Arbeit gilt das konzeptionelle Klassendiagramm mit dreizehn Klassen (Abb. 2 und Anhang 8): ohne Nutzerprofil und Trainerteam, Trainingsphase als Attribut des Szenarios, mit eigener Klasse Situationsmerkmal und der Mindestanzahl aus F11 im Einschätzungsspiegel. Die Anforderungsnummern auf dieser Seite folgen noch der alten Zählung.</p>
+  <p>Aktueller Stand: <a href="index.html#modell">Projektakte, Abschnitt Klassenmodell</a>.</p>
+</div>
 
 <section id="was" style="padding-top:0;">
   <div class="sec-head">
