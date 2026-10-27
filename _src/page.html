@@ -1,0 +1,643 @@
+<div class="site" lang="de">
+
+<header class="hero" id="top">
+  <div class="court" aria-hidden="true">
+    <svg viewBox="0 0 1000 560" fill="none" stroke-linecap="round">
+      <g stroke="var(--court-1)" stroke-width="2.2">
+        <rect x="20" y="40" width="960" height="480"/>
+        <path d="M20 100 A144 144 0 0 1 164 244 V316 A144 144 0 0 1 20 460"/>
+        <path d="M980 100 A144 144 0 0 0 836 244 V316 A144 144 0 0 0 980 460"/>
+      </g>
+      <g stroke="var(--court-3)" stroke-width="2.2" opacity=".75">
+        <rect x="164" y="100" width="672" height="360"/>
+        <line x1="500" y1="100" x2="500" y2="460"/>
+        <circle cx="500" cy="280" r="43"/>
+        <path d="M164 221 H303 V339 H164"/><circle cx="303" cy="280" r="43"/>
+        <path d="M836 221 H697 V339 H836"/><circle cx="697" cy="280" r="43"/>
+        <path d="M164 122 H237.8 A162 162 0 0 1 237.8 438 H164"/>
+        <path d="M836 122 H762.2 A162 162 0 0 0 762.2 438 H836"/>
+      </g>
+      <g stroke="var(--court-2)" stroke-width="2.2" opacity=".7">
+        <rect x="284" y="172" width="432" height="216"/>
+        <line x1="428" y1="172" x2="428" y2="388"/><line x1="572" y1="172" x2="572" y2="388"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div>
+      <p class="kicker"><span>Bachelorarbeit</span><span>DHfPG</span><span>Sport- und Gesundheitsinformatik</span><span>2026</span></p>
+      <h1>Ein Vater bleibt in der Kabine. <em>Wie verhältst du dich?</em></h1>
+      <p class="lede">In meiner Bachelorarbeit habe ich einen Prototyp konzipiert, mit dem ehrenamtliche Trainerinnen und Trainer genau solche Momente üben. <strong>Kurz, freiwillig und ohne dass jemand sieht, wie sie entschieden haben.</strong> Entstanden ist das Konzept für den Post SV Nürnberg, übertragbar ist es auf andere Vereine.</p>
+      <dl class="hero-meta">
+        <dt>Titel</dt>
+        <dd>Konzeptionelle Entwicklung eines Prototyps zur Unterstützung bei der Implementierung von Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein Post SV Nürnberg</dd>
+        <dt>Autor</dt>
+        <dd>Jonathan Sommerer · Abgabe Oktober 2026</dd>
+      </dl>
+    </div>
+    <aside class="teaser" aria-label="Ausschnitt aus Szenario 1">
+      <div class="t-top"><span>Szenario 1 · Vor dem Heimspiel</span><span class="seg" aria-label="Entscheidungspunkt 1 von 3"><i class="on"></i><i></i><i></i></span></div>
+      <div class="chips"><span class="chip">U12, 10 bis 12 Jahre</span><span class="chip">Kabine</span><span class="chip">vor dem Training</span></div>
+      <p class="sit">Zwanzig Minuten vor dem Anpfiff. Ein Vater, der seit zwei Jahren Fahrdienste übernimmt, steht mit dem Trikotsatz in der Kabine, während sich zwei Jungen umziehen. Einer dreht sich zur Wand. Der Vater merkt es nicht und erzählt weiter.</p>
+      <h2>Wie verhältst du dich?</h2>
+      <div class="opts" id="teaserOpts"></div>
+      <p class="hint">Wähl eine Option. Das Szenario läuft unten im Abschnitt Szenarien weiter.</p>
+    </aside>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Abschnitte">
+  <div class="wrap">
+    <a class="brand" href="#top">Prävention im Trainingsalltag</a>
+    <ul id="navlist">
+      <li><a class="n" href="#ueberblick">Überblick</a></li>
+      <li><a class="n" href="#problem">Problem</a></li>
+      <li><a class="n" href="#vorgehen">Vorgehen</a></li>
+      <li><a class="n" href="#konzept">Konzept</a></li>
+      <li><a class="n" href="#zielgruppe">Zielgruppe</a></li>
+      <li><a class="n" href="#anforderungen">Anforderungen</a></li>
+      <li><a class="n" href="#modelle">Modelle</a></li>
+      <li><a class="n" href="#szenarien">Szenarien</a></li>
+      <li><a class="n" href="#rueckblick">Rückblick</a></li>
+      <li><a class="n" href="#quellen">Quellen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ Überblick ============ -->
+<section class="sec" id="ueberblick">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Rahmen der Arbeit</p>
+      <h2>Auf einen Blick</h2>
+    </div>
+    <dl class="facts">
+      <div><dt>Forschungsfrage</dt><dd class="q">Wie kann ein digitales Tool Sportvereine konkret dabei unterstützen, präventiv gegen sexualisierte Gewalt vorzugehen?</dd></div>
+      <div><dt>Ergebnis</dt><dd>Ein Konzept für einen Prototyp mit Anforderungen, Ablauf- und Strukturmodell, Szenarienvorlage, drei ausgearbeiteten Szenarien und Wireframes. <small>Ausdrücklich keine fertig programmierte Anwendung.</small></dd></div>
+      <div><dt>Zielgruppe</dt><dd>Erwachsene, ehrenamtliche Trainerinnen und Trainer in ihrer Aufsichtsrolle. <small>Kinderschutz-Ansprechpersonen können den Prototyp ebenfalls nutzen, etwa als Einstieg in ein Gespräch mit dem Trainerteam.</small></dd></div>
+      <div><dt>Einordnung</dt><dd>Prävention im Vier-Ebenen-Modell von Wolff <span class="cite">(2015; zitiert nach Rulofs, 2024, S. 133)</span>. <small>Intervention und Aufarbeitung liegen außerhalb der Arbeit.</small></dd></div>
+      <div><dt>Praxispartner</dt><dd>Post SV Nürnberg, ein Breitensportverein mit ehrenamtlich getragenem Trainingsbetrieb</dd></div>
+      <div><dt>Hochschule</dt><dd>Deutsche Hochschule für Prävention und Gesundheitsmanagement (DHfPG), Saarbrücken <small>Studiengang Sport- und Gesundheitsinformatik, Bachelor of Science</small></dd></div>
+      <div><dt>Betreuung</dt><dd>Timo Engler (DHfPG) · Jamie Killinger (Ausbildungsbetrieb)</dd></div>
+      <div><dt>Zeitraum</dt><dd>2026 <small>Interviews im Juli, Ausarbeitung des Konzepts ab August, Abgabe im Oktober</small></dd></div>
+    </dl>
+
+    <div class="tally" aria-label="Kennzahlen der Arbeit">
+      <div><b>2</b><span>Experteninterviews im Verein</span></div>
+      <div><b>28</b><span>Anforderungen, davon 19 Muss</span></div>
+      <div><b>9</b><span>User Storys aus Sicht von Persona A</span></div>
+      <div><b>13</b><span>Klassen im konzeptionellen Klassendiagramm</span></div>
+      <div><b>10</b><span>Szenarien, drei davon ausformuliert</span></div>
+      <div><b>28</b><span>Quellen im Literaturverzeichnis</span></div>
+    </div>
+
+    <div class="chapters">
+      <p class="label" style="margin-bottom:.6rem">So verteilen sich die 56 Seiten Textteil (S. 4 bis 59)</p>
+      <div class="chbar" id="chbar"></div>
+      <div class="chlegend" id="chlegend"></div>
+      <p class="note" style="margin-top:.75rem">Dazu kommen Literatur-, Abbildungs- und Tabellenverzeichnis sowie zehn Anhänge ab S. 65: zwei Interviewtranskripte, zwei Personas, Nutzungsszenario, Use Case, Klassentabelle und drei Szenarien.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Problem ============ -->
+<section class="sec" id="problem">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 1 bis 3</p>
+      <h2>Das Problem sitzt nicht im Schutzkonzept</h2>
+      <p>Sexualisierte Gewalt im Sport ist gut untersucht, und viele Vereine haben inzwischen ein Schutzkonzept. Woran es hakt, ist der Weg vom Papier in die Kabine.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>37,6&nbsp;%</b><p>Lebenszeitprävalenz sexualisierter Gewalt unter 1.529 befragten Athletinnen und Athleten, davon 11,2&nbsp;% schwere Formen. <span class="cite">Ohlert et al., 2018, S. 60, 63</span></p></div>
+      <div class="stat"><b>81&nbsp;%</b><p>der Täterinnen und Täter waren erwachsene Betreuungspersonen, etwa Trainer, Physiotherapeuten oder Funktionäre. <span class="cite">Ohlert et al., 2018, S. 63</span></p></div>
+      <div class="stat"><b>≈&nbsp;10&nbsp;%</b><p>der befragten Vereine hatten Ansprechpersonen oder Schulungen, 31&nbsp;% überhaupt einen Ehrenkodex. <span class="cite">Hartmann-Tews et al., 2016; zitiert nach Rulofs, 2024, S. 137</span></p></div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Die Argumentationskette</h3>
+      <p class="sub-lede">An dieser Kette hängt jede Entscheidung im Konzept. Wenn eine Gestaltungsfrage offen war, führte der Weg hierher zurück.</p>
+      <ol class="chain">
+        <li><div><h4>Das Risiko hängt an den Erwachsenen.</h4><p>Weder Alter noch Leistungsniveau, Sportart, Migrationshintergrund oder Behinderung erklären, wer betroffen ist. Es geht um Kultur und den Umgang mit Beziehungen im Team, und die prägen Erwachsene. <span class="cite">Ohlert et al., 2018, S. 63–64</span></p></div></li>
+        <li><div><h4>Vereine sind dafür dünn aufgestellt.</h4><p>Viel Ehrenamt und Semi-Professionalität, niedrige Zugangsschwellen, wenige Ansprechpersonen und kaum Interventionspläne. <span class="cite">Rulofs, 2024, S. 134–141</span></p></div></li>
+        <li><div><h4>Beim Post SV fehlt nicht das Konzept, sondern seine Verankerung.</h4><p>Ein strenges Schutzkonzept liegt vor. Bei den Trainerinnen und Trainern kommt es kaum an, viele reagieren mit Abwehr aus Unwissenheit. <span class="cite">Interview K</span></p></div></li>
+        <li><div><h4>Das eigentliche Problem ist Mehrdeutigkeit.</h4><p>Dieselbe Berührung am Arm kann harmlos sein oder der Beginn von Grooming. Weil beides gleich aussieht, können Täter Reaktionen gefahrlos testen. <span class="cite">Brackenridge &amp; Fasting, 2005, S. 19</span></p></div></li>
+        <li><div><h4>Gebraucht wird Selbstbewusstsein, keine Belehrung.</h4><p>Den Trainern müsse man „das Selbstbewusstsein geben, dass sie sich in einem bestimmten Rahmen bewegen können, ohne etwas falsch zu machen“. <span class="cite">Interview K</span></p></div></li>
+        <li><div><h4>Im Angebot klafft eine Lücke.</h4><p>Es gibt kein Format für erwachsene Trainerinnen und Trainer in ihrer Aufsichtsrolle, das sie allein und im eigenen Tempo nutzen können. <span class="cite">Kap. 3.5.4</span></p></div></li>
+        <li class="end"><div><h4>Daraus folgt der Prototyp.</h4><p>Szenariobasiert, freiwillig, in wenigen Minuten. Er zielt auf Selbstreflexion und auf den Abgleich im Trainerteam. <span class="cite">Kap. 2, 4.4</span></p></div></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <blockquote class="bigquote">Dieselbe Berührung oder dasselbe Einzelgespräch kann harmlos sein <span>oder der Anfang eines Grooming-Prozesses.</span>
+        <footer>Aus Kapitel 7. Deshalb übt der Prototyp das Einordnen mehrdeutiger Fälle und nicht das Erkennen eindeutiger Kategorien.</footer>
+      </blockquote>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Zwei Perspektiven auf denselben Verein</h3>
+      <p class="sub-lede">Im Juli 2026 habe ich zwei leitfadengestützte Experteninterviews geführt. Zwei Befragte sind keine repräsentative Erhebung, aber sie zeigen zwei Blickwinkel auf denselben Trainingsbetrieb.</p>
+      <div class="voices">
+        <article class="card voice">
+          <header><b>Interview K</b><span class="label">Kinderschutzbeauftragter · 23.07.2026 · 33 Min.</span></header>
+          <blockquote>„bei den Trainern sind definitiv Lücken. Bei den Trainern ist aber auch der Bedarf hoch, sich selbst zu schützen“</blockquote>
+          <ul>
+            <li>Das Schutzkonzept hat er allein und bewusst strikt verfasst: „wenn ich kein Ziel definiere, das auch etwas höher hängt, dann setzt es vielleicht auch keiner richtig um“.</li>
+            <li>Er rechnet damit, dass „jeder zweite Trainer, wenn nicht sogar mehr“ auf zusätzliche Pflichten abwehrend reagiert. Jüngere sind offener.</li>
+            <li>Er schlägt eine prozentuale Rückmeldung über die Einschätzungen anderer vor und lehnt eine Bewertung als richtig oder falsch ab.</li>
+            <li>Ein solches Instrument wirke nur bei Menschen ohne schädigende Absicht und nur präventiv.</li>
+          </ul>
+        </article>
+        <article class="card voice">
+          <header><b>Interview T</b><span class="label">Trainer im Trainingsbetrieb · 20.07.2026 · 41 Min.</span></header>
+          <blockquote>Über sexualisierte Gewalt werde im Verein zu selten gesprochen, weil es „einfach Tabuthema noch ist“.<small>sinngemäß, mit Zitat aus Interview T</small></blockquote>
+          <ul>
+            <li>Bei Unsicherheit fragt er Trainerkollegen derselben Altersklasse, nicht eine benannte Ansprechperson oder ein Dokument.</li>
+            <li>Für ihn gehören körpernahes Vormachen und Gespräche nach dem Training zum Alltag.</li>
+            <li>Wünsche an ein Tool: Feedback, bei dem man sieht, woher es kommt, situationsnah statt pauschal, übersichtlich, mit Farben, und der Fortschritt darf beim Schließen nicht verloren gehen.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="label" style="margin-top:1.6rem">Situationen, in denen beide den Bedarf am deutlichsten sehen</p>
+      <div class="situ">
+        <div><span class="mono">K</span>Umkleide, während sich Eltern oder andere Mitglieder im Raum aufhalten</div>
+        <div><span class="mono">K</span>Hausrecht, das ein junger Trainer gegenüber einem langjährigen Mitglied durchsetzen muss</div>
+        <div><span class="mono">K</span>Wortwahl bei der Auswechslung, die einen Spieler vor der Mannschaft bloßstellen kann</div>
+        <div><span class="mono">T</span>Körpernahes Vormachen von Bewegungsabläufen</div>
+        <div><span class="mono">T</span>Einzelgespräche nach dem Training</div>
+        <div><span class="mono">T</span>Teambuilding außerhalb der Trainingszeit, bei dem die Gruppe unerwartet schrumpft</div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Drei Angebote, drei andere Ausschnitte</h3>
+      <p class="sub-lede">Im deutschsprachigen Raum gibt es drei digitale, teils spielerische Angebote zur Prävention im Vereinssport. Keines richtet sich an Erwachsene, die in ihrer Aufsichtsrolle mehrdeutige Situationen allein und flexibel üben wollen.</p>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr>
+            <td></td>
+            <th>Uuugh – Falsches Spiel<small>Universitätsklinikum Ulm</small></th>
+            <th>3D-Online-Simulation<small>Schirrmacher GmbH, „Schau hin und sag was!“</small></th>
+            <th>Safe Clubs<small>BMBF-Verbund, DSHS Köln u.&nbsp;a.</small></th>
+            <th class="me">Dieser Prototyp<small>Konzept für den Post SV Nürnberg</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><th>Format</th><td>2D-Simulation, PC und mobil, kostenfrei, USK ab 12</td><td>Kooperatives Planspiel online oder in Präsenz, kommerziell lizenziert</td><td>Online-Risikoanalyse mit 72 Fragen, Workshops, Online-Schulung zur Intervention</td><td class="me">Szenarien im Smartphone-Browser, ohne Anmeldung</td></tr>
+            <tr><th>Rolle der Nutzenden</th><td>Täterperspektive, um Strategien zu erkennen und sich selbst zu schützen</td><td>Beobachtende, die einschreiten sollen</td><td>Vereinsverantwortliche und benannte Ansprechpersonen</td><td class="me">Trainerin oder Trainer in Aufsichts- und Verantwortungsrolle</td></tr>
+            <tr><th>Setting</th><td>allein, eigenes Tempo</td><td>moderierte Gruppe, 4 bis 24 Personen, halber bis ganzer Tag</td><td>Workshops durch Fachpersonal, Online-Tools</td><td class="me">allein, höchstens fünf Minuten je Durchlauf</td></tr>
+            <tr><th>Evaluation</th><td>Vorevaluation, Ergebnisse ausdrücklich vorläufig</td><td>keine veröffentlicht</td><td>keine Wirksamkeitsdaten berichtet</td><td class="me">nicht erprobt (Konzept)</td></tr>
+            <tr><th>Was ich übernehme</th><td>Eulenkodex als Gliederung der Rückmeldung, dauerhaft sichtbarer Notausgang, Lehre aus der Textlastigkeit</td><td>Skala von grün bis rot statt richtig oder falsch</td><td>Themenblöcke der Risikoanalyse als Vorlage für die Themenfelder</td><td class="me">–</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Wo der Prototyp im Grooming-Verlauf ansetzt</h3>
+      <p class="sub-lede">Das Phasenmodell nach Brackenridge (2001; zitiert nach Brackenridge &amp; Fasting, 2005, S. 5) mit den acht Strategien aus „Uuugh“ (Krauß et al., 2025, S. 11). Sechs davon liegen in Phase 3 und 4. Die frühe Phase, in der Handlungen noch mehrdeutig sind, bildet das Spiel nicht ab.</p>
+      <div class="phases">
+        <div class="phase focus"><span class="n">1</span><h4>Auswahl eines potenziellen Opfers</h4><div class="strat"><span class="none">keine Strategie im Spiel</span></div></div>
+        <div class="phase focus"><span class="n">2</span><h4>Aufbau von Vertrauen und Freundschaft</h4><div class="strat"><span>Erzeugung emotionaler Abhängigkeit</span></div></div>
+        <div class="phase"><span class="n">3</span><h4>Isolation, Kontrolle, Loyalität</h4><div class="strat"><span>Isolation des Kindes</span></div></div>
+        <div class="phase"><span class="n">4</span><h4>Beginn des Missbrauchs, Geheimhaltung</h4><div class="strat"><span>Wiederholte Grenzüberschreitungen</span><span>„Das ist unser Geheimnis“</span><span>Emotionale Erpressung</span><span>Schuldumkehr</span><span>Drohungen bei Offenlegung</span></div></div>
+      </div>
+      <p class="cross"><span class="chip">phasenübergreifend</span> Vernebelung der Wahrnehmung des Umfelds, also Grooming des sozialen Umfelds (Leberg, 1997; zitiert nach Brackenridge &amp; Fasting, 2005, S. 4).</p>
+      <p class="note" style="margin-top:.6rem">Hervorgehoben: der Bereich, auf den die Szenarien des Prototyps zielen. In allen drei ausgearbeiteten Szenarien sind die grenzverletzenden Merkmale gerade noch nicht eingetreten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Vorgehen ============ -->
+<section class="sec" id="vorgehen">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 4.1</p>
+      <h2>Wie ich vorgegangen bin</h2>
+      <p>Die Arbeit ist keine empirische Erhebung, sondern ein Gestaltungsvorschlag. Deshalb musste ich zweierlei offenlegen: woher die Anforderungen stammen und nach welchen Regeln daraus ein Konzept wird.</p>
+    </div>
+
+    <h3 class="sub">Drei Phasen, zwei davon umgesetzt</h3>
+    <p class="sub-lede">Für Serious Games schlagen De Angeli, Finnegan und Scott (2026, S. 479–480) einen partizipativen Prozess in drei Phasen vor. Ich habe ihn in eingeschränkter Form umgesetzt.</p>
+    <div class="trio">
+      <div class="step"><span class="label">Phase 1</span><h4>Co-Discovery</h4><p>Zwei Experteninterviews, die Bedarfsanalyse in Kapitel 3.2 und die Untersuchung der drei bestehenden Angebote.</p></div>
+      <div class="step"><span class="label">Phase 2</span><h4>Co-Design</h4><p>Stakeholder, Personas, Gestaltungsansatz, User Storys, Use Case und Anforderungen in Kapitel 4, danach Modelle, Szenarien und Wireframes in Kapitel 5.</p></div>
+      <div class="step off"><span class="label">Phase 3</span><h4>Co-Evaluation</h4><p>Findet in dieser Arbeit nicht statt. Das ist die schwerste Grenze des Konzepts, mehr dazu im Rückblick.</p></div>
+    </div>
+
+    <div class="block" style="margin-top:2.5rem">
+      <div class="grid g2" style="gap:2rem">
+        <div>
+          <p class="label" style="margin-bottom:.6rem">Woher die Anforderungen stammen (nach Al Mrayat et al., 2013, S. 3–5)</p>
+          <div class="srcs">
+            <div><b><span class="dot" style="background:var(--s-meth)"></span>Konversationell</b>Die zwei Experteninterviews</div>
+            <div><b><span class="dot" style="background:var(--s-sg)"></span>Analytisch</b>Bestehende Angebote und Forschungsstand zu Serious Games und Gamification</div>
+            <div><b><span class="dot" style="background:var(--s-best)"></span>Synthetisch</b>Nutzungsszenario, User Storys und Use Case</div>
+            <div class="off"><b>Beobachtend</b>Nicht eingesetzt</div>
+          </div>
+          <p class="note" style="margin-top:.75rem">Mehrere Quellen helfen gegen methodenbedingte Verzerrungen, etwa die Neigung, den Stand der Prävention günstiger darzustellen, als er ist (Podsakoff et al., 2003, S. 887). Deshalb nennt jede Anforderung ihre Quelle.</p>
+        </div>
+        <div>
+          <p class="label" style="margin-bottom:.6rem">Wie tief die Befragten beteiligt waren (Druin, 2002; zitiert nach Pan et al., 2026, S. 456)</p>
+          <div class="ladder">
+            <div><b>Nutzende</b>werden beobachtet</div>
+            <div><b>Testende</b>geben Rückmeldung zu Prototypen</div>
+            <div class="on"><b>Informanten</b>tragen an ausgewählten Punkten bei</div>
+            <div><b>Design Partner</b>gestalten durchgehend mit</div>
+          </div>
+          <p class="note" style="margin-top:.75rem">Im Ehrenamt fehlt die Zeit für durchgehende Mitgestaltung. Die Rolle als Informant ist ein bewusster Kompromiss, und in der frühen Phase Fachpersonen statt Endnutzende zu befragen, ist etabliert (Pan et al., 2026, S. 456–457).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Vom Interview zur finalen Fassung</h3>
+      <p class="sub-lede">Wie die Arbeit von Juli bis Oktober 2026 entstanden ist, mit den Stellen, an denen sich das Konzept gedreht hat.</p>
+      <ol class="timeline">
+        <li class="key"><time>20.07.</time><div><h4>Interview mit einem Trainer</h4><p>41 Minuten. Er war erst seit wenigen Monaten im Verein und brachte viel Erfahrung aus seinem früheren Verein mit. Das gab mir einen Blick von außen auf den Trainingsalltag.</p></div></li>
+        <li class="key"><time>23.07.</time><div><h4>Interview mit dem Kinderschutzbeauftragten</h4><p>33 Minuten. Was ich aus dem ersten Gespräch mitgenommen hatte, brachte ich als bisherigen Konsens ein. Dass die beiden Interviews dadurch nicht unabhängig sind, habe ich später in der Diskussion offengelegt.</p></div></li>
+        <li><time>bis August</time><div><h4>Forschungsstand</h4><p>Grooming und Täterstrategien, Präventionsansätze, Serious Games, Gamification und die drei bestehenden Angebote. Kapitel 3 wurde mit rund 21 Seiten das längste der Arbeit.</p></div></li>
+        <li><time>24.08.</time><div><h4>Gliederung von Kapitel 4 steht</h4><p>Ein eigenes Unterkapitel zur Erhebungsmethodik habe ich nach Rücksprache mit meinem Betreuer gestrichen. Am selben Tag entstand der erste Entwurf des Modells, das ein paar Tage später 16 Klassen hatte.</p></div></li>
+        <li class="key"><time>25.08.</time><div><h4>Erkennen, Absichern, Handeln</h4><p>Aus Detektion, Schutz und Aktion des Eulenkodex wurde die dreiteilige Rückmeldung des Prototyps. Die Umdeutung von „Schutz“ zu „Absichern“ ist am Ende der eigenständigste Beitrag der Arbeit.</p></div></li>
+        <li class="key"><time>26./27.08.</time><div><h4>Kapitel 4 ausgearbeitet</h4><p>Stakeholder, Personas, Nutzungsszenario, User Storys, Use Case und die Anforderungstabellen. Das IREB-Handbuch von Glinz et al. (2024) wurde zum methodischen Gerüst. Und Grundfunktion 2 kippte: Eingeordnet wird seitdem die Situation, nicht die eigene Entscheidung.</p></div></li>
+        <li><time>01.09.</time><div><h4>Die Eskalationsebenen fliegen raus</h4><p>Drei Ebenen von Kontaktpersonen hatte ich aus der 3D-Simulation übernommen. Sie hatten nur diese eine Quelle und gehörten eigentlich zur Intervention.</p></div></li>
+        <li class="key"><time>Anfang Sept.</time><div><h4>Keine Benutzerkonten</h4><p>Nutzerprofil und Trainerteam verschwinden aus dem Modell. Fortschritt bleibt auf dem Gerät, zentral zählt nur ein Wert je Option, und der Vergleich läuft über den ganzen Verein statt pro Team.</p></div></li>
+        <li><time>September</time><div><h4>Kapitel 5</h4><p>Aktivitätsdiagramm, konzeptionelles Klassendiagramm, Szenarienvorlage, zehn Szenarien und Wireframes. Drei Szenarien habe ich ausformuliert. Sie stehen aus Platzgründen im Anhang.</p></div></li>
+        <li><time>Oktober</time><div><h4>Diskussion und Zusammenfassung</h4><p>Die Diskussion durfte höchstens vier bis fünf Seiten lang sein und ging durch mehrere Fassungen. Ein geplantes Unterkapitel 5.6 zur Einbindung in den Vereinsalltag ist darin aufgegangen. Dass der Textteil über den 50 Seiten der Richtlinie liegt, habe ich mit meinem Betreuer abgestimmt.</p></div></li>
+        <li><time>16./17.10.</time><div><h4>Korrekturrunde</h4><p>Zwölf Kommentarstränge und 253 farbige Markierungen in der Word-Datei, dazu ein Abgleich aller Interviewbelege mit den Transkripten.</p></div></li>
+        <li class="key"><time>27.10.</time><div><h4>Finale Fassung</h4><p>Sieben Kapitel, 28 Quellen, zehn Anhänge.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Konzept ============ -->
+<section class="sec" id="konzept">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 4.4 und 5.1</p>
+      <h2>Was der Prototyp ist</h2>
+      <p>Eine Anwendung im Browser, in der Trainerinnen und Trainer in kurzen, erfundenen Situationen aus dem eigenen Trainingsalltag entscheiden und die Situation danach eingeordnet bekommen. Kein Kurs mit Anfang und Ende, sondern ein Angebot für einzelne Durchläufe, wenn gerade ein Anlass da ist.</p>
+    </div>
+
+    <div class="lead2">
+      <div class="goal">
+        <span class="label">Lernziel</span>
+        <p class="big">Handlungssicherheit bei mehrdeutigen Situationen, nicht Faktenwissen</p>
+        <p>Wissenszuwachs allein verändert weder das Erkennen noch das Handeln im Moment. Wer Entscheidungsverhalten verändern will, muss Entscheidungen üben lassen.</p>
+      </div>
+      <div class="card tolks">
+        <span class="label">Ist das ein Serious Game? Die vier Kriterien nach Tolks und Lampert</span>
+        <ol>
+          <li><i>✓</i><span>Die Intention liegt in der Vermittlung von Inhalten, nicht in der Unterhaltung.</span></li>
+          <li><i>✓</i><span>Es gibt einen pädagogischen Inhalt.</span></li>
+          <li class="no"><i>✕</i><span>Der pädagogische Inhalt ordnet sich dem Unterhaltungsfaktor unter. <b>Bewusst nicht:</b> Bei diesem Thema wiegt das Risiko der Verharmlosung schwerer als ein möglicher Motivationsgewinn.</span></li>
+          <li><i>✓</i><span>Es gibt mindestens ein Lernziel.</span></li>
+        </ol>
+        <p class="res">Deshalb: ein szenariobasiertes digitales Lernformat mit Elementen des Serious-Game-Designs.</p>
+        <p class="note">Kriterien nach Tolks und Lampert (2016; zitiert nach Tolks et al., 2020, S. 699)</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Drei Festlegungen, die alles Weitere tragen</h3>
+      <div class="three">
+        <div><h4>Keine Benutzerkonten</h4><p>Keine Anmeldung, keine Registrierung, kein Profil. Der Prototyp kennt keine Personen, nur Durchläufe. Im Klassendiagramm gibt es deshalb absichtlich keine Klasse für eine nutzende Person.</p></div>
+        <div><h4>Daten bleiben auf dem Gerät</h4><p>Fortschritt und eigene Entscheidungen werden lokal gespeichert. Vereinsweit gehalten wird nur ein Zählwert je Entscheidungspunkt und Handlungsoption.</p></div>
+        <div><h4>Inhalt getrennt vom Verein</h4><p>Szenarien, Rückmeldungen und Situationsmerkmale stehen auf der einen Seite, Ansprechpersonen und Meldewege auf der anderen. Ein anderer Verein hinterlegt einfach seine eigenen Angaben.</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Fünf Gestaltungsprinzipien</h3>
+      <ol class="princ">
+        <li><div><h4>Blending statt Belohnung</h4><p>Die Bewältigung der Situation ist schon die geübte Kompetenz. Ein vorgeschalteter Wissenstest mit Spiel als Belohnung würde trennen, was zusammengehört. <span class="cite">Ritterfeld &amp; Weber, 2006; zitiert nach Breuer &amp; Bente, 2010, S. 13</span></p></div></li>
+        <li><div><h4>Spielen, Lernen und Anleitung auseinanderhalten</h4><p>Wer aus Neugier öffnet, lernt deshalb noch nicht. Weil im Ehrenamt niemand anleitet, steckt die Instruktion im Prototyp selbst: Einordnung, Führung, Rückmeldung, Auswertung. <span class="cite">Carvalho et al., 2015, S. 169</span></p></div></li>
+        <li><div><h4>Kompetenz, Autonomie, Eingebundenheit</h4><p>Autonomie über freie Szenarienwahl und eigenes Tempo, Kompetenzerleben über Rückmeldung und Fortschrittsübersicht statt Punkte, Eingebundenheit über den Abgleich im Trainerteam. <span class="cite">Sailer, 2016; zitiert nach Tolks et al., 2020, S. 701</span></p></div></li>
+        <li><div><h4>Modelle bleiben im Hintergrund</h4><p>Theorie ist Werkzeug für die Gestaltung und taucht in der Anwendung nicht auf. Die Darstellung bleibt schematisch, weil grafischer Aufwand nichts zum Lernerfolg beiträgt. <span class="cite">Carvalho et al., 2015, S. 179; Wouters et al., 2013, S. 258</span></p></div></li>
+        <li><div><h4>Erfundene, aber realitätsnahe Fälle</h4><p>In einem Verein dieser Größe wüsste man bei echten Fällen schnell, um wen es geht, und aus einer Übung würde ein Vorwurf. Und niemand muss eigene Erlebnisse offenlegen. <span class="cite">De Angeli et al., 2026, S. 480</span></p></div></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Sechs Grundfunktionen</h3>
+      <p class="sub-lede">Aus Prinzipien und Befunden folgen sechs Grundfunktionen (GF). Die Nummern stehen in der Anforderungstabelle in der Spalte GF.</p>
+      <div class="gfs" id="gfs"></div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Was bewusst fehlt</h3>
+      <div class="nots">
+        <span>Punkte und Bestenlisten</span><span>Richtig oder falsch</span><span>Benutzerkonten</span><span>Teilnahmenachweis</span><span>Zeitdruck</span><span>Chat im Prototyp</span><span>Echte Vereinsfälle</span><span>Intervention im Verdachtsfall</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Zielgruppe ============ -->
+<section class="sec" id="zielgruppe">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 4.2 und 4.3</p>
+      <h2>Für wen er gedacht ist</h2>
+      <p>Anforderungen entstehen nicht nur bei denen, die ein System bedienen. Im Verein kommt dazu, dass eine Person oft mehrere Rollen zugleich hat. Die Analyse unterscheidet deshalb nach Rollen, nicht nach Personen.</p>
+    </div>
+
+    <h3 class="sub">Sieben Rollen, drei davon kritisch</h3>
+    <p class="sub-lede">Einfluss auf den Erfolg in drei Stufen nach Glinz et al. (2024, S. 20–21). Kritisch heißt: Wird die Rolle nicht berücksichtigt, scheitert der Prototyp.</p>
+    <div class="stake" id="stake"></div>
+
+    <div class="block">
+      <h3 class="sub">Zwei Personas</h3>
+      <p class="sub-lede">Die Unterscheidung trifft der Kinderschutzbeauftragte selbst: Erfahrene Trainer reagieren eher abwehrend, jüngere sind offener. Persona A ist der schwierigere Fall, deshalb sind die User Storys aus ihrer Sicht geschrieben.</p>
+      <div class="personas">
+        <article class="card persona a">
+          <header><div class="mono-av" aria-hidden="true">T</div><div><b>Thomas, 46</b><span>Persona A · „Der Etablierte“</span></div></header>
+          <p>Trainiert seit elf Jahren die U14 im Jugendfußball, ist selbst seit der Jugend im Verein und arbeitet Vollzeit. Das Schutzkonzept kennt er dem Namen nach. Dem Thema begegnet er zurückhaltend, nicht aus Gleichgültigkeit, sondern aus Unsicherheit.</p>
+          <div class="cols">
+            <div><span class="label">Hintergrund</span><ul><li>zwei Einheiten pro Woche plus Spieltag</li><li>Schutzkonzept nie gelesen</li></ul></div>
+            <div><span class="label">Motivationen</span><ul><li>wissen, wo die Grenze im Training verläuft</li><li>sich absichern</li><li>Anerkennung im Team statt Bescheinigung</li></ul></div>
+            <div><span class="label">Frustrationen</span><ul><li>jedes Wort auf der Goldwaage</li><li>Pflichten, Fristen, Nachweise</li><li>Digitales muss auf Anhieb funktionieren</li></ul></div>
+          </div>
+          <footer>Datengrundlage: Interview K; Horch et al. (2024, S. 162–163); Kap. 3.2 · Anhang 3</footer>
+        </article>
+        <article class="card persona b">
+          <header><div class="mono-av" aria-hidden="true">L</div><div><b>Lena, 22</b><span>Persona B · „Die Neue“</span></div></header>
+          <p>Trainiert seit zwei Jahren eine U12 und studiert. Dem Thema steht sie offen gegenüber. Schwer fällt ihr nicht die Einschätzung, sondern das Auftreten, wenn ein deutlich älterer Trainer ihre Spieler beschimpft.</p>
+          <div class="cols">
+            <div><span class="label">Hintergrund</span><ul><li>zeitlich flexibel, aber unregelmäßig da</li><li>kurze Kinderschutz-Einheit in der Übungsleiterausbildung</li></ul></div>
+            <div><span class="label">Motivationen</span><ul><li>Vorbild und ansprechbar sein</li><li>Rückhalt, wenn sie Position beziehen muss</li><li>wissen, ob andere es ähnlich sehen</li></ul></div>
+            <div><span class="label">Frustrationen</span><ul><li>setzt sich gegenüber Älteren schwer durch</li><li>Angst, belächelt zu werden</li><li>niemand zum fachlichen Austausch</li></ul></div>
+          </div>
+          <footer>Datengrundlage: Interview K; Interview T; Kap. 3.2 · Anhang 4</footer>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Ein Abend mit Thomas</h3>
+      <p class="sub-lede">Das Nutzungsszenario aus Anhang 5 zeigt, wann der Prototyp überhaupt geöffnet wird: anlassbezogen, ungeplant und ohne anleitende Person.</p>
+      <ol class="story" id="story"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Anforderungen ============ -->
+<section class="sec" id="anforderungen">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 4.5 und 4.6</p>
+      <h2>Was der Prototyp leisten muss</h2>
+      <p>User Storys halten fest, was Nutzende erreichen wollen. Der Use Case legt fest, wie eine Nutzung abläuft. Beides fließt in 28 überprüfbare Anforderungen mit Priorität und Quelle.</p>
+    </div>
+
+    <h3 class="sub">Neun User Storys</h3>
+    <p class="sub-lede">Nach der Schablone von Cohn (2004; zitiert nach Glinz et al., 2024, S. 47), aus Sicht von Persona A. Ein Klick auf eine Anforderung springt in die Tabelle weiter unten.</p>
+    <div class="stories" id="stories"></div>
+
+    <div class="block">
+      <h3 class="sub">Use Case „Szenario bearbeiten“</h3>
+      <p class="sub-lede">In diesem Anwendungsfall laufen alle sechs Grundfunktionen zusammen. Spezifiziert nach der Formularvorlage bei Glinz et al. (2024, S. 48–49), vollständig in Anhang 6.</p>
+      <div class="uc">
+        <ol class="uc-flow" id="ucflow"></ol>
+        <div class="uc-side">
+          <div class="card"><h4>Alternative Abläufe</h4><p><b>3a</b>Die Bearbeitung wird unterbrochen. Der Fortschritt wird gespeichert, beim nächsten Aufruf geht es am zuletzt erreichten Entscheidungspunkt weiter.</p><p><b>8a</b>Für einzelne Punkte liegen zu wenige Entscheidungen anderer vor. Dort erscheint ein Hinweis, die übrigen Anteile werden regulär gezeigt.</p></div>
+          <div class="card"><h4>Erweiterungen</h4><p>Eine offizielle Beratungsstelle ist in jedem Schritt erreichbar. Nach Abschluss lässt sich das Szenario erneut starten, um die übrigen Optionen nachzulesen.</p></div>
+          <div class="card"><h4>Was der Use Case erzwungen hat</h4><p>Der Vergleich mit anderen erscheint erst nach allen Rückmeldungen, damit sich niemand während des Durchlaufs an der Mehrheit ausrichtet. Und es musste geregelt sein, was passiert, wenn bei der Einführung im Verein noch kaum Daten vorliegen.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block" id="anforderungsliste">
+      <h3 class="sub">28 Anforderungen</h3>
+      <div class="req-top">
+        <div class="moscow">
+          <p class="label">Priorisierung nach MoSCoW (Glinz et al., 2024, S. 159)</p>
+          <div class="mrow"><span>Funktional · 15</span><div class="mbar" aria-label="9 Muss, 4 Soll, 2 Kann"><div class="m" style="flex:9">9</div><div class="s" style="flex:4">4</div><div class="k" style="flex:2">2</div></div></div>
+          <div class="mrow"><span>Nichtfunkt. · 13</span><div class="mbar" aria-label="10 Muss, 2 Soll, 1 Kann"><div class="m" style="flex:10">10</div><div class="s" style="flex:2">2</div><div class="k" style="flex:1">1</div></div></div>
+          <div class="mkey"><span><i style="background:var(--ink)"></i>Muss</span><span><i style="background:var(--rule-2)"></i>Soll</span><span><i style="border:1px dashed var(--rule-2)"></i>Kann</span></div>
+        </div>
+        <div class="card mix">
+          <p class="label">Quellen je Anforderung</p>
+          <div class="row"><span class="st-k"><span class="src">Interview</span></span><span class="st-a"><span class="src">Literatur</span></span><span class="st-s"><span class="src">User Story, Persona, Szenario, Use Case</span></span></div>
+          <p class="note" style="color:var(--ink-2)">15 der 28 Anforderungen stützen sich auf mindestens zwei Quellenarten, vier auf alle drei: F07, F08, F10 und NF01.</p>
+        </div>
+      </div>
+      <div class="filters" id="reqfilters" role="group" aria-label="Anforderungen filtern"></div>
+      <ul class="reqlist" id="reqlist"></ul>
+    </div>
+
+    <div class="block" id="zielkonflikte">
+      <h3 class="sub">Wo sich Anforderungen widersprechen</h3>
+      <p class="sub-lede">Nicht alle Anforderungen lassen sich zugleich vollständig erfüllen. Zwei Zielkonflikte löst schon Kapitel 4.6, die übrigen tauchen im Verein oder in der Diskussion auf. Offengelegt werden sie, damit die Abwägung nachvollziehbar bleibt (Glinz et al., 2024, S. 114–115).</p>
+      <div class="conflicts" id="conflicts"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Modelle ============ -->
+<section class="sec" id="modelle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 5.2 und 5.3</p>
+      <h2>Ablauf und Struktur</h2>
+      <p>Zwei UML-Modelle machen das Konzept prüfbar: ein Aktivitätsdiagramm für den Ablauf eines Szenarios und ein konzeptionelles Klassendiagramm für seine fachlichen Bestandteile. Notation in Anlehnung an Glinz et al. (2024).</p>
+    </div>
+
+    <div class="flowgrid">
+      <figure class="fig">
+        <div class="paper"><img src="__ABB1__" alt="UML-Aktivitätsdiagramm eines Szenariodurchlaufs: Ausgangssituation, wiederholte Entscheidungspunkte mit optionaler Rückmeldung, Auswertung der Merkmale, Anteile anderer oder Hinweis, Ansprechpersonen, Abschluss." width="1298" height="1674"></div>
+        <figcaption><b>Abb. 1</b>Szenariodurchlauf als UML-Aktivitätsdiagramm, Notation in Anlehnung an Glinz, van Loenhoud, Staal und Bühne (2024, S. 70–71)</figcaption>
+      </figure>
+      <div>
+        <h3 class="sub">So liest man den Ablauf</h3>
+        <ul class="reads">
+          <li><b>Die Schleife ist die Wiederholung.</b>Nach jedem Entscheidungspunkt führt der Ablauf zum Verzweigungsknoten darüber zurück, bis kein weiterer Punkt folgt.</li>
+          <li><b>Von den Optionen geht keine eigene Kante aus.</b>Das ist Absicht. Wie es weitergeht, hängt nicht an der Wahl (F05). Situationen entwickeln sich auch dann weiter, wenn angemessen gehandelt wurde, und Täter ziehen sich bei Widerstand zurück, ohne aufzuhören.</li>
+          <li><b>Rückmeldung nur auf Abruf.</b>Wer keine öffnet, bekommt trotzdem die Auswertung am Ende. Was im Ernstfall gebraucht wird, steht immer da.</li>
+          <li><b>Zwei Abweichungen.</b>Die Unterbrechung speichert den Fortschritt (F12). Liegen zu wenige Entscheidungen anderer vor, erscheint statt der Anteile ein Hinweis (F11).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Das Klassendiagramm zum Anklicken</h3>
+      <p class="sub-lede">13 Klassen in drei Bereichen. Wähle eine Klasse, um ihre Beziehungen, Attribute und Anforderungen zu sehen. Mit „Entwicklung zeigen“ erscheint, was sich seit dem Entwurf vom 27.08. geändert hat.</p>
+      <div class="cd-bar" id="cdbar"></div>
+      <div class="cd-list" id="cdlist" aria-label="Klassen"></div>
+      <div class="cd">
+        <div class="cd-stage" id="cdstage"></div>
+        <aside class="card cd-panel" id="cdpanel" aria-live="polite"></aside>
+      </div>
+      <div id="evo" hidden>
+        <div class="gone"><span class="label">Gestrichen seit dem Entwurf:</span><span class="g">Nutzerprofil</span><span class="g">Trainerteam</span><span class="g">«enumeration» Groomingphase</span><span class="g">«enumeration» Trainingsphase</span></div>
+        <div class="evo-list">
+          <div><b>Nutzerprofil und Trainerteam</b>Mit der Entscheidung gegen Benutzerkonten gab es nichts mehr, woran ein Profil hängen könnte. Der Vergleich gilt jetzt für den ganzen Verein.</div>
+          <div><b>Groomingphase</b>Modelle bleiben im Hintergrund. Welche Phase ein Szenario abbildet, muss die Anwendung nicht wissen.</div>
+          <div><b>Trainingsphase</b>Bleibt erhalten, aber als einfaches Attribut des Szenarios statt als eigene Klasse. Sie ordnet die Übersicht.</div>
+          <div><b>Situationsmerkmal ist neu</b>Die Ampelstufe hing zuerst an der Handlungsoption, also an der Wahl. Jetzt hängt sie an Merkmalen der Situation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Szenarien ============ -->
+<section class="sec" id="szenarien">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 5.4 und 5.5</p>
+      <h2>Zehn Szenarien, drei zum Durchspielen</h2>
+      <p>Ein Szenario ist eine Folge von Situationen, die an drei Stellen anhält. Am Ende wird die Situation eingeordnet, nicht die Person. Beim Ausformulieren war mir wichtig, sehr nah am echten Trainingsalltag zu bleiben.</p>
+    </div>
+
+    <div class="anat">
+      <div>
+        <h3 class="sub">Die Vorlage</h3>
+        <p class="sub-lede">Tab. 8 gilt für alle Szenarien gleich und dient als Vorlage für weitere. Rechts steht, in welcher Klasse des Diagramms der Bestandteil liegt.</p>
+        <div class="card anat-card" id="anat"></div>
+      </div>
+      <div class="amp">
+        <h3 class="sub">Die Ampel</h3>
+        <p class="sub-lede">Zehn bis zwölf Situationsmerkmale je Szenario, jede Stufe mindestens zweimal besetzt. Aufgeführt werden auch Merkmale, die nicht eingetreten sind, aber zeigen, wo die Situation kippen würde.</p>
+        <div class="amp-scale">
+          <div class="lv-ok"><b>unbedenklich</b><p>genauso wichtig wie die anderen beiden Stufen, weil sie auffällige Details ausdrücklich entlastet</p></div>
+          <div class="lv-warn"><b>klärungsbedürftig</b><p>braucht ein Gespräch, eine Regel oder einen zweiten Blick</p></div>
+          <div class="lv-crit"><b>grenzverletzend</b><p>markiert die Schwelle, ab der die Situation kippt</p></div>
+        </div>
+        <p class="label" style="margin-top:.6rem">Die Rückmeldung nach jedem Entscheidungspunkt</p>
+        <div class="eah">
+          <div><b>Erkennen</b><span>Woran ist die Situation zu erkennen?</span></div>
+          <div><b>Absichern</b><span>Wie verhalte ich mich so, dass nichts missverständlich wird?</span></div>
+          <div><b>Handeln</b><span>Welche Schritte können jetzt folgen?</span></div>
+        </div>
+        <p class="note">Höchstens drei Sätze je Abschnitt. Die Rückmeldung gehört zum Entscheidungspunkt, nicht zur gewählten Option.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Der Szenarienbestand</h3>
+      <p class="sub-lede">Tab. 9: Zusammen decken die zehn Szenarien die Phasen vor, im und nach dem Training ab. Die Themenfelder stammen aus Literatur und Vereinspraxis.</p>
+      <div class="inv-bar" id="invbar" role="group" aria-label="Nach Trainingsphase filtern"></div>
+      <div class="inv" id="inv"></div>
+    </div>
+
+    <div class="block" id="durchspielen">
+      <h3 class="sub">Selbst durchspielen</h3>
+      <p class="sub-lede">Die drei ausgearbeiteten Szenarien aus Anhang 8 bis 10, so wie der Prototyp sie zeigen würde. Diese Seite speichert deinen Fortschritt nur in deinem Browser und schickt nichts weg.</p>
+      <div class="player">
+        <div class="picker" id="picker" role="group" aria-label="Szenario wählen"></div>
+        <div class="phone" id="phone"></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Die Oberfläche</h3>
+      <div class="wire">
+        <figure class="fig">
+          <div class="paper"><img src="__ABB3__" alt="Wireframes von drei Smartphone-Ansichten: Übersicht mit Szenarienliste, Entscheidungspunkt mit drei Optionen und aufklappbarer Rückmeldung, Auswertung mit Merkmalen nach Ampelstufe, Einschätzungsspiegel und Ansprechpersonen." width="2584" height="1872"></div>
+          <figcaption><b>Abb. 3</b>Wireframes des Prototyps, Detaillierungsgrad in Anlehnung an Glinz, van Loenhoud, Staal und Bühne (2024, S. 82). Sie zeigen, was auf welcher Ansicht steht und in welcher Reihenfolge es gelesen wird, nicht das fertige Aussehen.</figcaption>
+        </figure>
+        <ol>
+          <li><b>Übersicht</b><p>Der Einstieg. Szenarien mit Themenfeld und Kurzbeschreibung, frei wählbar. Begonnene Durchläufe stehen oben, abgeschlossene bleiben sichtbar und lassen sich neu starten.</p></li>
+          <li><b>Entscheidungspunkt</b><p>Oben die Rahmenangaben der Ausgangssituation, darunter Situationstext, Leitfrage und genau drei Optionen. Die fachliche Rückmeldung klappt unterhalb der Optionen auf.</p></li>
+          <li><b>Auswertung</b><p>Erst die Einordnung der Situationsmerkmale, dann der Einschätzungsspiegel zu den Antworten anderer, zuletzt die Ansprechpersonen des Vereins mit Kontaktweg.</p></li>
+          <li><b>Fußzeile</b><p>Der Zugang zur offiziellen Beratungsstelle liegt auf jeder Ansicht unten.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Rückblick ============ -->
+<section class="sec" id="rueckblick">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 6 und 7</p>
+      <h2>Rückblick</h2>
+      <p>Was sich unterwegs geändert hat, wo ich gestolpert bin und was die Arbeit am Ende beantwortet.</p>
+    </div>
+
+    <h3 class="sub">Entscheidungen, die das Konzept verändert haben</h3>
+    <div class="dec" id="decisions"></div>
+
+    <div class="block">
+      <h3 class="sub">Stolpersteine</h3>
+      <p class="sub-lede">Die methodischen Grenzen stehen alle in Kapitel 6. Hier in meinen Worten, weil sie zum Prozess gehören.</p>
+      <ul class="trips">
+        <li><h4>Ich habe die Lösungsidee zu früh gezeigt.</h4><p>Dem Kinderschutzbeauftragten habe ich die App-Idee vor der ersten Leitfadenfrage vorgestellt, dem Trainer vor der Frage nach Anforderungen. Das widerspricht dem eigenen Anspruch, zuerst das Problem zu erschließen (Dell’Era et al., 2025, S. 32, 50).</p></li>
+        <li><h4>Die Interviews waren nicht unabhängig.</h4><p>Inhalte aus dem ersten Gespräch sind als bisheriger Konsens ins zweite gewandert. Damit wiegt das Kriterium „beide Befragte nennen es unabhängig“ bei der Priorisierung weniger.</p></li>
+        <li><h4>Die Hauptzielgruppe habe ich nicht selbst befragt.</h4><p>Persona A beruht auf der Beschreibung des Kinderschutzbeauftragten. Ausgerechnet ihre Vorbehalte, der Kern der Persona, sind damit eine Fremdbeschreibung.</p></li>
+        <li><h4>Leitfaden und Auswertung sind schlank geblieben.</h4><p>Den Leitfaden habe ich je Gesprächspartner angepasst, er ist in der Arbeit nicht dokumentiert. Ausgewertet habe ich thematisch, ohne Kategoriensystem und ohne Zweitcodierung.</p></li>
+        <li><h4>Nichts davon ist erprobt.</h4><p>Die Co-Evaluation fehlt vollständig, und nach Glinz et al. (2024, S. 27) sind nicht validierte Anforderungen nutzlos. Ob sie den Bedürfnissen der Trainerinnen und Trainer entsprechen, ist offen.</p></li>
+        <li><h4>Die Wirkung ist lerntheoretisch nicht abgesichert.</h4><p>Die Belege für Serious Games und Gamification betreffen vor allem Wissenserwerb (Ritterfeld et al., 2009, S. 695–696; Sailer &amp; Homner, 2020, S. 98, 101), also gerade nicht das Lernziel des Prototyps.</p></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Was die Arbeit beantwortet</h3>
+      <div class="answer">
+        <div class="card"><h4>Die Antwort</h4><p>Ein digitales Tool sollte das Einordnen mehrdeutiger Alltagssituationen üben lassen, kurz, freiwillig und ohne dass die Nutzenden erkennbar werden. Es übersetzt ein bestehendes Schutzkonzept in die Entscheidungen des Trainingsalltags und gibt dem Trainerteam einen Anlass, über Grenzen zu sprechen.</p></div>
+        <div class="card"><h4>Die Stärke</h4><p>Geringer technischer Aufwand. Ohne Benutzerkonten und mit einem gemeinsamen Zählwert je Option bleibt der Betrieb einfach. Umsetzbar wäre das als Webanwendung, deren Szenarien als einzelne Dateien nach Tab. 8 hinterlegt sind.</p></div>
+        <div class="card"><h4>Der eigene Beitrag</h4><p>Aus „Schutz“ im Eulenkodex, dort der Selbstschutz potenziell Betroffener, wird „Absichern“: transparentes Verhalten, das nicht missverstanden werden kann. Das verbindet die Angst vor falscher Beschuldigung (Brackenridge &amp; Fasting, 2005, S. 19) mit dem Beobachtet-Sein als stärkstem Hemmnis für Täter (Götzl et al., 2025, S. 279). Dazu setzen die Szenarien in der frühen, mehrdeutigen Grooming-Phase an.</p></div>
+        <div class="card"><h4>Die Schwächen</h4><p>Lokale Speicherung heißt: Gerätewechsel oder gelöschte Browserdaten setzen den Fortschritt zurück, Mehrfachzählungen sind möglich. Und die freiwillige Nutzung ohne Nachweis passt zum Ehrenamt, nimmt dem Verein aber den Überblick, wen er erreicht.</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub">Was der Post SV jetzt tun kann</h3>
+      <ol class="next">
+        <li><b>Betreiberrolle verteilen</b>Auf mindestens zwei Personen, bevor der Prototyp eingeführt wird, damit die Pflege nicht an einer Einzelperson hängt.</li>
+        <li><b>Schutzkonzept auf Eindeutigkeit prüfen</b>Regelt es Kabine, Einzeltraining und Fahrten so eindeutig, wie die Rückmeldungen in den Szenarien es voraussetzen?</li>
+        <li><b>Mit einer kleinen Gruppe testen</b>Erst dann lassen sich die Bearbeitungsdauer (NF01), die Bedienbarkeit ohne Einführung (NF03) und der Schwellenwert für F11 festlegen.</li>
+        <li><b>Ins Schutzkonzept aufnehmen</b>Als Einstieg für neue Trainerinnen und Trainer und als wiederkehrender Anlass, im Team über Grenzen zu sprechen.</li>
+      </ol>
+    </div>
+
+    <div class="closing">
+      <p>Ob ein digitales Tool Kinder schützt, entscheidet sich nicht an dem Tag, an dem es beschlossen oder programmiert wird, <span>sondern in dem Moment, in dem eine Trainerin oder ein Trainer in der Kabine etwas bemerkt und sich zutraut, es anzusprechen.</span></p>
+      <small>Letzter Satz der Arbeit, Kapitel 7</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Quellen ============ -->
+<section class="sec" id="quellen">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kapitel 8</p>
+      <h2>28 Quellen und wofür ich sie gebraucht habe</h2>
+      <p>Das Literaturverzeichnis als Landkarte: wann die Quellen erschienen sind, zu welchem Strang sie gehören und welche Anforderungen oder Szenarien sich auf sie stützen. Sekundärzitate stehen bei der Quelle, über die sie zitiert sind.</p>
+    </div>
+    <div class="yr" id="years"></div>
+    <div class="legend" id="strands" role="group" aria-label="Nach Strang filtern"></div>
+    <div class="lit" id="lit"></div>
+    <p class="note" style="margin-top:1.25rem">Zitiert nach den Richtlinien der DHfPG in Anlehnung an DGPs/APA. Seitenangaben stehen auf dieser Seite dort, wo eine Aussage direkt belegt ist.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="sig">Jonathan Sommerer</p>
+      <p>Bachelorarbeit im Studiengang Sport- und Gesundheitsinformatik an der DHfPG, 2026. Praxispartner: Post SV Nürnberg.</p>
+    </div>
+    <div>
+      <h4>Hilfe und Beratung</h4>
+      <p>Hilfe-Telefon Sexueller Missbrauch, kostenfrei und anonym:</p>
+      <p class="num">0800 22 55 530</p>
+      <p>Weitere Angebote: <a href="https://www.hilfe-portal-missbrauch.de" rel="noopener">hilfe-portal-missbrauch.de</a></p>
+    </div>
+    <div>
+      <h4>Zu dieser Seite</h4>
+      <p>Die Interviews sind nach Rolle anonymisiert, die Szenarien erfunden. Die Seite lädt keine externen Schriften und setzt keine Cookies.</p>
+      <p style="margin-top:.5rem"><a href="__REPO__" rel="noopener">Quellcode und Projektdokumentation auf GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+</div>
