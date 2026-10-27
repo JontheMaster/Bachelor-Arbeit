@@ -1,0 +1,83 @@
+classDiagram
+    direction LR
+    class Szenario {
+        titel
+        kurzbeschreibung
+        ausgangssituation
+        trainingsphase
+    }
+    class Themenfeld {
+        bezeichnung
+        herkunft
+    }
+    class Situationsmerkmal {
+        beschreibung
+        stufe
+        eingetreten
+    }
+    class Ampelstufe {
+        <<Wertevorrat>>
+        unbedenklich
+        klärungsbedürftig
+        grenzverletzend
+    }
+    class Entscheidungspunkt {
+        reihenfolge
+        situationstext
+        leitfrage
+    }
+    class Rückmeldung {
+        erkennen
+        absichern
+        handeln
+    }
+    class Handlungsoption {
+        text
+    }
+    class Durchlauf {
+        <<lokal>>
+        status
+        fortschritt
+        begonnenAm
+        abgeschlossenAm
+        gezählt
+    }
+    class Entscheidung {
+        <<lokal>>
+    }
+    class Einschätzungsspiegel {
+        <<gemeinsam>>
+        anzahlProOption
+        anteilProOption
+        mindestanzahl
+    }
+    class Verein {
+        name
+    }
+    class Ansprechperson {
+        name
+        funktion
+        kontaktweg
+    }
+    class Hilfsangebot {
+        bezeichnung
+        kontaktweg
+        erreichbarkeit
+    }
+
+    Szenario "*" --> "1" Themenfeld : behandelt
+    Szenario "1" *-- "1..*" Situationsmerkmal : weist auf
+    Szenario "1" *-- "2..*" Entscheidungspunkt : gliedert sich in
+    Situationsmerkmal ..> Ampelstufe
+    Entscheidungspunkt "1" *-- "1" Rückmeldung : trägt
+    Entscheidungspunkt "1" *-- "3" Handlungsoption : stellt zur Wahl
+    Durchlauf "*" --> "1" Szenario : bearbeitet
+    Durchlauf "1" *-- "*" Entscheidung : protokolliert
+    Entscheidung "*" --> "1" Handlungsoption : wählt
+    Entscheidung ..> Einschätzungsspiegel : erhöht
+    Einschätzungsspiegel "*" --> "1" Entscheidungspunkt : gilt für
+    Einschätzungsspiegel "*" --> "1" Verein : gilt im
+    Durchlauf "*" --> "1" Verein : findet statt im
+    Durchlauf ..> Hilfsangebot : ruft auf
+    Durchlauf ..> Ansprechperson : zeigt
+    Verein "1" *-- "1..*" Ansprechperson : benennt
