@@ -1,95 +1,57 @@
-# Projektakte Bachelor-Thesis — Prototyp gegen sexualisierte Gewalt im Sportverein
+# Prävention im Trainingsalltag
 
-Arbeitsakte zur Bachelor-Thesis **„Konzeptionelle Entwicklung eines Prototyps zur Unterstützung
-bei der Implementierung von Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein
-Post SV Nürnberg"**. DHfPG Saarbrücken, Sport- und Gesundheitsinformatik.
+Website und Projektdokumentation zu meiner Bachelorarbeit **„Konzeptionelle Entwicklung eines Prototyps zur Unterstützung bei der Implementierung von Präventionsmaßnahmen gegen sexualisierte Gewalt im Sportverein Post SV Nürnberg“** (DHfPG, Sport- und Gesundheitsinformatik, 2026).
 
-**Stand: 17.10.2026 · Kapitel 1 bis 7 geschrieben, Endkorrektur läuft, Abgabe am 31.10.2026.**
-Grundlage ist die Fassung der Arbeit vom 16.10.2026.
+**Website:** https://jonathansommerer.me
+
+Die Arbeit entwirft einen Prototyp, mit dem ehrenamtliche Trainerinnen und Trainer mehrdeutige Situationen aus dem Trainingsalltag üben: kurz, freiwillig und ohne dass jemand sieht, wie sie entschieden haben. Am Ende jedes Szenarios wird die Situation eingeordnet, nicht die Person. Ergebnis ist ein Konzept, keine programmierte Anwendung.
 
 ---
 
-## Was hier drin ist
+## Was auf der Website zu finden ist
 
-| Datei | Inhalt |
+- Rahmen der Arbeit, Forschungsfrage und Aufbau mit Seitenzahlen
+- Problemstellung mit Argumentationskette, Interviewbefunden und Vergleich bestehender Angebote
+- Vorgehen mit Zeitleiste von Juli bis Oktober 2026
+- Konzept: Lernziel, Gestaltungsprinzipien, sechs Grundfunktionen
+- Stakeholder, Personas und Nutzungsszenario
+- User Storys, Use Case, alle 28 Anforderungen mit Filter nach Art, Priorität, Grundfunktion und Quelle, dazu die Zielkonflikte
+- Aktivitätsdiagramm und ein interaktives Klassendiagramm, das auch die Entwicklung seit dem ersten Entwurf zeigt
+- Die drei ausgearbeiteten Szenarien zum Durchspielen, der Szenarienbestand und die Wireframes
+- Rückblick mit Entscheidungen, Stolpersteinen und Diskussion
+- Alle 28 Quellen nach Erscheinungsjahr und Strang, mit Verweis auf die Anforderungen, die sich auf sie stützen
+
+## Aufbau des Repositorys
+
+| Pfad | Inhalt |
 |---|---|
-| `index.html` | Die Projektakte als Website: Steckbrief, Argumentationskette, Kapitelstand, offene Punkte, Konzept, alle 28 Anforderungen mit Prioritätsfilter, Zielkonflikte, Ergebnisse aus Kapitel 5 mit Abb. 1 bis 3, Klassenmodell, empirische Basis, Quellenlage |
-| `domaenenmodell.html` | **Archiv, Stand 27.08.2026.** Der frühere Entwurf des Inhaltsmodells mit sechzehn Klassen. Gültig ist das Klassendiagramm mit dreizehn Klassen in `index.html` (Abschnitt Klassenmodell) bzw. Abb. 2 und Anhang 8 der Arbeit |
-| `docs/projektdokumentation.md` | Dieselbe Substanz als ein durchgehendes Markdown-Dokument. Das ist die Quelle, aus der die Website gebaut ist |
-| `docs/01-…` bis `docs/07-…` | Dieselben Inhalte thematisch getrennt, damit sich einzelne Teile leichter fortschreiben lassen. `06-domaenenmodell.md` enthält inzwischen das aktuelle Klassendiagramm |
-| `docs/domaenenmodell.mmd` | Mermaid-Quelltext des aktuellen Klassendiagramms (13 Klassen), direkt auf mermaid.live einfügbar |
+| `index.html` | Die Website. Eine einzige, eigenständige Datei: Schriften und Abbildungen sind eingebettet, es werden keine externen Ressourcen geladen und keine Cookies gesetzt. Funktioniert auch lokal per Doppelklick. |
+| `docs/projektdokumentation.md` | Die Projektdokumentation als durchgehendes Markdown-Dokument |
+| `docs/01-…` bis `docs/07-…` | Dieselben Inhalte thematisch aufgeteilt |
+| `docs/klassendiagramm.mmd` | Mermaid-Quelltext des Klassendiagramms (Abb. 2), direkt auf mermaid.live einfügbar |
+| `_src/` | Quelldateien der Website und das Build-Skript |
 
-Beide HTML-Seiten sind vollständig eigenständig: kein Build nötig zum Ansehen, kein
-JavaScript-Framework, keine externen Abhängigkeiten außer Google Fonts. Die Abbildungen
-aus der Arbeit sind eingebettet. Beide Seiten funktionieren auch, wenn man sie lokal per
-Doppelklick öffnet.
+## Website neu bauen
 
----
+Geändert werden die Dateien in `_src/`, nicht `index.html`:
 
-## Auf GitHub Pages veröffentlichen
+- `page.html`: Inhalt und Struktur der Seite
+- `data.js`: Anforderungen, User Storys, Klassen, Szenarien, Quellen und weitere Daten
+- `app.js`: Interaktion (Szenario-Player, Klassendiagramm, Filter, Quellenkarte)
+- `style.css`: Gestaltung, helles und dunkles Farbschema
+- `img/`: Abb. 1 bis 3 aus der Arbeit
+- `fonts/`: Big Shoulders Display und Atkinson Hyperlegible (SIL Open Font License, siehe `fonts/OFL.txt`)
 
-Das Repo ist so gebaut, dass es ohne Anpassung als Pages-Site läuft.
+Aus dem Ordner `_src` heraus `python3 build.py` aufrufen. Das Skript schreibt `index.html` ins Wurzelverzeichnis und zusätzlich `_src/artifact.html` für die Ansicht auf claude.ai, die nicht eingecheckt wird.
 
-1. Dateien pushen bzw. hochladen, inklusive der leeren Datei `.nojekyll`.
-   Ohne sie versucht GitHub, die Seiten durch Jekyll zu schicken, was hier nur stört.
-2. Im Repository unter **Settings → Pages** als Quelle **Deploy from a branch** wählen,
-   Branch `main`, Ordner `/ (root)`.
-3. Nach ein bis zwei Minuten liegt die Seite unter
-   `https://<benutzername>.github.io/<repository>/`.
+## GitHub Pages
 
-`index.html` liegt bewusst im Wurzelverzeichnis, damit die Startseite ohne Unterpfad
-erreichbar ist. Der Link zwischen den beiden Seiten ist relativ (`domaenenmodell.html`)
-und funktioniert deshalb unter jedem Repository-Namen.
+Die Seite läuft über GitHub Pages (Branch `main`, Ordner `/ (root)`) unter der eigenen Domain aus `CNAME`. Die leere Datei `.nojekyll` verhindert, dass GitHub die Seite durch Jekyll schickt.
 
----
+## Hinweise
 
-## Bevor das Repo öffentlich wird
+Die Interviews sind nach Rolle anonymisiert (Interview K: Kinderschutzbeauftragter, Interview T: Trainer), die Szenarien sind erfunden. Transkripte sind nicht Teil dieses Repositorys.
 
-Die Akte enthält Material, das nicht für jeden gedacht sein muss:
+Hilfe-Telefon Sexueller Missbrauch, kostenfrei und anonym: **0800 22 55 530** · [hilfe-portal-missbrauch.de](https://www.hilfe-portal-missbrauch.de)
 
-- wörtliche Zitate aus zwei Experteninterviews
-- den Vereinsnamen und die Bedarfsanalyse zum Post SV Nürnberg
-- die Namen der Betreuenden und die Matrikelnummer
-- interne Arbeitsnotizen zu offenen Belegstellen und Korrekturen
-- seit dem Stand vom 17.10. auch die Abbildungen 1 bis 3 der Arbeit
-
-Für ein **privates** Repository ist das unproblematisch. Soll es öffentlich sein, lohnt
-ein Blick auf zwei Stellen: die Angabe „Datenschutzbeauftragter seit 2018, Compliance-Ombudsmann
-seit 2022/23" macht den interviewten Kinderschutzbeauftragten in einem Verein dieser Größe
-auch ohne Namen identifizierbar, und die Interviewzitate sind bislang nicht freigegeben.
-
----
-
-## Wie die Seiten neu gebaut werden
-
-Die HTML-Dateien entstehen aus Fragmenten. Wer sie ändern will, ändert nicht die fertigen
-Seiten, sondern:
-
-- `_src/style.css`: die gemeinsamen Stile beider Seiten
-- `_src/index.content.html`: Inhalt der Projektakte
-- `_src/modell.content.html`: Inhalt der Domänenmodell-Seite (Archiv)
-- `_src/model.svg`: das alte Klassendiagramm der Archivseite
-- `_src/img/`: Abb. 1 bis 3 aus der Arbeit, werden beim Bauen als data-URI eingebettet
-- `_src/build.py`: setzt daraus zwei Fassungen zusammen, eine für den Artifact-Viewer auf
-  claude.ai (`_src/artifact-*.html`, nicht einchecken) und eine vollständige HTML-Fassung für Pages
-
-Aus dem Ordner `_src` heraus `python3 build.py` aufrufen. Das Skript schreibt `index.html`
-und `domaenenmodell.html` direkt ins Wurzelverzeichnis.
-
----
-
-## Kurzfassung des Stands
-
-**Fertig:** Kapitel 1 bis 7 einschließlich Anforderungsspezifikation (15 funktionale und
-13 nichtfunktionale Anforderungen), Ablauf als Aktivitätsdiagramm, Klassendiagramm mit
-13 Klassen, Szenariovorlage, zehn Szenarien (drei ausgearbeitet) und Wireframes.
-
-**Vor der Abgabe inhaltlich offen:** Ohlert-Befund in Kapitel 1 differenzieren, Sailer & Homner
-in 3.4 korrigieren, Palzkill und Brackenridge & Fasting als zwei verschiedene Ängste trennen,
-3.2 an die Transkripte angleichen, dritter Schritt und Ausblick in Kapitel 6, Anhang 1 bis 3
-mit Anhangsverzeichnis, letzte Seitenangabe in Tab. 9.
-
-**Danach:** Konsistenz zwischen Tabellen, Anhang und Wireframes, Literaturverzeichnis formatieren,
-Kommentare und Markierungen entfernen.
-
-Alles Weitere in [`docs/02-offene-punkte.md`](docs/02-offene-punkte.md).
+© 2026 Jonathan Sommerer
